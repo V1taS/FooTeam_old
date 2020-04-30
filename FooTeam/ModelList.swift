@@ -12,10 +12,11 @@ import UIKit
 // Нам достаточно будет перечислить все необходимые свойства
 
 struct Player {
-    var image: UIImage?
     var imageStatic: String?
+    var image: UIImage?
     var name: String
-    var position: String?
+    var teamNumber: String?
+    var payment: String
     
     static let listTeam = ["Александр Фадеев", "Павел Богданов", "Артур Илларионов", "Андрей Пахомов", "Александр Добров", "Владимир Мельников", "Егор Малахов", "Андрей Смирнов", "Сосин Виталий", "Александр Руховец", "Илья Гордеев", "Обрадович Милан", "Даулет","Владимир Трифанов" ]
     
@@ -23,7 +24,7 @@ struct Player {
         var players = [Player]()
         
         for player in listTeam {
-            players.append(Player(image: nil, imageStatic: player, name: player, position: player))
+            players.append(Player(imageStatic: player, image: nil, name: player, teamNumber: "Команда: 1 или 2", payment: "Подписка до 05.30 игр ✅"))
         }
         return players
     }

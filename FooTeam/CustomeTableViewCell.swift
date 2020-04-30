@@ -13,4 +13,5 @@ class CustomeTableViewCell: UITableViewCell {
     @IBOutlet weak var imageOutlet: UIImageView!
     @IBOutlet weak var namePlayerOutlet: UILabel!
     @IBOutlet weak var positionPlayeroutlet: UILabel!
+    @IBOutlet weak var paymentOutlet: UILabel!
 }
