@@ -14,7 +14,7 @@ class AddPlayerTableViewController: UITableViewController {
     var imageIsChange = false
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    @IBOutlet weak var placeImage: UIImageView!
+    @IBOutlet weak var imagePlayer: UIImageView!
     @IBOutlet weak var namePlayer: UITextField!
     @IBOutlet weak var payMent: UITextField!
     
@@ -27,8 +27,8 @@ class AddPlayerTableViewController: UITableViewController {
         // Отключаем кнопку SAVE при загрузке
         saveButton.isEnabled = false
         
-        // Если поле (placeName) пустое то кнопка SAVE скрыта
-        // Каждый раз при редактировании поля (placeName) будет срабатывать этот метод который в свою очередь будет вызывать метод #selector(textFieldChanged) а метод #selector(textFieldChanged) - будет следить за тем что заполнено ли текстовое поле или нет, если заполнено то кнопка SAVE будет доступна.
+        // Если поле (namePlayer) пустое то кнопка SAVE скрыта
+        // Каждый раз при редактировании поля (namePlayer) будет срабатывать этот метод который в свою очередь будет вызывать метод #selector(textFieldChanged) а метод #selector(textFieldChanged) - будет следить за тем что заполнено ли текстовое поле или нет, если заполнено то кнопка SAVE будет доступна.
         namePlayer.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
@@ -103,7 +103,7 @@ class AddPlayerTableViewController: UITableViewController {
     func saveNewPlace() {
         
         newPlayer = Player(imageStatic: nil,
-                           image: placeImage.image,
+                           image: imagePlayer.image,
                            name: namePlayer.text!,
                            teamNumber: nil,
                            payment: payMent.text!)
@@ -112,7 +112,7 @@ class AddPlayerTableViewController: UITableViewController {
         var image: UIImage?
         // var imageIsChange = false
         if imageIsChange {
-            image = placeImage.image
+            image = imagePlayer.image
         } else {
             image = #imageLiteral(resourceName: "Даулет")
         }
@@ -184,11 +184,11 @@ extension AddPlayerTableViewController: UIImagePickerControllerDelegate, UINavig
         
         // Здесь нам надо присвоить outlet-у (imageOfPlace) изображение, которое выбрал пользователь
         // .editedImage - Данный тип контента позволяет использовать отредактированное пользователем изображение
-        placeImage.image = info[.editedImage] as? UIImage
+        imagePlayer.image = info[.editedImage] as? UIImage
         
         // Работаем над форматом изображения
-        placeImage.contentMode = .scaleAspectFill // Позволяет масштабировать изображение по содержимому UIImage
-        placeImage.clipsToBounds = true // Обрезаем по кроям
+        imagePlayer.contentMode = .scaleAspectFill // Позволяет масштабировать изображение по содержимому UIImage
+        imagePlayer.clipsToBounds = true // Обрезаем по кроям
         
         // Картинку мы не меняем
         imageIsChange = true
