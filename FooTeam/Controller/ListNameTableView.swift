@@ -55,6 +55,10 @@ class ListNameTableView: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
     
     
     

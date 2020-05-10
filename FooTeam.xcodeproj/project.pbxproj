@@ -47,6 +47,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B0D19C724688BB200EFE5C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BF4C98C2450A7F2006EEAC5 /* Main.storyboard */,
+				1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B0D19C824688BEE00EFE5C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1BF4C9A22450E04D006EEAC5 /* ModelList.swift */,
+				1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */,
+				1BF4C9A02450DF9E006EEAC5 /* CustomeTableViewCell.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B0D19C924688C0300EFE5C7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B4FECD0245AF5610007EAB5 /* ViewController.swift */,
+				1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */,
+				1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1BF4C97A2450A7F1006EEAC5 = {
 			isa = PBXGroup;
 			children = (
@@ -66,17 +95,12 @@
 		1BF4C9852450A7F1006EEAC5 /* FooTeam */ = {
 			isa = PBXGroup;
 			children = (
-				1B4FECD0245AF5610007EAB5 /* ViewController.swift */,
-				1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */,
-				1BF4C9A22450E04D006EEAC5 /* ModelList.swift */,
-				1BF4C9A02450DF9E006EEAC5 /* CustomeTableViewCell.swift */,
-				1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */,
-				1BF4C98C2450A7F2006EEAC5 /* Main.storyboard */,
-				1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */,
+				1B0D19C924688C0300EFE5C7 /* Controller */,
+				1B0D19C824688BEE00EFE5C7 /* Model */,
+				1B0D19C724688BB200EFE5C7 /* View */,
 				1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */,
 				1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */,
 				1BF4C98F2450A7F3006EEAC5 /* Assets.xcassets */,
-				1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */,
 				1BF4C9942450A7F3006EEAC5 /* Info.plist */,
 			);
 			path = FooTeam;

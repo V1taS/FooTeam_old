@@ -18,9 +18,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var index = 0
+        for i in Player.listTeam {
+            playersField[index].text = i
+            if index == 11 { break }
+            index += 1
+        }
 
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
