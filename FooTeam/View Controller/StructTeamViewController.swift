@@ -10,7 +10,7 @@ import UIKit
 
 class StructTeamViewController: UIViewController {
     
-    let player = Player.getPlayer()
+    var player = Player.getPlayer()
     
     @IBOutlet var photoTeamOne: [UIImageView]!
     @IBOutlet var nameTeamOne: [UILabel]!
@@ -21,17 +21,13 @@ class StructTeamViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addPlayer(listPlayer: player)
+        addPlayer(listPlayer: &player)
         
-//        nameTeamOne[0].text = "Vitalii"
-
-        // Do any additional setup after loading the view.
     }
         
-        
-    
     // ------------ Добавление играков ------------
-    func addPlayer(listPlayer players: [Player]) {
+    func addPlayer(listPlayer players: inout [Player]) {
+        players.shuffle()
 
         var countPlayer = 1
         var indexFirstTeam = 0
@@ -43,12 +39,14 @@ class StructTeamViewController: UIViewController {
                 if indexFirstTeam <= 5 {
                     nameTeamOne[indexFirstTeam].text = player.name
                     photoTeamOne[indexFirstTeam].image = UIImage(named: player.imageStatic!)
+                    photoTeamOne[indexFirstTeam].layer.cornerRadius = photoTeamOne[indexFirstTeam].frame.width / 2
                     indexFirstTeam += 1
                 }
             } else if countPlayer <= 12 {
                 if indexSecondTeam <= 5 {
                     nameTeamTwo[indexSecondTeam].text = player.name
                     photoTeamTwo[indexSecondTeam].image = UIImage(named: player.imageStatic!)
+                    photoTeamTwo[indexSecondTeam].layer.cornerRadius = photoTeamTwo[indexSecondTeam].frame.width / 2
                     indexSecondTeam += 1
                 }
             } else if countPlayer >= 13{

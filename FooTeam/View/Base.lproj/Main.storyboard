@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jr6-D6-5ku">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jr6-D6-5ku">
     <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -29,11 +29,11 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QqS-wl-duH">
                                                 <rect key="frame" x="167" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="oIg-0b-BRp">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="oIg-0b-BRp">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="80" id="984-Vf-dsp"/>
-                                                            <constraint firstAttribute="height" constant="80" id="h18-Qc-a3W"/>
+                                                            <constraint firstAttribute="height" constant="80" id="4wT-kY-DWP"/>
+                                                            <constraint firstAttribute="width" constant="80" id="ugg-34-kBv"/>
                                                         </constraints>
                                                     </imageView>
                                                 </subviews>
@@ -62,7 +62,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="p4x-Cq-cY7">
                                                 <rect key="frame" x="11.5" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="kLD-FZ-36B">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="kLD-FZ-36B">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="1vd-XG-dpr"/>
@@ -90,7 +90,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R5E-SR-nkM">
                                                 <rect key="frame" x="11.5" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="2wx-MO-Vwn">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="2wx-MO-Vwn">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="985-94-dwg"/>
@@ -118,7 +118,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yhl-3h-uGf">
                                                 <rect key="frame" x="12" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="Sl9-52-p1n">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="Sl9-52-p1n">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="OBl-4s-L2H"/>
@@ -151,7 +151,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fh6-9F-VdM">
                                                 <rect key="frame" x="11.5" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="VvD-Hq-jCR">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="VvD-Hq-jCR">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="85I-6R-lbV"/>
@@ -179,7 +179,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gZJ-AY-D40">
                                                 <rect key="frame" x="11.5" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="eKj-v0-bSu">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="eKj-v0-bSu">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="bZE-fh-ORd"/>
@@ -212,7 +212,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gqr-x7-mge">
                                                 <rect key="frame" x="167" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="nbY-sB-xlC">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="nbY-sB-xlC">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="OKN-0z-dmG"/>
@@ -245,7 +245,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dgo-YA-pc6">
                                                 <rect key="frame" x="11.5" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="FbY-Fp-nTw">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="FbY-Fp-nTw">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="5cu-qJ-MRc"/>
@@ -273,7 +273,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F1l-aK-A5t">
                                                 <rect key="frame" x="11.5" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="XyR-iR-VNu">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="XyR-iR-VNu">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="80" id="7Pp-h0-irH"/>
@@ -301,7 +301,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vvd-Jx-QAc">
                                                 <rect key="frame" x="12" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="0Ii-xD-uAP">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="0Ii-xD-uAP">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="OjO-HQ-ZGW"/>
@@ -334,7 +334,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E8R-K5-JIU">
                                                 <rect key="frame" x="11.5" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="sIU-g8-hsT">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="sIU-g8-hsT">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="61m-Ke-kPX"/>
@@ -362,7 +362,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GxO-hF-Mkw">
                                                 <rect key="frame" x="11.5" y="0.0" width="80" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="M9h-7N-Fwr">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vitaly" translatesAutoresizingMaskIntoConstraints="NO" id="M9h-7N-Fwr">
                                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="80" id="Gmf-eE-MS6"/>
@@ -603,11 +603,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KLq-C6-NDk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FooTeam" id="cKN-IE-VMN">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="f9o-jM-Glv">
-                            <color key="tintColor" name="BlackAndWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="FooTeam" id="cKN-IE-VMN"/>
                     <connections>
                         <outlet property="tempCloudLabel" destination="MCC-ci-Dik" id="fvw-dP-kea"/>
                         <outlet property="temperatureLabel" destination="eRz-mo-Wrj" id="n6l-dL-h5O"/>
