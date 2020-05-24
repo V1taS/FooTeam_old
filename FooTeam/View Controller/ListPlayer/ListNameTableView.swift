@@ -16,17 +16,11 @@ class ListNameTableView: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
     
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return listItem.count
     }
     
@@ -46,7 +40,6 @@ class ListNameTableView: UITableViewController {
             cell.imageOutlet.image = player.image
         }
         
-        
 //        // Скруглили Imageview
 //        cell.imageOutlet.layer.cornerRadius = cell.imageOutlet.frame.size.height / 2
 //        // Обрезали по краям
@@ -54,13 +47,6 @@ class ListNameTableView: UITableViewController {
         
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
-    }
-    
-    
-    
     
     // Метод который отрабатывает выход из ViewController
     // Мы на него будем ссылаться
@@ -76,5 +62,46 @@ class ListNameTableView: UITableViewController {
         // Перезагружаем tableView
         tableView.reloadData()
     }
-
+    
+    // MARK: - Delet players from listItem
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            listItem.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    // MARK: - Move players from listItem
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movePlayers = listItem.remove(at: sourceIndexPath.row)
+        listItem.insert(movePlayers, at: destinationIndexPath.row)
+        tableView.reloadData()
+    }
+    
+    // MARK: - Leading Swipe Actions
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let favourite = favouriteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [favourite])
+    }
+    
+    func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
+        var object = listItem[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: "I GO") { (action, view, completion) in
+            object.isFavourite = !object.isFavourite
+            self.listItem[indexPath.row] = object
+            completion(true)
+        }
+        action.backgroundColor = object.isFavourite ? #colorLiteral(red: 0, green: 0.364138335, blue: 0.1126995459, alpha: 1) : .systemGray
+        action.image = UIImage(systemName: "person.badge.plus")
+        return action
+    }
 }

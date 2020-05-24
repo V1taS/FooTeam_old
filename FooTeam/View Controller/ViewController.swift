@@ -15,12 +15,14 @@ class ViewController: UIViewController {
     let listAllPlayer = Player.getPlayer()
     var networkWeatherManager = NetworkWeatherManager()
     
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var tempCloudLabel: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        timeFoot()
         onCompletionWeather()
         networkWeatherManager.fetchCurrentWeather()
     }
@@ -39,6 +41,42 @@ class ViewController: UIViewController {
             self.tempCloudLabel.image = UIImage(systemName: weather.systemIconNameString)
         }
     }
+    
+    // MARK: - Time
+    private func timeFoot() {
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let weekday = calendar.component(.weekday, from: date)
+        
+        switch weekday {
+        case 1:
+            print("Сегодня Воскресенье")
+            timeLabel.text = "через: 3 дня"
+        case 2:
+            print("Сегодня Понедельник")
+            timeLabel.text = "через: 2 дня"
+        case 3:
+            print("Сегодня Вторник")
+            timeLabel.text = "через: 1 день"
+        case 4:
+            print("Сегодня Среда")
+            timeLabel.text = ": завтра"
+        case 5:
+            print("Сегодня Четверг")
+            timeLabel.text = ": сегодня"
+            timeLabel.textColor = .red
+        case 6:
+            print("Сегодня Пятница")
+            timeLabel.text = ": была вчера"
+        case 7:
+            print("Сегодня Суббота")
+            timeLabel.text = "через: 4 дня"
+        default:
+            print("Error")
+        }
+    }
+    
 }
 
 // MARK: - Collection View

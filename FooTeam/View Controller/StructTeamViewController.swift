@@ -21,13 +21,12 @@ class StructTeamViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addPlayer(listPlayer: &player)
+        addPlayer(listPlayer: player)
         
     }
         
     // ------------ Добавление играков ------------
-    func addPlayer(listPlayer players: inout [Player]) {
-        players.shuffle()
+    func addPlayer(listPlayer players: [Player]) {
 
         var countPlayer = 1
         var indexFirstTeam = 0

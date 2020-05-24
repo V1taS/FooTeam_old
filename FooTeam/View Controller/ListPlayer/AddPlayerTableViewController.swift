@@ -47,8 +47,6 @@ class AddPlayerTableViewController: UITableViewController {
                                                 message: nil,
                                                 preferredStyle: .actionSheet)
             
-            
-            
             // Создаем список пользовательских действий camera
             // Добавляем ключ приватности для камеры
             // NSCameraUsageDescription ($(PRODUCT_NAME) photo use)
@@ -63,8 +61,6 @@ class AddPlayerTableViewController: UITableViewController {
             // Выравнимаем текст кнопки слева
             camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             
-            
-            
             // Создаем список пользовательских действий photo
             let photo = UIAlertAction(title: "Photo",
                                       style: .default) { _ in
@@ -77,12 +73,8 @@ class AddPlayerTableViewController: UITableViewController {
             // Выравнимаем текст кнопки слева
             photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             
-            
-            
             // Создаем список пользовательских действий cancel
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-            
-            
             
             // Теперь необходимо наши Action поместить в UIAlertController
             actionSheet.addAction(camera)
@@ -98,7 +90,6 @@ class AddPlayerTableViewController: UITableViewController {
         }
     }
     
-    
     // Метод который будет сохранять данные из textField
     func saveNewPlace() {
         
@@ -106,8 +97,8 @@ class AddPlayerTableViewController: UITableViewController {
                            image: imagePlayer.image,
                            name: namePlayer.text!,
                            teamNumber: nil,
-                           payment: payMent.text!)
-        
+                           payment: payMent.text!,
+                           isFavourite: false)
         
         var image: UIImage?
         // var imageIsChange = false
@@ -121,7 +112,8 @@ class AddPlayerTableViewController: UITableViewController {
                               image: image,
                               name: namePlayer.text!,
                               teamNumber: nil,
-                              payment: payMent.text!)
+                              payment: payMent.text!,
+                              isFavourite: false)
         
     }
     
@@ -129,7 +121,6 @@ class AddPlayerTableViewController: UITableViewController {
         // При нажатии на cancel возвращаемся назад
         dismiss(animated: true)
     }
-    
     
 }
 
@@ -152,7 +143,6 @@ extension AddPlayerTableViewController: UITextFieldDelegate {
         }
     }
 }
-
 
 // MARK: - Работа с изображениями
 
@@ -177,7 +167,6 @@ extension AddPlayerTableViewController: UIImagePickerControllerDelegate, UINavig
             present(imagePicker, animated: true)
         }
     }
-    
     
     // Метод сообщает что выбран статичный фрагмен видео или фото
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

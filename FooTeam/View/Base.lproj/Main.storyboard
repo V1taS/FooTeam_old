@@ -534,25 +534,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WuT-3H-0Kv" userLabel="Погода">
-                                <rect key="frame" x="74.5" y="250" width="265.5" height="41"/>
+                                <rect key="frame" x="114" y="250" width="186" height="41"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWe-8N-6Fn">
-                                        <rect key="frame" x="0.0" y="0.0" width="265.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="20.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игра состоится:  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZy-Wm-aN3">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игра состоится  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZy-Wm-aN3">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
                                                 <color key="textColor" name="BlackAndWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="26.05.2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYC-AZ-cmZ">
-                                                <rect key="frame" x="124.5" y="0.0" width="84" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYC-AZ-cmZ">
+                                                <rect key="frame" x="119.5" y="0.0" width="9.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
                                                 <color key="textColor" name="BlackAndWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" в 21:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YN-Mb-Nd9">
-                                                <rect key="frame" x="208.5" y="0.0" width="57" height="20.5"/>
+                                                <rect key="frame" x="129" y="0.0" width="57" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
                                                 <color key="textColor" name="BlackAndWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -560,7 +560,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihs-pQ-1s8">
-                                        <rect key="frame" x="50" y="20.5" width="165.5" height="20.5"/>
+                                        <rect key="frame" x="10.5" y="20.5" width="165.5" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Температура: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLV-iB-G3O">
                                                 <rect key="frame" x="0.0" y="0.0" width="102.5" height="20.5"/>
@@ -607,11 +607,12 @@
                     <connections>
                         <outlet property="tempCloudLabel" destination="MCC-ci-Dik" id="fvw-dP-kea"/>
                         <outlet property="temperatureLabel" destination="eRz-mo-Wrj" id="n6l-dL-h5O"/>
+                        <outlet property="timeLabel" destination="CYC-AZ-cmZ" id="rgg-yz-Noj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIH-aK-0tY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2424.6376811594205" y="223.66071428571428"/>
+            <point key="canvasLocation" x="2425" y="224"/>
         </scene>
         <!--Игроки-->
         <scene sceneID="bt0-KE-pPF">
@@ -946,6 +947,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uwp-LG-R10">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="BlackAndWhite"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
