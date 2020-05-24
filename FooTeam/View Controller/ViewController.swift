@@ -14,6 +14,11 @@ class ViewController: UIViewController {
     
     let listAllPlayer = Player.getPlayer()
     var networkWeatherManager = NetworkWeatherManager()
+    var image: [UIImageView]?
+    
+    @IBOutlet var nameTemOne: [UILabel]!
+    @IBOutlet var nameTemTwo: [UILabel]!
+    
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -21,6 +26,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ModelAddPlayer.addPlayerName(
+            nameTeamOne: &nameTemOne,
+            nameTeamTwo: &nameTemTwo)
         
         timeFoot()
         onCompletionWeather()
@@ -93,6 +102,30 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.imageCell.layer.cornerRadius = cell.imageCell.frame.size.height / 2
         cell.imageCell.clipsToBounds = true
         
+        return cell
+    }
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    // MARK: - Table view data source
+
+     func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listAllPlayer.count
+    }
+
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellNewPlayer", for: indexPath) as! NewplayerTableViewCell
+        let player = listAllPlayer[indexPath.row]
+        
+        cell.namePlayers.text = player.name
+        cell.imagePlayers.image = UIImage(named: player.imageStatic!)
+        
+        cell.imagePlayers.layer.cornerRadius = cell.imagePlayers.frame.width / 2
+
         return cell
     }
 }

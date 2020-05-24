@@ -15,6 +15,8 @@
 		1B4FECD1245AF5610007EAB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD0245AF5610007EAB5 /* ViewController.swift */; };
 		1B4FECD3245AF8FF0007EAB5 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */; };
 		1B6F7CFA246CBE590047BB34 /* StructTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6F7CF9246CBE590047BB34 /* StructTeamViewController.swift */; };
+		1BC6093F247A1D6500D3CC9B /* NewplayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6093E247A1D6500D3CC9B /* NewplayerTableViewCell.swift */; };
+		1BC60941247A256200D3CC9B /* ModelAddPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC60940247A256200D3CC9B /* ModelAddPlayer.swift */; };
 		1BF097EF245AAE4900971451 /* AddPlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */; };
 		1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */; };
 		1BF4C9892450A7F1006EEAC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */; };
@@ -35,6 +37,8 @@
 		1B4FECD0245AF5610007EAB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
 		1B6F7CF9246CBE590047BB34 /* StructTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StructTeamViewController.swift; path = "FooTeam/View Controller/StructTeamViewController.swift"; sourceTree = SOURCE_ROOT; };
+		1BC6093E247A1D6500D3CC9B /* NewplayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewplayerTableViewCell.swift; sourceTree = "<group>"; };
+		1BC60940247A256200D3CC9B /* ModelAddPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAddPlayer.swift; sourceTree = "<group>"; };
 		1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerTableViewController.swift; sourceTree = "<group>"; };
 		1BF4C9832450A7F1006EEAC5 /* FooTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FooTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				1BF4C9A22450E04D006EEAC5 /* ModelList.swift */,
+				1BC60940247A256200D3CC9B /* ModelAddPlayer.swift */,
 				1B6F7CF8246CBA510047BB34 /* ListPlayer */,
 				1B6F7CF7246CB9EE0047BB34 /* Weather */,
 			);
@@ -84,6 +89,7 @@
 				1B4FECD0245AF5610007EAB5 /* ViewController.swift */,
 				1B6F7CF9246CBE590047BB34 /* StructTeamViewController.swift */,
 				1B6F7CF6246CB9A60047BB34 /* ListPlayer */,
+				1BC6093D247A1C9300D3CC9B /* NewPlayer */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -134,6 +140,14 @@
 				1BF4C9A02450DF9E006EEAC5 /* CustomeTableViewCell.swift */,
 			);
 			path = ListPlayer;
+			sourceTree = "<group>";
+		};
+		1BC6093D247A1C9300D3CC9B /* NewPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				1BC6093E247A1D6500D3CC9B /* NewplayerTableViewCell.swift */,
+			);
+			path = NewPlayer;
 			sourceTree = "<group>";
 		};
 		1BF4C97A2450A7F1006EEAC5 = {
@@ -236,10 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B283246246B6B0B00C675F9 /* ViewController+alertController.swift in Sources */,
+				1BC6093F247A1D6500D3CC9B /* NewplayerTableViewCell.swift in Sources */,
 				1B4FECD3245AF8FF0007EAB5 /* CellViewController.swift in Sources */,
 				1B28324F246B7A1500C675F9 /* CurrentWeather.swift in Sources */,
 				1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */,
 				1B6F7CFA246CBE590047BB34 /* StructTeamViewController.swift in Sources */,
+				1BC60941247A256200D3CC9B /* ModelAddPlayer.swift in Sources */,
 				1BF097EF245AAE4900971451 /* AddPlayerTableViewController.swift in Sources */,
 				1B4FECD1245AF5610007EAB5 /* ViewController.swift in Sources */,
 				1B283249246B6BC700C675F9 /* Constants.swift in Sources */,
