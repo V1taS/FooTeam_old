@@ -24,11 +24,12 @@ class Sorted {
             
             if teamOne.count <= 5 {
                 teamOne.append(player)
+                continue
             } else if teamTwo.count <= 5 {
                 teamTwo.append(player)
-            } else {
-                reserve.append(player)
+                continue
             }
+            reserve.append(player)
         }
         return [teamOne, teamTwo, reserve]
     }

@@ -17,5 +17,5 @@ class Team {
     
     var teamOne: [Player] { team[0] }
     var teamTwo: [Player] { team[1] }
-    var reserve: [Player] { team[1] }
+    var reserve: [Player] { team[2] }
 }
