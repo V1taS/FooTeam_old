@@ -7,16 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B283246246B6B0B00C675F9 /* ViewController+alertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B283245246B6B0B00C675F9 /* ViewController+alertController.swift */; };
 		1B283249246B6BC700C675F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B283248246B6BC700C675F9 /* Constants.swift */; };
 		1B28324B246B6C0800C675F9 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */; };
 		1B28324D246B73B900C675F9 /* CurrentWeatherDater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324C246B73B900C675F9 /* CurrentWeatherDater.swift */; };
 		1B28324F246B7A1500C675F9 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324E246B7A1500C675F9 /* CurrentWeather.swift */; };
 		1B4FECD1245AF5610007EAB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD0245AF5610007EAB5 /* ViewController.swift */; };
-		1B4FECD3245AF8FF0007EAB5 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */; };
-		1B6F7CFA246CBE590047BB34 /* StructTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6F7CF9246CBE590047BB34 /* StructTeamViewController.swift */; };
+		1B4FECD3245AF8FF0007EAB5 /* ListNameCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD2245AF8FF0007EAB5 /* ListNameCellViewController.swift */; };
 		1BC6093F247A1D6500D3CC9B /* NewplayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6093E247A1D6500D3CC9B /* NewplayerTableViewCell.swift */; };
 		1BC60941247A256200D3CC9B /* ModelAddPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC60940247A256200D3CC9B /* ModelAddPlayer.swift */; };
+		1BEA42FF247B4FBF00A4A000 /* StructTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA42FE247B4FBF00A4A000 /* StructTeamViewController.swift */; };
 		1BF097EF245AAE4900971451 /* AddPlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */; };
 		1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */; };
 		1BF4C9892450A7F1006EEAC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */; };
@@ -24,21 +23,20 @@
 		1BF4C9902450A7F3006EEAC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4C98F2450A7F3006EEAC5 /* Assets.xcassets */; };
 		1BF4C9932450A7F3006EEAC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */; };
 		1BF4C99B2450CCC8006EEAC5 /* ListNameTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */; };
-		1BF4C9A12450DF9E006EEAC5 /* CustomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9A02450DF9E006EEAC5 /* CustomeTableViewCell.swift */; };
+		1BF4C9A12450DF9E006EEAC5 /* AddPlayerCustomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9A02450DF9E006EEAC5 /* AddPlayerCustomeTableViewCell.swift */; };
 		1BF4C9A32450E04D006EEAC5 /* ModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9A22450E04D006EEAC5 /* ModelList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B283245246B6B0B00C675F9 /* ViewController+alertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+alertController.swift"; sourceTree = "<group>"; };
 		1B283248246B6BC700C675F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
 		1B28324C246B73B900C675F9 /* CurrentWeatherDater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherDater.swift; sourceTree = "<group>"; };
 		1B28324E246B7A1500C675F9 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		1B4FECD0245AF5610007EAB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
-		1B6F7CF9246CBE590047BB34 /* StructTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StructTeamViewController.swift; path = "FooTeam/View Controller/StructTeamViewController.swift"; sourceTree = SOURCE_ROOT; };
+		1B4FECD2245AF8FF0007EAB5 /* ListNameCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNameCellViewController.swift; sourceTree = "<group>"; };
 		1BC6093E247A1D6500D3CC9B /* NewplayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewplayerTableViewCell.swift; sourceTree = "<group>"; };
 		1BC60940247A256200D3CC9B /* ModelAddPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAddPlayer.swift; sourceTree = "<group>"; };
+		1BEA42FE247B4FBF00A4A000 /* StructTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructTeamViewController.swift; sourceTree = "<group>"; };
 		1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerTableViewController.swift; sourceTree = "<group>"; };
 		1BF4C9832450A7F1006EEAC5 /* FooTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FooTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +46,7 @@
 		1BF4C9922450A7F3006EEAC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BF4C9942450A7F3006EEAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNameTableView.swift; sourceTree = "<group>"; };
-		1BF4C9A02450DF9E006EEAC5 /* CustomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeTableViewCell.swift; sourceTree = "<group>"; };
+		1BF4C9A02450DF9E006EEAC5 /* AddPlayerCustomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerCustomeTableViewCell.swift; sourceTree = "<group>"; };
 		1BF4C9A22450E04D006EEAC5 /* ModelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,64 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B0D19C724688BB200EFE5C7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1BF4C98C2450A7F2006EEAC5 /* Main.storyboard */,
-				1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		1B0D19C824688BEE00EFE5C7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1BF4C9A22450E04D006EEAC5 /* ModelList.swift */,
-				1BC60940247A256200D3CC9B /* ModelAddPlayer.swift */,
-				1B6F7CF8246CBA510047BB34 /* ListPlayer */,
-				1B6F7CF7246CB9EE0047BB34 /* Weather */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		1B0D19C924688C0300EFE5C7 /* View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				1B4FECD0245AF5610007EAB5 /* ViewController.swift */,
-				1B6F7CF9246CBE590047BB34 /* StructTeamViewController.swift */,
-				1B6F7CF6246CB9A60047BB34 /* ListPlayer */,
-				1BC6093D247A1C9300D3CC9B /* NewPlayer */,
-			);
-			path = "View Controller";
-			sourceTree = "<group>";
-		};
-		1B283244246B6AE300C675F9 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				1B283245246B6B0B00C675F9 /* ViewController+alertController.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		1B283247246B6B3C00C675F9 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */,
-				1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */,
 				1BF4C98F2450A7F3006EEAC5 /* Assets.xcassets */,
 				1BF4C9942450A7F3006EEAC5 /* Info.plist */,
 				1B283248246B6BC700C675F9 /* Constants.swift */,
 			);
 			path = "Supporting files";
-			sourceTree = "<group>";
-		};
-		1B6F7CF6246CB9A60047BB34 /* ListPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */,
-				1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */,
-			);
-			path = ListPlayer;
 			sourceTree = "<group>";
 		};
 		1B6F7CF7246CB9EE0047BB34 /* Weather */ = {
@@ -133,21 +81,150 @@
 			path = Weather;
 			sourceTree = "<group>";
 		};
-		1B6F7CF8246CBA510047BB34 /* ListPlayer */ = {
+		1BEA42EC247B4A1100A4A000 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */,
-				1BF4C9A02450DF9E006EEAC5 /* CustomeTableViewCell.swift */,
+				1BEA42EF247B4A3700A4A000 /* Model */,
+				1BEA42EE247B4A3000A4A000 /* View */,
+				1BEA42ED247B4A2700A4A000 /* Controller */,
+				1BEA42FD247B4DD600A4A000 /* NetworkService */,
 			);
-			path = ListPlayer;
+			path = Application;
 			sourceTree = "<group>";
 		};
-		1BC6093D247A1C9300D3CC9B /* NewPlayer */ = {
+		1BEA42ED247B4A2700A4A000 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */,
+				1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1BEA42EE247B4A3000A4A000 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BF4C98C2450A7F2006EEAC5 /* Main.storyboard */,
+				1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1BEA42EF247B4A3700A4A000 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1BF4C9A22450E04D006EEAC5 /* ModelList.swift */,
+				1BC60940247A256200D3CC9B /* ModelAddPlayer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1BEA42F0247B4A8E00A4A000 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1BEA42F3247B4AAC00A4A000 /* Model */,
+				1BEA42F2247B4AA400A4A000 /* View */,
+				1BEA42F1247B4A9A00A4A000 /* Controller */,
+				1B6F7CF7246CB9EE0047BB34 /* Weather */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1BEA42F1247B4A9A00A4A000 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1B4FECD0245AF5610007EAB5 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1BEA42F2247B4AA400A4A000 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BEA42FE247B4FBF00A4A000 /* StructTeamViewController.swift */,
 				1BC6093E247A1D6500D3CC9B /* NewplayerTableViewCell.swift */,
 			);
-			path = NewPlayer;
+			path = View;
+			sourceTree = "<group>";
+		};
+		1BEA42F3247B4AAC00A4A000 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1BEA42F4247B4AC600A4A000 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				1BEA42F7247B4AF300A4A000 /* Model */,
+				1BEA42F6247B4AEB00A4A000 /* View */,
+				1BEA42F5247B4ADD00A4A000 /* Controller */,
+			);
+			path = Team;
+			sourceTree = "<group>";
+		};
+		1BEA42F5247B4ADD00A4A000 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1BEA42F6247B4AEB00A4A000 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1BEA42F7247B4AF300A4A000 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1BEA42F8247B4B0300A4A000 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				1BEA42FB247B4B2300A4A000 /* Model */,
+				1BEA42FA247B4B1B00A4A000 /* View */,
+				1BEA42F9247B4B1100A4A000 /* Controllers */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		1BEA42F9247B4B1100A4A000 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */,
+				1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1BEA42FA247B4B1B00A4A000 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B4FECD2245AF8FF0007EAB5 /* ListNameCellViewController.swift */,
+				1BF4C9A02450DF9E006EEAC5 /* AddPlayerCustomeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1BEA42FB247B4B2300A4A000 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1BEA42FD247B4DD600A4A000 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 		1BF4C97A2450A7F1006EEAC5 = {
@@ -169,10 +246,10 @@
 		1BF4C9852450A7F1006EEAC5 /* FooTeam */ = {
 			isa = PBXGroup;
 			children = (
-				1B0D19C924688C0300EFE5C7 /* View Controller */,
-				1B0D19C824688BEE00EFE5C7 /* Model */,
-				1B0D19C724688BB200EFE5C7 /* View */,
-				1B283244246B6AE300C675F9 /* Extensions */,
+				1BEA42EC247B4A1100A4A000 /* Application */,
+				1BEA42F0247B4A8E00A4A000 /* Home */,
+				1BEA42F4247B4AC600A4A000 /* Team */,
+				1BEA42F8247B4B0300A4A000 /* Players */,
 				1B283247246B6B3C00C675F9 /* Supporting files */,
 			);
 			path = FooTeam;
@@ -249,21 +326,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B283246246B6B0B00C675F9 /* ViewController+alertController.swift in Sources */,
 				1BC6093F247A1D6500D3CC9B /* NewplayerTableViewCell.swift in Sources */,
-				1B4FECD3245AF8FF0007EAB5 /* CellViewController.swift in Sources */,
+				1B4FECD3245AF8FF0007EAB5 /* ListNameCellViewController.swift in Sources */,
 				1B28324F246B7A1500C675F9 /* CurrentWeather.swift in Sources */,
 				1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */,
-				1B6F7CFA246CBE590047BB34 /* StructTeamViewController.swift in Sources */,
 				1BC60941247A256200D3CC9B /* ModelAddPlayer.swift in Sources */,
 				1BF097EF245AAE4900971451 /* AddPlayerTableViewController.swift in Sources */,
 				1B4FECD1245AF5610007EAB5 /* ViewController.swift in Sources */,
 				1B283249246B6BC700C675F9 /* Constants.swift in Sources */,
 				1BF4C99B2450CCC8006EEAC5 /* ListNameTableView.swift in Sources */,
 				1B28324D246B73B900C675F9 /* CurrentWeatherDater.swift in Sources */,
+				1BEA42FF247B4FBF00A4A000 /* StructTeamViewController.swift in Sources */,
 				1BF4C9A32450E04D006EEAC5 /* ModelList.swift in Sources */,
 				1BF4C9892450A7F1006EEAC5 /* SceneDelegate.swift in Sources */,
-				1BF4C9A12450DF9E006EEAC5 /* CustomeTableViewCell.swift in Sources */,
+				1BF4C9A12450DF9E006EEAC5 /* AddPlayerCustomeTableViewCell.swift in Sources */,
 				1B28324B246B6C0800C675F9 /* NetworkWeatherManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
