@@ -18,9 +18,11 @@ class StructTeamViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ModelAddPlayer.addPlayerNameandImage(nameTeamOne: &self.nameTeamOne,
-                                 photoTeamOne: &self.photoTeamOne,
-                                 nameTeamTwo: &self.nameTeamTwo,
-                                 photoTeamTwo: &self.photoTeamTwo)
+        ModelNameAndPhotoTeam.shared.getTeamOne(players: Team.shared.teamOne,
+                                    name: nameTeamOne,
+                                    photo: photoTeamOne)
+        ModelNameAndPhotoTeam.shared.getTeamOne(players: Team.shared.teamTwo,
+                                    name: nameTeamTwo,
+                                    photo: photoTeamTwo)
     }
 }

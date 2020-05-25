@@ -26,7 +26,7 @@ struct Player {
         players.shuffle()
         
         for player in listTeam {
-            players.append(Player(imageStatic: player, image: nil, name: player, teamNumber: "Команда: 1 или 2", payment: "Подписка до 05.30 игр ✅", isFavourite: false))
+            players.append(Player(imageStatic: player, image: nil, name: player, teamNumber: "Команда: 1 или 2", payment: "Подписка до 05.30 игр ✅", isFavourite: true))
         }
         return players
     }
