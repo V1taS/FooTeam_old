@@ -28,10 +28,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ModelOnlyNameTeam.shared.getTeamOne(players: Team.shared.teamOne,
-                                            name: nameTemOne)
-        ModelOnlyNameTeam.shared.getTeamOne(players: Team.shared.teamOne,
-                                            name: nameTemTwo)
+        ModelOnlyNameTeam.shared.getTeamOne(players: Team.shared.teamOne, name: nameTemOne)
+        
+        ModelOnlyNameTeam.shared.getTeamOne(players: Team.shared.teamTwo, name: nameTemTwo)
         
         TimeFoot.shared.timeFoot(timeLabel: timeLabel)
         onCompletionWeather()
