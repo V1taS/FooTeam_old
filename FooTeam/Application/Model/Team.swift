@@ -17,5 +17,7 @@ class Team {
     
     var teamOne: [Player] { team[0] }
     var teamTwo: [Player] { team[1] }
+    var teamAll: [Player] { Player.getPlayer() }
+    var teamAllRandom: [Player] { team[0] + team[1] + team[2] }
     var reserve: [Player] { team[2] }
 }

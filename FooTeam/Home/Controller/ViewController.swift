@@ -8,11 +8,9 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class ViewController: UIViewController {
     
-    var networkWeatherManager = NetworkWeatherManager()
+    @IBOutlet var tableView: UITableView!
     
     @IBOutlet var nameTemOne: [UILabel]!
     @IBOutlet var nameTemTwo: [UILabel]!
@@ -23,6 +21,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var reserve: [UILabel]!
     
+    var networkWeatherManager = NetworkWeatherManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +40,23 @@ class ViewController: UIViewController {
         networkWeatherManager.fetchCurrentWeather()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        let playersAddVC = segue.source as! AddPlayerTableViewController
+//        users.append(userManagerVC.userNameTextField.text ?? "Noname")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeSegue" {
+            let personStatSegueVC = segue.destination as! PersonalStatisticsController
+            personStatSegueVC.team = sender as? Player
+        }
+    }
+    
     // MARK: - API parse
     private func onCompletionWeather() {
         networkWeatherManager.onCompletion = { [weak self] currentWeather in
@@ -54,47 +70,5 @@ class ViewController: UIViewController {
             self.temperatureLabel.text = weather.temperatureString
             self.tempCloudLabel.image = UIImage(systemName: weather.systemIconNameString)
         }
-    }
-}
-
-// MARK: - Collection View
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Team.shared.teamOne.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CellViewController
-        
-        cell.imageCell.image = UIImage(named: Team.shared.teamOne[indexPath.row].imageStatic!)
-        cell.labelCell.text = Team.shared.teamOne[indexPath.row].name
-        cell.imageCell.layer.cornerRadius = cell.imageCell.frame.size.height / 2
-        cell.imageCell.clipsToBounds = true
-        
-        return cell
-    }
-}
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    // MARK: - Table view data source
-
-     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Team.shared.teamTwo.count
-    }
-
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellNewPlayer", for: indexPath) as! NewplayerTableViewCell
-        let player = Team.shared.teamTwo[indexPath.row]
-        
-        cell.namePlayers.text = player.name
-        cell.imagePlayers.image = UIImage(named: player.imageStatic!)
-        
-        cell.imagePlayers.layer.cornerRadius = cell.imagePlayers.frame.width / 2
-
-        return cell
     }
 }

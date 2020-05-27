@@ -10,13 +10,15 @@ import UIKit
 
 class AddPlayerTableViewController: UITableViewController {
     
-    var newPlayer: Player?
-    var imageIsChange = false
-    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var imagePlayer: UIImageView!
     @IBOutlet weak var namePlayer: UITextField!
     @IBOutlet weak var payMent: UITextField!
+    
+    var newPlayer: Player?
+    var imageIsChange = false
+    var team: Player!
+    var editModeIsOn = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,7 +100,8 @@ class AddPlayerTableViewController: UITableViewController {
                            name: namePlayer.text!,
                            teamNumber: nil,
                            payment: payMent.text!,
-                           isFavourite: false)
+                           isFavourite: false,
+                           rating: 50)
         
         var image: UIImage?
         // var imageIsChange = false
@@ -113,7 +116,8 @@ class AddPlayerTableViewController: UITableViewController {
                               name: namePlayer.text!,
                               teamNumber: nil,
                               payment: payMent.text!,
-                              isFavourite: false)
+                              isFavourite: false,
+                              rating: 50)
         
     }
     
