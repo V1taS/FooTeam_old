@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jr6-D6-5ku">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -698,7 +698,7 @@
         <!--FooTeam-->
         <scene sceneID="Myv-BM-Jdk">
             <objects>
-                <viewController id="E73-YY-Y4E" customClass="ViewController" customModule="FooTeam" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E73-YY-Y4E" customClass="MainViewController" customModule="FooTeam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bvw-cg-Tg7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1070,25 +1070,25 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WuT-3H-0Kv" userLabel="Погода">
-                                <rect key="frame" x="97.5" y="234" width="219" height="72"/>
+                                <rect key="frame" x="100" y="234" width="214" height="72"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWe-8N-6Fn">
-                                        <rect key="frame" x="0.0" y="0.0" width="219" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="24"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игра состоится  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZy-Wm-aN3">
-                                                <rect key="frame" x="0.0" y="0.0" width="140.5" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игра состоится " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZy-Wm-aN3">
+                                                <rect key="frame" x="0.0" y="0.0" width="135.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <color key="textColor" name="BlackAndWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYC-AZ-cmZ">
-                                                <rect key="frame" x="140.5" y="0.0" width="11.5" height="24"/>
+                                                <rect key="frame" x="135.5" y="0.0" width="11.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <color key="textColor" name="BlackAndWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" в 21:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YN-Mb-Nd9">
-                                                <rect key="frame" x="152" y="0.0" width="67" height="24"/>
+                                                <rect key="frame" x="147" y="0.0" width="67" height="24"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <color key="textColor" name="BlackAndWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -1096,34 +1096,34 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihs-pQ-1s8">
-                                        <rect key="frame" x="17" y="24" width="185.5" height="24"/>
+                                        <rect key="frame" x="11.5" y="24" width="191" height="24"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Температура:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLV-iB-G3O">
-                                                <rect key="frame" x="0.0" y="0.0" width="115" height="24"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Температура: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLV-iB-G3O">
+                                                <rect key="frame" x="0.0" y="0.0" width="120.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <color key="textColor" name="BlackAndWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRz-mo-Wrj">
-                                                <rect key="frame" x="115" y="0.0" width="20.5" height="24"/>
+                                                <rect key="frame" x="120.5" y="0.0" width="20.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <color key="textColor" name="BlackAndWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°С  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNc-Y0-LoF">
-                                                <rect key="frame" x="135.5" y="0.0" width="28" height="24"/>
+                                                <rect key="frame" x="141" y="0.0" width="28" height="24"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="20"/>
                                                 <color key="textColor" name="BlackAndWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.drizzle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MCC-ci-Dik">
-                                                <rect key="frame" x="163.5" y="0.0" width="22" height="25.5"/>
+                                                <rect key="frame" x="169" y="0.0" width="22" height="25.5"/>
                                                 <color key="tintColor" name="BlackAndWhite"/>
                                             </imageView>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yu7-ZK-zAh">
-                                        <rect key="frame" x="43.5" y="48" width="132.5" height="24"/>
+                                        <rect key="frame" x="41" y="48" width="132.5" height="24"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Состав на игру" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyl-b1-xVQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="132.5" height="24"/>
@@ -1684,7 +1684,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jQ4-Np-tW7"/>
-        <segue reference="evd-kk-GUw"/>
+        <segue reference="nXh-Ac-dWn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="4" width="644" height="900"/>

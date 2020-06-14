@@ -6,8 +6,6 @@
 //  Copyright © 2020 Vitalii Sosin. All rights reserved.
 //
 
-import Foundation
-
 enum NetworkError: Error {
     case failInternetError
     case noInternetConection
