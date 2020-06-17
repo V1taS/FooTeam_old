@@ -7,10 +7,11 @@
 //
 
 class Sorted {
+    
     private init() {}
     static let shared = Sorted()
     private let players = Player.getPlayer()
-
+    
     public func getData() -> [[Player]] {
         
         let randomPlayers = players.shuffled()

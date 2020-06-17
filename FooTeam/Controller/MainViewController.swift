@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainViewController: UIViewController {
     
@@ -20,6 +21,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var tempCloudLabel: UIImageView!
     
     @IBOutlet var reserve: [UILabel]!
+    
+    var db: Firestore!
     
     var networkWeatherManager = NetworkWeatherManager()
     
@@ -38,6 +41,8 @@ class MainViewController: UIViewController {
         TimeFoot.shared.timeFoot(timeLabel: timeLabel)
         onCompletionWeather()
         networkWeatherManager.fetchCurrentWeather()
+        
+        db = Firestore.firestore()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,8 +52,17 @@ class MainViewController: UIViewController {
     
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         let playersAddVC = segue.source as! AddPlayerTableViewController
-//        users.append(userManagerVC.userNameTextField.text ?? "Noname")
+        //        users.append(userManagerVC.userNameTextField.text ?? "Noname")
     }
+    
+    @IBAction func appActions(_ sender: UIBarButtonItem) {
+        addPlayers()
+    }
+    
+    private func addPlayers() {
+        
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HomeSegue" {
@@ -71,8 +85,26 @@ class MainViewController: UIViewController {
             self.tempCloudLabel.image = UIImage(systemName: weather.systemIconNameString)
         }
     }
+    
+    private func addAdaLovelace() {
+        // [START add_ada_lovelace]
+        // Add a new document with a generated ID
+        var ref: DocumentReference? = nil
+        ref = db.collection("users").addDocument(data: [
+            "first": "Ada",
+            "last": "Lovelace",
+            "born": 1815
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+        // [END add_ada_lovelace]
+    }
+    
 }
-
 // MARK: - Collection View DataSource
 
 extension MainViewController: UICollectionViewDataSource {

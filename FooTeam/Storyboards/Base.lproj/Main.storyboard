@@ -1302,7 +1302,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KLq-C6-NDk"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FooTeam" id="cKN-IE-VMN"/>
+                    <navigationItem key="navigationItem" title="FooTeam" id="cKN-IE-VMN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="nNt-GE-OvE">
+                            <connections>
+                                <action selector="appActions:" destination="E73-YY-Y4E" id="Hgj-o1-oiJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="b5r-1l-Bzl" id="f32-Pr-AhI"/>
                         <outlet property="tempCloudLabel" destination="MCC-ci-Dik" id="fvw-dP-kea"/>

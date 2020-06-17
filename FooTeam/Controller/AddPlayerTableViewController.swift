@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddPlayerTableViewController: UITableViewController {
     
@@ -19,6 +20,7 @@ class AddPlayerTableViewController: UITableViewController {
     var imageIsChange = false
     var team: Player!
     var editModeIsOn = false
+    var db: Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,8 @@ class AddPlayerTableViewController: UITableViewController {
         // Если поле (namePlayer) пустое то кнопка SAVE скрыта
         // Каждый раз при редактировании поля (namePlayer) будет срабатывать этот метод который в свою очередь будет вызывать метод #selector(textFieldChanged) а метод #selector(textFieldChanged) - будет следить за тем что заполнено ли текстовое поле или нет, если заполнено то кнопка SAVE будет доступна.
         namePlayer.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        
+        db = Firestore.firestore()
     }
     
     // MARK: - Table View Delegate
@@ -96,12 +100,13 @@ class AddPlayerTableViewController: UITableViewController {
     func saveNewPlace() {
         
         newPlayer = Player(imageStatic: nil,
-                           image: imagePlayer.image,
+                           image: imagePlayer.image!,
                            name: namePlayer.text!,
-                           teamNumber: nil,
-                           payment: payMent.text!,
+                           teamNumber: 1,
+                           payment: 0,
                            isFavourite: false,
-                           rating: 50)
+                           rating: 50,
+                           position: "ФРВ")
         
         var image: UIImage?
         // var imageIsChange = false
@@ -111,13 +116,24 @@ class AddPlayerTableViewController: UITableViewController {
             image = #imageLiteral(resourceName: "Даулет")
         }
         
-        newPlayer = Player(imageStatic: nil,
-                              image: image,
-                              name: namePlayer.text!,
-                              teamNumber: nil,
-                              payment: payMent.text!,
-                              isFavourite: false,
-                              rating: 50)
+        let newPlayer = Player(imageStatic: nil,
+                               image: image!,
+                               name: namePlayer.text!,
+                               teamNumber: 1,
+                               payment: 0,
+                               isFavourite: false,
+                               rating: 50,
+                               position: "ФРВ")
+        
+        var ref: DocumentReference? = nil
+        
+        ref = db.collection("players").addDocument(data: newPlayer.dictionary) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
         
     }
     
@@ -136,7 +152,7 @@ extension AddPlayerTableViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-
+    
     // private - этот метод будет использоваться исключительно в этом классе
     @objc private func textFieldChanged() {
         // Если поле placeName не пустое
