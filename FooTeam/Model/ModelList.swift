@@ -20,11 +20,11 @@ struct Player {
     var rating: Int
     var position: String
     
-    var numberOfGames = 0
-    var numberOfGoals = 0
+    var numberOfGames: Int
+    var numberOfGoals: Int
     
-    var winGame = 0
-    var losGame = 0
+    var winGame: Int
+    var losGame: Int
     
     var dictionary: [String: Any] {
         return ["name": name,
@@ -52,7 +52,7 @@ extension Player {
             let numberOfGoals = dictionary["numberOfGoals"] as? Int,
             let winGame = dictionary["winGame"] as? Int,
             let losGame = dictionary["losGame"] as? Int else {return nil}
-
+        
         self.init(name: name, teamNumber: teamNumber, payment: payment, isFavourite: isFavourite, rating: rating, position: position, numberOfGames: numberOfGames, numberOfGoals: numberOfGoals, winGame: winGame, losGame: losGame)
     }
 }

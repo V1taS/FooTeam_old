@@ -26,6 +26,8 @@ class MainViewController: UIViewController {
     
     var networkWeatherManager = NetworkWeatherManager()
     
+    var dbPlayers: [Player] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,10 +45,16 @@ class MainViewController: UIViewController {
         networkWeatherManager.fetchCurrentWeather()
         
         db = Firestore.firestore()
+        
+        print("viewDidLoad - TEST")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.addPlayers()
+        print("viewWillAppear - TEST")
+        
         tableView.reloadData()
     }
     
@@ -59,8 +67,31 @@ class MainViewController: UIViewController {
         addPlayers()
     }
     
-    private func addPlayers() {
-        
+    func addPlayers() {
+        db.collection("players").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+//                                        print("\(document.documentID) => \(document.data())")
+                    guard let players = Player.init(dictionary: document.data()) else { return }
+                    self.dbPlayers.append(players)
+                    print("Functions - TEST")
+//                    let player = Player(name: players.name,
+//                                        teamNumber: players.teamNumber,
+//                                        payment: players.payment,
+//                                        isFavourite: players.isFavourite,
+//                                        rating: players.rating,
+//                                        position: players.position,
+//                                        numberOfGames: players.numberOfGames,
+//                                        numberOfGoals: players.numberOfGoals,
+//                                        winGame: players.winGame,
+//                                        losGame: players.losGame)
+//                    dbPlayers.append(player)
+//                    print(dbPlayers)
+                }
+            }
+        }
     }
     
     
@@ -84,24 +115,6 @@ class MainViewController: UIViewController {
             self.temperatureLabel.text = weather.temperatureString
             self.tempCloudLabel.image = UIImage(systemName: weather.systemIconNameString)
         }
-    }
-    
-    private func addAdaLovelace() {
-        // [START add_ada_lovelace]
-        // Add a new document with a generated ID
-        var ref: DocumentReference? = nil
-        ref = db.collection("users").addDocument(data: [
-            "first": "Ada",
-            "last": "Lovelace",
-            "born": 1815
-        ]) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }
-        // [END add_ada_lovelace]
     }
     
 }
@@ -142,17 +155,19 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Team.shared.teamTwo.count
+        
+//        return Team.shared.teamTwo.count
+        return dbPlayers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellNewPlayer", for: indexPath) as! NewplayerTableViewCell
         let player = Team.shared.teamTwo[indexPath.row]
         
-        cell.namePlayers.text = player.name
-        cell.imagePlayers.image = UIImage(named: player.imageStatic!)
+        cell.namePlayers.text = dbPlayers[indexPath.row].name
+        //        cell.imagePlayers.image = UIImage(named: player.imageStatic!)
         
-        cell.imagePlayers.layer.cornerRadius = cell.imagePlayers.frame.width / 2
+        //        cell.imagePlayers.layer.cornerRadius = cell.imagePlayers.frame.width / 2
         
         return cell
     }

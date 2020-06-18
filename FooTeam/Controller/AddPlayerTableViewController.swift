@@ -102,11 +102,15 @@ class AddPlayerTableViewController: UITableViewController {
         newPlayer = Player(imageStatic: nil,
                            image: imagePlayer.image!,
                            name: namePlayer.text!,
-                           teamNumber: 1,
+                           teamNumber: 0,
                            payment: 0,
-                           isFavourite: false,
-                           rating: 50,
-                           position: "ФРВ")
+                           isFavourite: true,
+                           rating: 0,
+                           position: "ФРВ",
+                           numberOfGames: 0,
+                           numberOfGoals: 0,
+                           winGame: 0,
+                           losGame: 0)
         
         var image: UIImage?
         // var imageIsChange = false
@@ -119,11 +123,15 @@ class AddPlayerTableViewController: UITableViewController {
         let newPlayer = Player(imageStatic: nil,
                                image: image!,
                                name: namePlayer.text!,
-                               teamNumber: 1,
+                               teamNumber: 0,
                                payment: 0,
-                               isFavourite: false,
-                               rating: 50,
-                               position: "ФРВ")
+                               isFavourite: true,
+                               rating: 0,
+                               position: "ФВР",
+                               numberOfGames: 0,
+                               numberOfGoals: 0,
+                               winGame: 0,
+                               losGame: 0)
         
         var ref: DocumentReference? = nil
         

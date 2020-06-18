@@ -11,6 +11,7 @@ class Sorted {
     private init() {}
     static let shared = Sorted()
     private let players = Player.getPlayer()
+//    private let players = GetDataFB.shared.players
     
     public func getData() -> [[Player]] {
         

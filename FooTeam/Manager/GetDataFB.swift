@@ -12,7 +12,7 @@ class GetDataFB {
     private init() {}
     static let shared = GetDataFB()
     
-    private var players: Player!
+    var players: [Player] = []
     
     var db: Firestore!
     
@@ -24,7 +24,20 @@ class GetDataFB {
                 for document in querySnapshot!.documents {
                     //                    print("\(document.documentID) => \(document.data())")
                     guard let players = Player.init(dictionary: document.data()) else { return }
-                    self.players = players
+                    
+                    let player = Player(imageStatic: players.imageStatic,
+                                        image: players.image,
+                                        name: players.name,
+                                        teamNumber: players.teamNumber,
+                                        payment: players.payment,
+                                        isFavourite: players.isFavourite,
+                                        rating: players.rating,
+                                        position: players.position,
+                                        numberOfGames: players.numberOfGames,
+                                        numberOfGoals: players.numberOfGoals,
+                                        winGame: players.winGame,
+                                        losGame: players.losGame)
+                    self.players.append(player)
                 }
             }
         }
