@@ -28,7 +28,7 @@ class PersonalStatisticsController: UIViewController {
         super.viewDidLoad()
         
         rating.text = String(team.rating)
-        position.text = team.position!
+        position.text = team.position
         
         namePlayers.text = team.name
         photoPlayers.image = UIImage(named: team.imageStatic!)
