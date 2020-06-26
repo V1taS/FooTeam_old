@@ -8,4 +8,4 @@
 
 import Foundation
 
-let apiKey = "fed0e404428553177cedcb1f3819a57f"
+let apiKeyWeather = "fed0e404428553177cedcb1f3819a57f"

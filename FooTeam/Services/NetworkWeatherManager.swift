@@ -13,7 +13,7 @@ class NetworkWeatherManager {
     var onCompletion: ((CurrentWeather) -> Void)?
     
     func fetchCurrentWeather() {
-        let urlString = "https://api.openweathermap.org/data/2.5/weather?q=Khimki&appid=\(apiKey)&units=metric"
+        let urlString = "https://api.openweathermap.org/data/2.5/weather?q=Khimki&appid=\(apiKeyWeather)&units=metric"
         guard let url = URL(string: urlString) else { return }
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { data, respone, Error

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 class MainViewController: UIViewController {
     
@@ -22,83 +21,45 @@ class MainViewController: UIViewController {
     
     @IBOutlet var reserve: [UILabel]!
     
-    var db: Firestore!
+    var players = Team.shared.teamAll
     
     var networkWeatherManager = NetworkWeatherManager()
-    
-    var dbPlayers: [Player] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ModelOnlyNameTeam.shared.getTeamOne(players: Team.shared.reserve,
-                                            name: reserve)
-        
-        ModelOnlyNameTeam.shared.getTeamOne(players: Team.shared.teamOne,
-                                            name: nameTemOne)
-        
-        ModelOnlyNameTeam.shared.getTeamOne(players: Team.shared.teamTwo,
-                                            name: nameTemTwo)
-        
-        TimeFoot.shared.timeFoot(timeLabel: timeLabel)
-        onCompletionWeather()
-        networkWeatherManager.fetchCurrentWeather()
-        
-        db = Firestore.firestore()
-        
-        print("viewDidLoad - TEST")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.addPlayers()
-        print("viewWillAppear - TEST")
+        players = Team.shared.teamAll
+        
+        OnlyName.shared.getTeamOne(players: Team.shared.reserve,
+                                   name: reserve)
+        
+        OnlyName.shared.getTeamOne(players: Team.shared.teamOne,
+                                   name: nameTemOne)
+        
+        OnlyName.shared.getTeamOne(players: Team.shared.teamTwo,
+                                   name: nameTemTwo)
+        
+        timeFoot(timeLabel: timeLabel)
+        onCompletionWeather()
+        networkWeatherManager.fetchCurrentWeather()
         
         tableView.reloadData()
     }
     
-    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+    @IBAction func unwindSegueMain(segue: UIStoryboardSegue) {
         let playersAddVC = segue.source as! AddPlayerTableViewController
         //        users.append(userManagerVC.userNameTextField.text ?? "Noname")
     }
     
-    @IBAction func appActions(_ sender: UIBarButtonItem) {
-        addPlayers()
-    }
-    
-    func addPlayers() {
-        db.collection("players").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-//                                        print("\(document.documentID) => \(document.data())")
-                    guard let players = Player.init(dictionary: document.data()) else { return }
-                    self.dbPlayers.append(players)
-                    print("Functions - TEST")
-//                    let player = Player(name: players.name,
-//                                        teamNumber: players.teamNumber,
-//                                        payment: players.payment,
-//                                        isFavourite: players.isFavourite,
-//                                        rating: players.rating,
-//                                        position: players.position,
-//                                        numberOfGames: players.numberOfGames,
-//                                        numberOfGoals: players.numberOfGoals,
-//                                        winGame: players.winGame,
-//                                        losGame: players.losGame)
-//                    dbPlayers.append(player)
-//                    print(dbPlayers)
-                }
-            }
-        }
-    }
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HomeSegue" {
             let personStatSegueVC = segue.destination as! PersonalStatisticsController
-            personStatSegueVC.team = sender as? Player
+            personStatSegueVC.players = sender as? Player
         }
     }
     
@@ -117,19 +78,53 @@ class MainViewController: UIViewController {
         }
     }
     
+    private func timeFoot(timeLabel: UILabel) {
+        let date = Date()
+        let calendar = Calendar.current
+        
+        let weekday = calendar.component(.weekday, from: date)
+        
+        switch weekday {
+        case 1:
+//            print("Сегодня Воскресенье")
+            timeLabel.text = "через: 3 дня"
+        case 2:
+//            print("Сегодня Понедельник")
+            timeLabel.text = "через: 2 дня"
+        case 3:
+//            print("Сегодня Вторник")
+            timeLabel.text = "через: 1 день"
+        case 4:
+//            print("Сегодня Среда")
+            timeLabel.text = ": завтра"
+        case 5:
+//            print("Сегодня Четверг")
+            timeLabel.text = ": сегодня"
+            timeLabel.textColor = .red
+        case 6:
+//            print("Сегодня Пятница")
+            timeLabel.text = ": была вчера"
+        case 7:
+//            print("Сегодня Суббота")
+            timeLabel.text = "через: 4 дня"
+        default:
+            print("Error")
+        }
+    }
 }
 // MARK: - Collection View DataSource
 
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Team.shared.teamOne.count
+        return players.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionView", for: indexPath) as! CellViewController
+        let player = players[indexPath.row]
         
-        cell.imageCell.image = UIImage(named: Team.shared.teamOne[indexPath.row].imageStatic!)
-        cell.labelCell.text = Team.shared.teamOne[indexPath.row].name
+        cell.imageCell.image = UIImage(data: player.photo)
+        cell.labelCell.text = player.name
         cell.imageCell.layer.cornerRadius = cell.imageCell.frame.size.height / 2
         cell.imageCell.clipsToBounds = true
         return cell
@@ -140,7 +135,7 @@ extension MainViewController: UICollectionViewDataSource {
 
 extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let player = Team.shared.teamAllRandom[indexPath.row]
+        let player = players[indexPath.row]
         performSegue(withIdentifier: "HomeSegue", sender: player)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
@@ -150,24 +145,20 @@ extension MainViewController: UICollectionViewDelegate {
 
 extension MainViewController: UITableViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-//        return Team.shared.teamTwo.count
-        return dbPlayers.count
+        return players.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellNewPlayer", for: indexPath) as! NewplayerTableViewCell
-        let player = Team.shared.teamTwo[indexPath.row]
         
-        cell.namePlayers.text = dbPlayers[indexPath.row].name
-        //        cell.imagePlayers.image = UIImage(named: player.imageStatic!)
+        let player = players[indexPath.row]
         
-        //        cell.imagePlayers.layer.cornerRadius = cell.imagePlayers.frame.width / 2
+        cell.namePlayers.text = player.name
+        cell.imagePlayers.image = UIImage(data: player.photo)
+        
+        cell.imagePlayers.layer.cornerRadius = cell.imagePlayers.frame.width / 2
         
         return cell
     }
@@ -178,7 +169,7 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let player = Team.shared.teamAllRandom[indexPath.row]
+        let player = players[indexPath.row]
         performSegue(withIdentifier: "HomeSegue", sender: player)
         tableView.deselectRow(at: indexPath, animated: true)
     }

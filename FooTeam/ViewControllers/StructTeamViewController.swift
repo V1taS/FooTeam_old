@@ -15,13 +15,21 @@ class StructTeamViewController: UIViewController {
     @IBOutlet var photoTeamTwo: [UIImageView]!
     @IBOutlet var nameTeamTwo: [UILabel]!
     
+    var players = [Player]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        ModelNameAndPhotoTeam.shared.getTeamOne(players: Team.shared.teamOne,
-                                    name: nameTeamOne,
-                                    photo: photoTeamOne)
-        ModelNameAndPhotoTeam.shared.getTeamOne(players: Team.shared.teamTwo,
+        print("TTTT")
+        
+        NameAndPhoto.shared.getTeamOne(players: Team.shared.teamOne,
+                                       name: nameTeamOne,
+                                       photo: photoTeamOne)
+        NameAndPhoto.shared.getTeamOne(players: Team.shared.teamTwo,
                                     name: nameTeamTwo,
                                     photo: photoTeamTwo)
     }

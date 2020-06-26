@@ -7,20 +7,19 @@
 //
 
 import UIKit
-import Firebase
 
 class AddPlayerTableViewController: UITableViewController {
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     @IBOutlet weak var imagePlayer: UIImageView!
     @IBOutlet weak var namePlayer: UITextField!
     @IBOutlet weak var payMent: UITextField!
     
     var newPlayer: Player?
     var imageIsChange = false
-    var team: Player!
+    var players: Player!
     var editModeIsOn = false
-    var db: Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,15 +34,15 @@ class AddPlayerTableViewController: UITableViewController {
         // Каждый раз при редактировании поля (namePlayer) будет срабатывать этот метод который в свою очередь будет вызывать метод #selector(textFieldChanged) а метод #selector(textFieldChanged) - будет следить за тем что заполнено ли текстовое поле или нет, если заполнено то кнопка SAVE будет доступна.
         namePlayer.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
-        db = Firestore.firestore()
     }
     
     // MARK: - Table View Delegate
-    // Скрываем клавиатуру по нажатию на экран
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // Если наша ячейка имеет индекс 0 то пользователь должен загрузить изображение
         if indexPath.row == 0 {
+            
             // Создаем два объекта с изображениями
             let cameraIcon = #imageLiteral(resourceName: "camera") // image literal
             let photoIcon = #imageLiteral(resourceName: "photo")  // image literal
@@ -96,32 +95,19 @@ class AddPlayerTableViewController: UITableViewController {
         }
     }
     
+    // MARK: - Сохранение данных
     // Метод который будет сохранять данные из textField
-    func saveNewPlace() {
-        
-        newPlayer = Player(imageStatic: nil,
-                           image: imagePlayer.image!,
-                           name: namePlayer.text!,
-                           teamNumber: 0,
-                           payment: 0,
-                           isFavourite: true,
-                           rating: 0,
-                           position: "ФРВ",
-                           numberOfGames: 0,
-                           numberOfGoals: 0,
-                           winGame: 0,
-                           losGame: 0)
+    func saveNewPlayer() {
         
         var image: UIImage?
-        // var imageIsChange = false
+//         var imageIsChange = false
         if imageIsChange {
             image = imagePlayer.image
         } else {
             image = #imageLiteral(resourceName: "Даулет")
         }
         
-        let newPlayer = Player(imageStatic: nil,
-                               image: image!,
+        let newPlayer = Player(photo: (image?.pngData())!,
                                name: namePlayer.text!,
                                teamNumber: 0,
                                payment: 0,
@@ -132,16 +118,7 @@ class AddPlayerTableViewController: UITableViewController {
                                numberOfGoals: 0,
                                winGame: 0,
                                losGame: 0)
-        
-        var ref: DocumentReference? = nil
-        
-        ref = db.collection("players").addDocument(data: newPlayer.dictionary) { err in
-            if let err = err {
-                print("Error adding document: \(err)")
-            } else {
-                print("Document added with ID: \(ref!.documentID)")
-            }
-        }
+        StorageManager.shared.savePlayer(with: newPlayer)
         
     }
     

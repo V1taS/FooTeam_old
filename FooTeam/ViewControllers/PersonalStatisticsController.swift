@@ -21,35 +21,41 @@ class PersonalStatisticsController: UIViewController {
     @IBOutlet weak var winGame: UILabel!
     @IBOutlet weak var losGame: UILabel!
     
-    var team: Player!
+    var players: Player!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        rating.text = String(team.rating)
-        position.text = team.position
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        namePlayers.text = team.name
-        photoPlayers.image = UIImage(named: team.imageStatic!)
+        rating.text = String(players.rating)
+        position.text = players.position
+        
+        namePlayers.text = players.name
+        photoPlayers.image = UIImage(data: players.photo)
         photoPlayers.layer.cornerRadius = photoPlayers.frame.width / 2
         
-        numberOfGames.text = String(team.numberOfGames)
-        numberOfGoals.text = String(team.numberOfGoals)
+        numberOfGames.text = String(players.numberOfGames)
+        numberOfGoals.text = String(players.numberOfGoals)
         
-        winGame.text = String(team.winGame)
-        losGame.text = String(team.losGame)
+        winGame.text = String(players.winGame)
+        losGame.text = String(players.losGame)
     }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let userManagerVC = segue.destination as! AddPlayerTableViewController
-        userManagerVC.team = team
+        userManagerVC.players = players
         userManagerVC.editModeIsOn = true
     }
     
-    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        let userManagerVC = segue.source as! AddPlayerTableViewController
-//        userNameLabel.text = userManagerVC.userNameTextField.text
-    }
+//    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+//        let userManagerVC = segue.source as! AddPlayerTableViewController
+////        userNameLabel.text = userManagerVC.userNameTextField.text
+//    }
     
 }

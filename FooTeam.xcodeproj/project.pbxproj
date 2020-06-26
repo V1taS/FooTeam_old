@@ -3,28 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B25FFCF24A54BCA009BC7CE /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B25FFCE24A54BCA009BC7CE /* DB.swift */; };
+		1B25FFD124A54D25009BC7CE /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B25FFD024A54D25009BC7CE /* StorageManager.swift */; };
 		1B283249246B6BC700C675F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B283248246B6BC700C675F9 /* Constants.swift */; };
 		1B28324B246B6C0800C675F9 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */; };
 		1B28324D246B73B900C675F9 /* CurrentWeatherDater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324C246B73B900C675F9 /* CurrentWeatherDater.swift */; };
 		1B28324F246B7A1500C675F9 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324E246B7A1500C675F9 /* CurrentWeather.swift */; };
-		1B449B71248E7C49009CAEF5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B449B70248E7C49009CAEF5 /* GoogleService-Info.plist */; };
-		1B4FC50124999A0C00D7A7D5 /* GetDataFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FC50024999A0C00D7A7D5 /* GetDataFB.swift */; };
 		1B4FECD1245AF5610007EAB5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD0245AF5610007EAB5 /* MainViewController.swift */; };
 		1B4FECD3245AF8FF0007EAB5 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */; };
 		1B539712247DFE3D0042879D /* PersonalStatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B539711247DFE3D0042879D /* PersonalStatisticsController.swift */; };
-		1B9A1C06247B835A00542381 /* ModelOnlyNameTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9A1C05247B835A00542381 /* ModelOnlyNameTeam.swift */; };
+		1B66CCDA24A541C500F03ED4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B66CCD924A541C500F03ED4 /* GoogleService-Info.plist */; };
 		1BC6093F247A1D6500D3CC9B /* NewplayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6093E247A1D6500D3CC9B /* NewplayerTableViewCell.swift */; };
 		1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDC9E6247B85C400BFC139 /* Team.swift */; };
 		1BEA42FF247B4FBF00A4A000 /* StructTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA42FE247B4FBF00A4A000 /* StructTeamViewController.swift */; };
-		1BEA4301247B557600A4A000 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA4300247B557600A4A000 /* NetworkService.swift */; };
-		1BEA4303247B56C300A4A000 /* NetworkError.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA4302247B56C300A4A000 /* NetworkError.swift.swift */; };
-		1BEA430A247B5BBF00A4A000 /* Sorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA4309247B5BBF00A4A000 /* Sorted.swift */; };
-		1BEA430C247B71AF00A4A000 /* ModelNameAndPhotoTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA430B247B71AF00A4A000 /* ModelNameAndPhotoTeam.swift */; };
-		1BEA430E247B7A2B00A4A000 /* TimeFoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEA430D247B7A2B00A4A000 /* TimeFoot.swift */; };
 		1BF097EF245AAE4900971451 /* AddPlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */; };
 		1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */; };
 		1BF4C9892450A7F1006EEAC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */; };
@@ -33,30 +28,23 @@
 		1BF4C9932450A7F3006EEAC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */; };
 		1BF4C99B2450CCC8006EEAC5 /* ListNameTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */; };
 		1BF4C9A12450DF9E006EEAC5 /* AddPlayerCustomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9A02450DF9E006EEAC5 /* AddPlayerCustomeTableViewCell.swift */; };
-		1BF4C9A32450E04D006EEAC5 /* ModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9A22450E04D006EEAC5 /* ModelList.swift */; };
-		1EDA3BFDBF92A6290EB98408 /* Pods_FooTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB6BDDCA86E36EF3BC3D3BB /* Pods_FooTeam.framework */; };
+		1BF4C9A32450E04D006EEAC5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9A22450E04D006EEAC5 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1609FFD3C6C881C0C1067ECA /* Pods-FooTeam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooTeam.debug.xcconfig"; path = "Target Support Files/Pods-FooTeam/Pods-FooTeam.debug.xcconfig"; sourceTree = "<group>"; };
+		1B25FFCE24A54BCA009BC7CE /* DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB.swift; sourceTree = "<group>"; };
+		1B25FFD024A54D25009BC7CE /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		1B283248246B6BC700C675F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
 		1B28324C246B73B900C675F9 /* CurrentWeatherDater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherDater.swift; sourceTree = "<group>"; };
 		1B28324E246B7A1500C675F9 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
-		1B449B70248E7C49009CAEF5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1B4FC50024999A0C00D7A7D5 /* GetDataFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFB.swift; sourceTree = "<group>"; };
 		1B4FECD0245AF5610007EAB5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
 		1B539711247DFE3D0042879D /* PersonalStatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalStatisticsController.swift; sourceTree = "<group>"; };
-		1B9A1C05247B835A00542381 /* ModelOnlyNameTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelOnlyNameTeam.swift; sourceTree = "<group>"; };
+		1B66CCD924A541C500F03ED4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1BC6093E247A1D6500D3CC9B /* NewplayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewplayerTableViewCell.swift; sourceTree = "<group>"; };
 		1BDDC9E6247B85C400BFC139 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		1BEA42FE247B4FBF00A4A000 /* StructTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructTeamViewController.swift; sourceTree = "<group>"; };
-		1BEA4300247B557600A4A000 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		1BEA4302247B56C300A4A000 /* NetworkError.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift.swift; sourceTree = "<group>"; };
-		1BEA4309247B5BBF00A4A000 /* Sorted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorted.swift; sourceTree = "<group>"; };
-		1BEA430B247B71AF00A4A000 /* ModelNameAndPhotoTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelNameAndPhotoTeam.swift; sourceTree = "<group>"; };
-		1BEA430D247B7A2B00A4A000 /* TimeFoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFoot.swift; sourceTree = "<group>"; };
 		1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerTableViewController.swift; sourceTree = "<group>"; };
 		1BF4C9832450A7F1006EEAC5 /* FooTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FooTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,9 +55,7 @@
 		1BF4C9942450A7F3006EEAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNameTableView.swift; sourceTree = "<group>"; };
 		1BF4C9A02450DF9E006EEAC5 /* AddPlayerCustomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerCustomeTableViewCell.swift; sourceTree = "<group>"; };
-		1BF4C9A22450E04D006EEAC5 /* ModelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelList.swift; sourceTree = "<group>"; };
-		1FEB36B5E92F5F06CD6DA5D3 /* Pods-FooTeam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooTeam.release.xcconfig"; path = "Target Support Files/Pods-FooTeam/Pods-FooTeam.release.xcconfig"; sourceTree = "<group>"; };
-		DFB6BDDCA86E36EF3BC3D3BB /* Pods_FooTeam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FooTeam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BF4C9A22450E04D006EEAC5 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EDA3BFDBF92A6290EB98408 /* Pods_FooTeam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,11 +72,7 @@
 		1B283247246B6B3C00C675F9 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				1BEA42ED247B4A2700A4A000 /* Controller */,
-				1BF4C98F2450A7F3006EEAC5 /* Assets.xcassets */,
-				1BF4C9942450A7F3006EEAC5 /* Info.plist */,
 				1B283248246B6BC700C675F9 /* Constants.swift */,
-				1B449B70248E7C49009CAEF5 /* GoogleService-Info.plist */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -107,42 +88,52 @@
 		1B539716247E18790042879D /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				1BEA4307247B582F00A4A000 /* Responses */,
+				1B28324C246B73B900C675F9 /* CurrentWeatherDater.swift */,
 				1B28324E246B7A1500C675F9 /* CurrentWeather.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
 		};
-		1B96BECF2496D98200AAF68B /* Manager */ = {
+		1B66CCD824A5410A00F03ED4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1B4FC50024999A0C00D7A7D5 /* GetDataFB.swift */,
-				1BEA430D247B7A2B00A4A000 /* TimeFoot.swift */,
-				1BDDC9E6247B85C400BFC139 /* Team.swift */,
-				1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */,
+				1BF4C98F2450A7F3006EEAC5 /* Assets.xcassets */,
 			);
-			path = Manager;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		1BEA42ED247B4A2700A4A000 /* Controller */ = {
+		1B96BECF2496D98200AAF68B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1BDDC9E6247B85C400BFC139 /* Team.swift */,
+				1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */,
+				1B25FFCE24A54BCA009BC7CE /* DB.swift */,
+				1B25FFD024A54D25009BC7CE /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1BEA42ED247B4A2700A4A000 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */,
 				1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */,
+				1BF4C9942450A7F3006EEAC5 /* Info.plist */,
+				1B66CCD924A541C500F03ED4 /* GoogleService-Info.plist */,
 			);
-			path = Controller;
+			path = App;
 			sourceTree = "<group>";
 		};
-		1BEA42EE247B4A3000A4A000 /* Storyboards */ = {
+		1BEA42EE247B4A3000A4A000 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
 				1BF4C98C2450A7F2006EEAC5 /* Main.storyboard */,
 				1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */,
 			);
-			path = Storyboards;
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
-		1BEA42F1247B4A9A00A4A000 /* Controller */ = {
+		1BEA42F1247B4A9A00A4A000 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				1B4FECD0245AF5610007EAB5 /* MainViewController.swift */,
@@ -151,7 +142,7 @@
 				1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */,
 				1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */,
 			);
-			path = Controller;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		1BEA42F2247B4AA400A4A000 /* View */ = {
@@ -165,40 +156,13 @@
 			path = Home/View;
 			sourceTree = "<group>";
 		};
-		1BEA42F3247B4AAC00A4A000 /* Model */ = {
+		1BEA42F3247B4AAC00A4A000 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1BF4C9A22450E04D006EEAC5 /* ModelList.swift */,
-				1BEA4302247B56C300A4A000 /* NetworkError.swift.swift */,
+				1BF4C9A22450E04D006EEAC5 /* Player.swift */,
 				1B539716247E18790042879D /* Weather */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		1BEA42FD247B4DD600A4A000 /* NetworkService */ = {
-			isa = PBXGroup;
-			children = (
-				1BEA4300247B557600A4A000 /* NetworkService.swift */,
-			);
-			path = NetworkService;
-			sourceTree = "<group>";
-		};
-		1BEA4307247B582F00A4A000 /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-				1B28324C246B73B900C675F9 /* CurrentWeatherDater.swift */,
-			);
-			path = Responses;
-			sourceTree = "<group>";
-		};
-		1BEA4308247B5B8400A4A000 /* Sorted */ = {
-			isa = PBXGroup;
-			children = (
-				1BEA4309247B5BBF00A4A000 /* Sorted.swift */,
-				1B9A1C05247B835A00542381 /* ModelOnlyNameTeam.swift */,
-				1BEA430B247B71AF00A4A000 /* ModelNameAndPhotoTeam.swift */,
-			);
-			path = Sorted;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		1BF4C97A2450A7F1006EEAC5 = {
@@ -206,8 +170,6 @@
 			children = (
 				1BF4C9852450A7F1006EEAC5 /* FooTeam */,
 				1BF4C9842450A7F1006EEAC5 /* Products */,
-				51D4B2B57A602C19B744DB7E /* Pods */,
-				DD2E036600DBD6D02E202B7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,33 +184,16 @@
 		1BF4C9852450A7F1006EEAC5 /* FooTeam */ = {
 			isa = PBXGroup;
 			children = (
-				1BEA42EE247B4A3000A4A000 /* Storyboards */,
-				1BEA42F3247B4AAC00A4A000 /* Model */,
+				1BEA42EE247B4A3000A4A000 /* StoryBoards */,
+				1BEA42F3247B4AAC00A4A000 /* Models */,
 				1BEA42F2247B4AA400A4A000 /* View */,
-				1BEA42F1247B4A9A00A4A000 /* Controller */,
-				1BEA4308247B5B8400A4A000 /* Sorted */,
-				1B96BECF2496D98200AAF68B /* Manager */,
-				1BEA42FD247B4DD600A4A000 /* NetworkService */,
+				1BEA42F1247B4A9A00A4A000 /* ViewControllers */,
+				1B96BECF2496D98200AAF68B /* Services */,
 				1B283247246B6B3C00C675F9 /* Supporting files */,
+				1B66CCD824A5410A00F03ED4 /* Sources */,
+				1BEA42ED247B4A2700A4A000 /* App */,
 			);
 			path = FooTeam;
-			sourceTree = "<group>";
-		};
-		51D4B2B57A602C19B744DB7E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				1609FFD3C6C881C0C1067ECA /* Pods-FooTeam.debug.xcconfig */,
-				1FEB36B5E92F5F06CD6DA5D3 /* Pods-FooTeam.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		DD2E036600DBD6D02E202B7C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DFB6BDDCA86E36EF3BC3D3BB /* Pods_FooTeam.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,11 +203,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BF4C9972450A7F3006EEAC5 /* Build configuration list for PBXNativeTarget "FooTeam" */;
 			buildPhases = (
-				8239203F476B60178B41B87D /* [CP] Check Pods Manifest.lock */,
 				1BF4C97F2450A7F1006EEAC5 /* Sources */,
 				1BF4C9802450A7F1006EEAC5 /* Frameworks */,
 				1BF4C9812450A7F1006EEAC5 /* Resources */,
-				E5BB15C2FF64DE48C2C11D16 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -312,55 +255,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BF4C9932450A7F3006EEAC5 /* LaunchScreen.storyboard in Resources */,
-				1B449B71248E7C49009CAEF5 /* GoogleService-Info.plist in Resources */,
+				1B66CCDA24A541C500F03ED4 /* GoogleService-Info.plist in Resources */,
 				1BF4C9902450A7F3006EEAC5 /* Assets.xcassets in Resources */,
 				1BF4C98E2450A7F2006EEAC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		8239203F476B60178B41B87D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FooTeam-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E5BB15C2FF64DE48C2C11D16 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1BF4C97F2450A7F1006EEAC5 /* Sources */ = {
@@ -370,26 +271,21 @@
 				1BC6093F247A1D6500D3CC9B /* NewplayerTableViewCell.swift in Sources */,
 				1B4FECD3245AF8FF0007EAB5 /* CellViewController.swift in Sources */,
 				1B28324F246B7A1500C675F9 /* CurrentWeather.swift in Sources */,
-				1B4FC50124999A0C00D7A7D5 /* GetDataFB.swift in Sources */,
-				1B9A1C06247B835A00542381 /* ModelOnlyNameTeam.swift in Sources */,
+				1B25FFD124A54D25009BC7CE /* StorageManager.swift in Sources */,
 				1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */,
 				1BF097EF245AAE4900971451 /* AddPlayerTableViewController.swift in Sources */,
 				1B539712247DFE3D0042879D /* PersonalStatisticsController.swift in Sources */,
-				1BEA430A247B5BBF00A4A000 /* Sorted.swift in Sources */,
 				1B4FECD1245AF5610007EAB5 /* MainViewController.swift in Sources */,
 				1B283249246B6BC700C675F9 /* Constants.swift in Sources */,
 				1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */,
 				1BF4C99B2450CCC8006EEAC5 /* ListNameTableView.swift in Sources */,
 				1B28324D246B73B900C675F9 /* CurrentWeatherDater.swift in Sources */,
-				1BEA4301247B557600A4A000 /* NetworkService.swift in Sources */,
 				1BEA42FF247B4FBF00A4A000 /* StructTeamViewController.swift in Sources */,
-				1BF4C9A32450E04D006EEAC5 /* ModelList.swift in Sources */,
-				1BEA430C247B71AF00A4A000 /* ModelNameAndPhotoTeam.swift in Sources */,
+				1BF4C9A32450E04D006EEAC5 /* Player.swift in Sources */,
 				1BF4C9892450A7F1006EEAC5 /* SceneDelegate.swift in Sources */,
-				1BEA430E247B7A2B00A4A000 /* TimeFoot.swift in Sources */,
 				1BF4C9A12450DF9E006EEAC5 /* AddPlayerCustomeTableViewCell.swift in Sources */,
 				1B28324B246B6C0800C675F9 /* NetworkWeatherManager.swift in Sources */,
-				1BEA4303247B56C300A4A000 /* NetworkError.swift.swift in Sources */,
+				1B25FFCF24A54BCA009BC7CE /* DB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,12 +427,11 @@
 		};
 		1BF4C9982450A7F3006EEAC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1609FFD3C6C881C0C1067ECA /* Pods-FooTeam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34VDSPZYU9;
-				INFOPLIST_FILE = "$(SRCROOT)/FooTeam/Supporting files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FooTeam/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -551,12 +446,11 @@
 		};
 		1BF4C9992450A7F3006EEAC5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FEB36B5E92F5F06CD6DA5D3 /* Pods-FooTeam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34VDSPZYU9;
-				INFOPLIST_FILE = "$(SRCROOT)/FooTeam/Supporting files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/FooTeam/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
