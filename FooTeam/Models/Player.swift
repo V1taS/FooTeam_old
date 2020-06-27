@@ -35,8 +35,8 @@ extension Player {
         for player in listTeam {
             let newPlayer = Player(photo: (UIImage(named: player)?.pngData())!,
                                   name: player,
-                                  teamNumber: 0,
-                                  payment: "0",
+                                  teamNumber: 3,
+                                  payment: "5",
                                   isFavourite: true,
                                   rating: 50,
                                   position: "ФРВ",

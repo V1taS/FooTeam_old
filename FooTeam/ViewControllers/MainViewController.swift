@@ -28,6 +28,8 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        Player.getPlayer()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,11 +51,6 @@ class MainViewController: UIViewController {
         networkWeatherManager.fetchCurrentWeather()
         
         tableView.reloadData()
-    }
-    
-    @IBAction func unwindSegueMain(segue: UIStoryboardSegue) {
-        let playersAddVC = segue.source as! AddPlayerTableViewController
-        //        users.append(userManagerVC.userNameTextField.text ?? "Noname")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -16,6 +16,7 @@
 		1B3F6C9A24A6C28800630F44 /* EditePlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F6C9924A6C28800630F44 /* EditePlayerTableViewController.swift */; };
 		1B4FECD1245AF5610007EAB5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD0245AF5610007EAB5 /* MainViewController.swift */; };
 		1B4FECD3245AF8FF0007EAB5 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */; };
+		1B50A9E824A7EDE500B25D2C /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50A9E724A7EDE500B25D2C /* PickerView.swift */; };
 		1B539712247DFE3D0042879D /* PersonalStatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B539711247DFE3D0042879D /* PersonalStatisticsController.swift */; };
 		1B66CCDA24A541C500F03ED4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B66CCD924A541C500F03ED4 /* GoogleService-Info.plist */; };
 		1BC6093F247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6093E247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift */; };
@@ -42,6 +43,7 @@
 		1B3F6C9924A6C28800630F44 /* EditePlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditePlayerTableViewController.swift; sourceTree = "<group>"; };
 		1B4FECD0245AF5610007EAB5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
+		1B50A9E724A7EDE500B25D2C /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		1B539711247DFE3D0042879D /* PersonalStatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalStatisticsController.swift; sourceTree = "<group>"; };
 		1B66CCD924A541C500F03ED4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1BC6093E247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewPlayersTableViewCell.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				1B50B390247E1D5A00392148 /* UICollectionViewCell */,
 				1BC6093E247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift */,
 				1BF4C9A02450DF9E006EEAC5 /* ListNameTableViewCell.swift */,
+				1B50A9E724A7EDE500B25D2C /* PickerView.swift */,
 			);
 			name = View;
 			path = Home/View;
@@ -279,6 +282,7 @@
 				1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */,
 				1BF097EF245AAE4900971451 /* AddPlayerTableViewController.swift in Sources */,
 				1B539712247DFE3D0042879D /* PersonalStatisticsController.swift in Sources */,
+				1B50A9E824A7EDE500B25D2C /* PickerView.swift in Sources */,
 				1B4FECD1245AF5610007EAB5 /* MainViewController.swift in Sources */,
 				1B283249246B6BC700C675F9 /* Constants.swift in Sources */,
 				1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */,
