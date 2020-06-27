@@ -14,7 +14,7 @@ struct Player: Codable {
     var name: String
     
     var teamNumber: Int
-    var payment: Int
+    var payment: String
     var isFavourite: Bool
     
     var rating: Int
@@ -36,7 +36,7 @@ extension Player {
             let newPlayer = Player(photo: (UIImage(named: player)?.pngData())!,
                                   name: player,
                                   teamNumber: 0,
-                                  payment: 0,
+                                  payment: "0",
                                   isFavourite: true,
                                   rating: 50,
                                   position: "ФРВ",

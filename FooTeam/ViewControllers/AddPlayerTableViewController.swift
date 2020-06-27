@@ -104,13 +104,13 @@ class AddPlayerTableViewController: UITableViewController {
         if imageIsChange {
             image = imagePlayer.image
         } else {
-            image = #imageLiteral(resourceName: "Даулет")
+            image = #imageLiteral(resourceName: "medium_Avatar")
         }
         
         let newPlayer = Player(photo: (image?.pngData())!,
                                name: namePlayer.text!,
-                               teamNumber: 0,
-                               payment: 0,
+                               teamNumber: 3,
+                               payment: payMent.text ?? "0",
                                isFavourite: true,
                                rating: 0,
                                position: "ФВР",

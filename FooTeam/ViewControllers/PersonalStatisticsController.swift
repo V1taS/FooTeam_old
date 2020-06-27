@@ -48,9 +48,7 @@ class PersonalStatisticsController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let userManagerVC = segue.destination as! AddPlayerTableViewController
-        userManagerVC.players = players
-        userManagerVC.editModeIsOn = true
+
     }
     
 //    @IBAction func unwindSegue(segue: UIStoryboardSegue) {

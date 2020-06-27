@@ -57,7 +57,7 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "HomeSegue" {
+        if segue.identifier == "HomeSeguetoPS" {
             let personStatSegueVC = segue.destination as! PersonalStatisticsController
             personStatSegueVC.players = sender as? Player
         }
@@ -136,7 +136,7 @@ extension MainViewController: UICollectionViewDataSource {
 extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let player = players[indexPath.row]
-        performSegue(withIdentifier: "HomeSegue", sender: player)
+        performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
 }
@@ -151,7 +151,7 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellNewPlayer", for: indexPath) as! NewplayerTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CellNewPlayer", for: indexPath) as! MainNewPlayersTableViewCell
         
         let player = players[indexPath.row]
         
@@ -170,7 +170,7 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let player = players[indexPath.row]
-        performSegue(withIdentifier: "HomeSegue", sender: player)
+        performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

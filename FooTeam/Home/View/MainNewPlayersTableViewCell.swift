@@ -1,5 +1,5 @@
 //
-//  NewplayerTableViewCell.swift
+//  MainNewPlayersTableViewCell.swift
 //  FooTeam
 //
 //  Created by Виталий Сосин on 24.05.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewplayerTableViewCell: UITableViewCell {
+class MainNewPlayersTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imagePlayers: UIImageView!
     @IBOutlet weak var namePlayers: UILabel!

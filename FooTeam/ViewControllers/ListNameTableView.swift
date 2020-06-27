@@ -25,7 +25,7 @@ class ListNameTableView: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "PlayersSegue" {
+        if segue.identifier == "ListNameTableViewSegue" {
             let personStatSegueVC = segue.destination as! PersonalStatisticsController
             personStatSegueVC.players = sender as? Player
         }
@@ -52,25 +52,42 @@ class ListNameTableView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayersCell", for: indexPath) as! CustomeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayersCell", for: indexPath) as! ListNameTableViewCell
         
         let player = players[indexPath.row]
         
         // Имя игрока
-        cell.namePlayerOutlet.text = player.name
+        cell.namePlayer.text = player.name
+        cell.ratingPlayer.text = "Райтинг: \(player.rating)"
+        cell.numberOfGamesLeft.text = "Осталось игр: \(player.payment)"
+        cell.positionPlayer.text = player.position
         
-        cell.positionPlayeroutlet.text = player.position
+        if player.teamNumber == 0 {
+            cell.teamSelection.text = "Команда: 🔴"
+        } else if player.teamNumber == 1 {
+            cell.teamSelection.text = "Команда: 🔵"
+        } else {
+            cell.teamSelection.text = "Команда: 🤷🏻‍♂️"
+        }
+        
+        if player.isFavourite {
+            cell.iGo.textColor = .green
+        } else {
+            cell.iGo.textColor = .red
+        }
+        
+    
         
         if UIImage(data: player.photo) == nil {
-            cell.imageOutlet.image = UIImage(data: player.photo)
+            cell.imagePlayer.image = UIImage(data: player.photo)
         } else {
-            cell.imageOutlet.image = UIImage(data: player.photo)
+            cell.imagePlayer.image = UIImage(data: player.photo)
         }
         
         // Скруглили Imageview
-        cell.imageOutlet.layer.cornerRadius = cell.imageOutlet.frame.size.height / 2
+        cell.imagePlayer.layer.cornerRadius = cell.imagePlayer.frame.size.height / 20
         // Обрезали по краям
-        cell.imageOutlet.clipsToBounds = true
+        cell.imagePlayer.clipsToBounds = true
         
         return cell
     }
@@ -78,7 +95,7 @@ class ListNameTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let player = players[indexPath.row]
-        performSegue(withIdentifier: "PlayersSegue", sender: player)
+        performSegue(withIdentifier: "ListNameTableViewSegue", sender: player)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
