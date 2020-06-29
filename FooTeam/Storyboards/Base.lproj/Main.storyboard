@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jr6-D6-5ku">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -699,24 +699,25 @@
         <scene sceneID="uWo-im-7g0">
             <objects>
                 <tableViewController id="CPi-Fg-LvN" customClass="EditePlayerTableViewController" customModule="FooTeam" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ktl-8s-e1P">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ktl-8s-e1P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                        <color key="tintColor" name="BlackAndWhite"/>
                         <sections>
                             <tableViewSection id="EY4-aX-i0x">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="227" id="53c-ka-f0y" userLabel="Фото">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" rowHeight="227" id="53c-ka-f0y" userLabel="Фото">
                                         <rect key="frame" x="0.0" y="28" width="414" height="227"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="53c-ka-f0y" id="7we-1V-ScO">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="227"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stub" translatesAutoresizingMaskIntoConstraints="NO" id="Ffe-RV-xA9">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stub" translatesAutoresizingMaskIntoConstraints="NO" id="Ffe-RV-xA9">
                                                     <rect key="frame" x="20" y="11" width="374" height="205"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                    <color key="backgroundColor" name="WhiteAndBlack"/>
+                                                    <color key="tintColor" name="BlackAndWhite"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -726,27 +727,35 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="Ffe-RV-xA9" secondAttribute="bottom" id="pZc-gr-xBd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                                        <color key="tintColor" name="BlackAndWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="U6T-Bz-cva" userLabel="Имя">
-                                        <rect key="frame" x="0.0" y="255" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="U6T-Bz-cva" userLabel="Имя">
+                                        <rect key="frame" x="0.0" y="255" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U6T-Bz-cva" id="4Be-71-lag">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="9wx-Yo-8LF">
-                                                    <rect key="frame" x="77" y="5" width="260" height="34"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="9wx-Yo-8LF">
+                                                    <rect key="frame" x="77" y="7.5" width="260" height="55.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4r-tZ-M9w">
-                                                            <rect key="frame" x="0.0" y="0.0" width="38.5" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сосин Виталий" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-kl-Py5">
-                                                            <rect key="frame" x="52.5" y="0.0" width="207.5" height="34"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сосин Виталий" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kq8-kl-Py5">
+                                                            <rect key="frame" x="0.0" y="21.5" width="260" height="34"/>
+                                                            <color key="backgroundColor" name="WhiteAndBlack"/>
+                                                            <color key="tintColor" name="BlackAndWhite"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" keyboardType="namePhonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartQuotesType="no" textContentType="name"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="CPi-Fg-LvN" id="y9K-YY-HOT"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -759,29 +768,38 @@
                                                 <constraint firstItem="9wx-Yo-8LF" firstAttribute="centerX" secondItem="4Be-71-lag" secondAttribute="centerX" id="eb8-rt-ac6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                                        <color key="tintColor" name="BlackAndWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ApR-pn-teU" userLabel="Номер команды">
-                                        <rect key="frame" x="0.0" y="298.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="ApR-pn-teU" userLabel="Номер команды">
+                                        <rect key="frame" x="0.0" y="325" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ApR-pn-teU" id="ARh-42-2Sk">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="MGQ-Hp-EFJ">
-                                                    <rect key="frame" x="77" y="5" width="260" height="34"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MGQ-Hp-EFJ">
+                                                    <rect key="frame" x="77" y="7.5" width="260" height="55.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер команды:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hY-Lh-yl2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="135" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qez-Wz-g1o">
-                                                            <rect key="frame" x="149" y="0.0" width="111" height="34"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qez-Wz-g1o">
+                                                            <rect key="frame" x="0.0" y="21.5" width="260" height="34"/>
+                                                            <color key="backgroundColor" name="WhiteAndBlack"/>
+                                                            <color key="tintColor" name="BlackAndWhite"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="CPi-Fg-LvN" id="pF6-93-3Bw"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
+                                                    <color key="backgroundColor" name="WhiteAndBlack"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="260" id="VWU-Xz-76o"/>
                                                     </constraints>
@@ -792,27 +810,35 @@
                                                 <constraint firstItem="MGQ-Hp-EFJ" firstAttribute="centerY" secondItem="ARh-42-2Sk" secondAttribute="centerY" id="MeD-1m-i7B"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                                        <color key="tintColor" name="BlackAndWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dem-TB-bMQ" userLabel="Оплата подписки">
-                                        <rect key="frame" x="0.0" y="342" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="dem-TB-bMQ" userLabel="Оплата подписки">
+                                        <rect key="frame" x="0.0" y="395" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dem-TB-bMQ" id="btC-Bg-eUv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="VNR-kN-hTa">
-                                                    <rect key="frame" x="77" y="5" width="260" height="34"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="VNR-kN-hTa">
+                                                    <rect key="frame" x="77" y="7.5" width="260" height="55.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оплата подписки:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHt-n4-zfn">
-                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ci7-E1-GBe">
-                                                            <rect key="frame" x="159" y="0.0" width="101" height="34"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1000" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ci7-E1-GBe">
+                                                            <rect key="frame" x="0.0" y="21.5" width="260" height="34"/>
+                                                            <color key="backgroundColor" name="WhiteAndBlack"/>
+                                                            <color key="tintColor" name="BlackAndWhite"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="postal-code"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="CPi-Fg-LvN" id="KLu-yA-f3a"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -825,25 +851,28 @@
                                                 <constraint firstItem="VNR-kN-hTa" firstAttribute="centerY" secondItem="btC-Bg-eUv" secondAttribute="centerY" id="thB-21-uNl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                                        <color key="tintColor" name="BlackAndWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="sTV-H1-sJP" userLabel="i-GO">
-                                        <rect key="frame" x="0.0" y="385.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="sTV-H1-sJP" userLabel="i-GO">
+                                        <rect key="frame" x="0.0" y="465" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sTV-H1-sJP" id="kfV-BU-WRF">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="HMN-8K-SUl">
-                                                    <rect key="frame" x="77" y="6.5" width="260" height="31"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="HMN-8K-SUl">
+                                                    <rect key="frame" x="77" y="9" width="260" height="52.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i-GO:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr9-BK-H1n">
-                                                            <rect key="frame" x="0.0" y="0.0" width="197" height="31"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-hL-TRc">
-                                                            <rect key="frame" x="211" y="0.0" width="51" height="31"/>
+                                                            <rect key="frame" x="0.0" y="21.5" width="262" height="31"/>
+                                                            <color key="tintColor" name="BlackAndWhite"/>
                                                         </switch>
                                                     </subviews>
                                                     <constraints>
@@ -856,27 +885,35 @@
                                                 <constraint firstItem="HMN-8K-SUl" firstAttribute="centerX" secondItem="kfV-BU-WRF" secondAttribute="centerX" id="zId-B0-4p3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                                        <color key="tintColor" name="BlackAndWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="V9m-5W-fCd" userLabel="Рейтинг">
-                                        <rect key="frame" x="0.0" y="429" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="V9m-5W-fCd" userLabel="Рейтинг">
+                                        <rect key="frame" x="0.0" y="535" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V9m-5W-fCd" id="8D8-cl-F3z">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="YRR-Nh-Rjy">
-                                                    <rect key="frame" x="77" y="5" width="260" height="34"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="YRR-Nh-Rjy">
+                                                    <rect key="frame" x="77" y="7.5" width="260" height="55.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рейтинг:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXD-Jx-fdW">
-                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="81" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EB9-FQ-kJc">
-                                                            <rect key="frame" x="84" y="0.0" width="176" height="34"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="81" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EB9-FQ-kJc">
+                                                            <rect key="frame" x="0.0" y="21.5" width="260" height="34"/>
+                                                            <color key="backgroundColor" name="WhiteAndBlack"/>
+                                                            <color key="tintColor" name="BlackAndWhite"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="CPi-Fg-LvN" id="gJo-VR-ahQ"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -889,27 +926,35 @@
                                                 <constraint firstItem="YRR-Nh-Rjy" firstAttribute="centerX" secondItem="8D8-cl-F3z" secondAttribute="centerX" id="Y3I-4t-kwQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                                        <color key="tintColor" name="BlackAndWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="rtz-LE-2MB" userLabel="Позиция">
-                                        <rect key="frame" x="0.0" y="472.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="rtz-LE-2MB" userLabel="Позиция">
+                                        <rect key="frame" x="0.0" y="605" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rtz-LE-2MB" id="Tiz-HT-hMe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="r3f-dX-JLv">
-                                                    <rect key="frame" x="77" y="5" width="260" height="34"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="r3f-dX-JLv">
+                                                    <rect key="frame" x="77" y="7.5" width="260" height="55.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Позиция:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rf-4Y-LDr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="74" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ФРВ" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6X-vT-NIu">
-                                                            <rect key="frame" x="88" y="0.0" width="172" height="34"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ФРВ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6X-vT-NIu">
+                                                            <rect key="frame" x="0.0" y="21.5" width="260" height="34"/>
+                                                            <color key="backgroundColor" name="WhiteAndBlack"/>
+                                                            <color key="tintColor" name="BlackAndWhite"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="CPi-Fg-LvN" id="4Gx-zc-Th0"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -922,27 +967,35 @@
                                                 <constraint firstItem="r3f-dX-JLv" firstAttribute="centerY" secondItem="Tiz-HT-hMe" secondAttribute="centerY" id="j5u-Ak-fIa"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                                        <color key="tintColor" name="BlackAndWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3L7-Dw-yvJ" userLabel="Количество игр">
-                                        <rect key="frame" x="0.0" y="516" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="3L7-Dw-yvJ" userLabel="Количество игр">
+                                        <rect key="frame" x="0.0" y="675" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3L7-Dw-yvJ" id="D7Q-dh-HRn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="qLw-6C-pMt">
-                                                    <rect key="frame" x="77" y="5" width="260" height="34"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="qLw-6C-pMt">
+                                                    <rect key="frame" x="77" y="7.5" width="260" height="55.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество игр:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtU-xY-9tP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="130.5" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBf-4Y-muv">
-                                                            <rect key="frame" x="144.5" y="0.0" width="115.5" height="34"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBf-4Y-muv">
+                                                            <rect key="frame" x="0.0" y="21.5" width="260" height="34"/>
+                                                            <color key="backgroundColor" name="WhiteAndBlack"/>
+                                                            <color key="tintColor" name="BlackAndWhite"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="CPi-Fg-LvN" id="o0j-3O-QZB"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -955,27 +1008,35 @@
                                                 <constraint firstItem="qLw-6C-pMt" firstAttribute="centerX" secondItem="D7Q-dh-HRn" secondAttribute="centerX" id="k1v-1x-T1Q"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                                        <color key="tintColor" name="BlackAndWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kPM-Eu-9yt" userLabel="Количество голов">
-                                        <rect key="frame" x="0.0" y="559.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="kPM-Eu-9yt" userLabel="Количество голов">
+                                        <rect key="frame" x="0.0" y="745" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kPM-Eu-9yt" id="D4A-tE-emZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="0yp-of-QDU">
-                                                    <rect key="frame" x="77" y="5" width="260" height="34"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="0yp-of-QDU">
+                                                    <rect key="frame" x="77" y="7.5" width="260" height="55.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество голов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRS-wL-Nfd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="148.5" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VyV-c0-WM4">
-                                                            <rect key="frame" x="162.5" y="0.0" width="97.5" height="34"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VyV-c0-WM4">
+                                                            <rect key="frame" x="0.0" y="21.5" width="260" height="34"/>
+                                                            <color key="backgroundColor" name="WhiteAndBlack"/>
+                                                            <color key="tintColor" name="BlackAndWhite"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="CPi-Fg-LvN" id="F2D-93-ePq"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -988,27 +1049,34 @@
                                                 <constraint firstItem="0yp-of-QDU" firstAttribute="centerX" secondItem="D4A-tE-emZ" secondAttribute="centerX" id="hPV-m6-lod"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="WhiteAndBlack"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uB6-vP-54g" userLabel="Количество побед">
-                                        <rect key="frame" x="0.0" y="603" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="uB6-vP-54g" userLabel="Количество побед">
+                                        <rect key="frame" x="0.0" y="815" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uB6-vP-54g" id="0Gx-Qb-UNg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="mBo-fA-4Pr">
-                                                    <rect key="frame" x="77" y="5" width="260" height="34"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="mBo-fA-4Pr">
+                                                    <rect key="frame" x="77" y="7.5" width="260" height="55.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество побед:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guG-4y-ggp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="152" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DEk-a3-3KQ">
-                                                            <rect key="frame" x="166" y="0.0" width="94" height="34"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DEk-a3-3KQ">
+                                                            <rect key="frame" x="0.0" y="21.5" width="260" height="34"/>
+                                                            <color key="backgroundColor" name="WhiteAndBlack"/>
+                                                            <color key="tintColor" name="BlackAndWhite"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="CPi-Fg-LvN" id="M4z-J2-VJi"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -1021,27 +1089,35 @@
                                                 <constraint firstItem="mBo-fA-4Pr" firstAttribute="centerY" secondItem="0Gx-Qb-UNg" secondAttribute="centerY" id="zEu-FS-ykO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                                        <color key="tintColor" name="BlackAndWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ydb-5W-Lfo" userLabel="Количество поражений">
-                                        <rect key="frame" x="0.0" y="646.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="70" id="ydb-5W-Lfo" userLabel="Количество поражений">
+                                        <rect key="frame" x="0.0" y="885" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ydb-5W-Lfo" id="8qN-Yl-vhb">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="lA5-pN-HFQ">
-                                                    <rect key="frame" x="77" y="5" width="260" height="34"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="lA5-pN-HFQ">
+                                                    <rect key="frame" x="77" y="7.5" width="260" height="55.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество поражений:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoQ-Eh-Yj9">
-                                                            <rect key="frame" x="0.0" y="0.0" width="193.5" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pj9-ha-wm2">
-                                                            <rect key="frame" x="207.5" y="0.0" width="52.5" height="34"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pj9-ha-wm2">
+                                                            <rect key="frame" x="0.0" y="21.5" width="260" height="34"/>
+                                                            <color key="backgroundColor" name="WhiteAndBlack"/>
+                                                            <color key="tintColor" name="BlackAndWhite"/>
+                                                            <color key="textColor" name="BlackAndWhite"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="CPi-Fg-LvN" id="XhX-T2-lhS"/>
+                                                            </connections>
                                                         </textField>
                                                     </subviews>
                                                     <constraints>
@@ -1049,11 +1125,14 @@
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
+                                            <color key="backgroundColor" name="WhiteAndBlack"/>
                                             <constraints>
                                                 <constraint firstItem="lA5-pN-HFQ" firstAttribute="centerY" secondItem="8qN-Yl-vhb" secondAttribute="centerY" id="TOV-TD-UTf"/>
                                                 <constraint firstItem="lA5-pN-HFQ" firstAttribute="centerX" secondItem="8qN-Yl-vhb" secondAttribute="centerX" id="abw-IO-4CY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="WhiteAndBlack"/>
+                                        <color key="tintColor" name="BlackAndWhite"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1068,6 +1147,7 @@
                             <color key="tintColor" name="BlackAndWhite"/>
                             <connections>
                                 <action selector="saveButton:" destination="CPi-Fg-LvN" id="co5-ME-xaZ"/>
+                                <segue destination="s8E-Gh-s3R" kind="unwind" unwindAction="unwindSeguePersonal:" id="Upx-n1-Sn4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1086,6 +1166,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKi-Lg-XEb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="s8E-Gh-s3R" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5369.5652173913049" y="756.69642857142856"/>
         </scene>
@@ -1698,7 +1779,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="FooTeam" id="cKN-IE-VMN"/>
                     <connections>
-                        <outlet property="tableView" destination="b5r-1l-Bzl" id="f32-Pr-AhI"/>
+                        <outlet property="collectionViewTopPlayers" destination="ZRA-w7-O5Q" id="U6Y-C3-Nb2"/>
+                        <outlet property="tableViewNewPlayers" destination="b5r-1l-Bzl" id="f32-Pr-AhI"/>
                         <outlet property="tempCloudLabel" destination="MCC-ci-Dik" id="fvw-dP-kea"/>
                         <outlet property="temperatureLabel" destination="eRz-mo-Wrj" id="n6l-dL-h5O"/>
                         <outlet property="timeLabel" destination="CYC-AZ-cmZ" id="rgg-yz-Noj"/>
@@ -1845,7 +1927,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="WhiteAndBlack"/>
-                        <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="iZh-7K-HyN">
                                 <cells>
@@ -2011,7 +2093,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wjf-H0-MRD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="MHd-En-uKF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="6103" y="1780"/>
+            <point key="canvasLocation" x="6055" y="757"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9g4-W1-xOr">
@@ -2125,7 +2207,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="evd-kk-GUw"/>
+        <segue reference="nXh-Ac-dWn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="4" width="644" height="900"/>

@@ -10,7 +10,8 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var tableViewNewPlayers: UITableView!
+    @IBOutlet weak var collectionViewTopPlayers: UICollectionView!
     
     @IBOutlet var nameTemOne: [UILabel]!
     @IBOutlet var nameTemTwo: [UILabel]!
@@ -28,13 +29,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        Player.getPlayer()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
         players = Team.shared.teamAll
         
         OnlyName.shared.getTeamOne(players: Team.shared.reserve,
@@ -50,13 +44,25 @@ class MainViewController: UIViewController {
         onCompletionWeather()
         networkWeatherManager.fetchCurrentWeather()
         
-        tableView.reloadData()
+        tableViewNewPlayers.reloadData()
+        
+        //        Player.getPlayer()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "HomeSeguetoPS" {
-            let personStatSegueVC = segue.destination as! PersonalStatisticsController
-            personStatSegueVC.players = sender as? Player
+        
+        if let indexPath = tableViewNewPlayers.indexPathForSelectedRow {
+            
+            if segue.identifier == "HomeSeguetoPS" {
+                let personStatSegueVC = segue.destination as! PersonalStatisticsController
+                personStatSegueVC.players = sender as? Player
+                personStatSegueVC.indexPath = indexPath
+            } 
         }
     }
     
@@ -83,26 +89,26 @@ class MainViewController: UIViewController {
         
         switch weekday {
         case 1:
-//            print("Сегодня Воскресенье")
+            //            print("Сегодня Воскресенье")
             timeLabel.text = "через: 3 дня"
         case 2:
-//            print("Сегодня Понедельник")
+            //            print("Сегодня Понедельник")
             timeLabel.text = "через: 2 дня"
         case 3:
-//            print("Сегодня Вторник")
+            //            print("Сегодня Вторник")
             timeLabel.text = "через: 1 день"
         case 4:
-//            print("Сегодня Среда")
+            //            print("Сегодня Среда")
             timeLabel.text = ": завтра"
         case 5:
-//            print("Сегодня Четверг")
+            //            print("Сегодня Четверг")
             timeLabel.text = ": сегодня"
             timeLabel.textColor = .red
         case 6:
-//            print("Сегодня Пятница")
+            //            print("Сегодня Пятница")
             timeLabel.text = ": была вчера"
         case 7:
-//            print("Сегодня Суббота")
+            //            print("Сегодня Суббота")
             timeLabel.text = "через: 4 дня"
         default:
             print("Error")
@@ -167,6 +173,7 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let player = players[indexPath.row]
+        
         performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
         tableView.deselectRow(at: indexPath, animated: true)
     }

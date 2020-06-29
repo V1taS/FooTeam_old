@@ -25,9 +25,13 @@ class ListNameTableView: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ListNameTableViewSegue" {
-            let personStatSegueVC = segue.destination as! PersonalStatisticsController
-            personStatSegueVC.players = sender as? Player
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            if segue.identifier == "ListNameTableViewSegue" {
+                let personStatSegueVC = segue.destination as! PersonalStatisticsController
+                personStatSegueVC.players = sender as? Player
+                personStatSegueVC.indexPath = indexPath
+            }
         }
     }
     
@@ -62,9 +66,9 @@ class ListNameTableView: UITableViewController {
         cell.numberOfGamesLeft.text = "Осталось игр: \(player.payment)"
         cell.positionPlayer.text = player.position
         
-        if player.teamNumber == 0 {
+        if player.teamNumber == 1 {
             cell.teamSelection.text = "Команда: 🔴"
-        } else if player.teamNumber == 1 {
+        } else if player.teamNumber == 2 {
             cell.teamSelection.text = "Команда: 🔵"
         } else {
             cell.teamSelection.text = "Команда: 🤷🏻‍♂️"
@@ -142,11 +146,11 @@ class ListNameTableView: UITableViewController {
             object.isFavourite = !object.isFavourite
             
             self.players[indexPath.row] = object
-            StorageManager.shared.reSavePlayer(player: object, at: indexPath.row)
             completion(true)
         }
         action.backgroundColor = object.isFavourite ? #colorLiteral(red: 0, green: 0.364138335, blue: 0.1126995459, alpha: 1) : .systemGray
         action.image = UIImage(systemName: "person.badge.plus")
+        StorageManager.shared.reSavePlayer(player: object, at: indexPath.row)
         return action
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditePlayerTableViewController: UITableViewController {
+class EditePlayerTableViewController: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     @IBOutlet weak var imagePlayer: UIImageView!
     @IBOutlet weak var namePlayer: UITextField!
@@ -28,7 +28,10 @@ class EditePlayerTableViewController: UITableViewController {
     var positionToolBar: UIToolbar?
     var teamNumberToolBar: UIToolbar?
     
+    var imageIsChange = false
+    
     var players: Player!
+    var indexPath: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +51,7 @@ class EditePlayerTableViewController: UITableViewController {
         setStat()
         
         tableView.tableFooterView = UIView()
+
     }
     
     
@@ -67,7 +71,6 @@ class EditePlayerTableViewController: UITableViewController {
         numberOfGoals.text = String(players.numberOfGoals)
         winGame.text = String(players.winGame)
         losGame.text = String(players.losGame)
-        
     }
     
     private func setPickerViewString(picker: PickerView) {
@@ -231,11 +234,93 @@ class EditePlayerTableViewController: UITableViewController {
         position.text = positionPicker?.selectedValue
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
+    // MARK: - Table View Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        view.endEditing(true)
+        if indexPath.row == 0 {
+            
+            let cameraIcon = #imageLiteral(resourceName: "camera") // image literal
+            let photoIcon = #imageLiteral(resourceName: "photo")  // image literal
+
+            let actionSheet = UIAlertController(title: nil,
+                                                message: nil,
+                                                preferredStyle: .actionSheet)
+            
+            let camera = UIAlertAction(title: "Camera",
+                                       style: .default) { _ in
+                                        self.chooseImagePicker(source: .camera)
+            }
+            camera.setValue(cameraIcon, forKey: "image")
+            camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+            
+            let photo = UIAlertAction(title: "Photo",
+                                      style: .default) { _ in
+                                        self.chooseImagePicker(source: .photoLibrary)
+            }
+            
+            photo.setValue(photoIcon, forKey: "image")
+            photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+            
+            actionSheet.addAction(camera)
+            actionSheet.addAction(photo)
+            actionSheet.addAction(cancel)
+            
+            present(actionSheet, animated: true)
+            
+        } else {
+            view.endEditing(true)
+        }
     }
+    
+    func chooseImagePicker(source: UIImagePickerController.SourceType) {
+
+        if UIImagePickerController.isSourceTypeAvailable(source){
+            
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true
+            imagePicker.sourceType = source
+            present(imagePicker, animated: true)
+        }
+    }
+    
+    // Метод сообщает что выбран статичный фрагмен видео или фото
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imagePlayer.image = info[.editedImage] as? UIImage
+        imagePlayer.contentMode = .scaleAspectFill
+        imagePlayer.clipsToBounds = true
+        dismiss(animated: true)
+    }
+    
+    func saveNewPlayer() {
+            
+            var image: UIImage?
+            imageIsChange = true
+            if imageIsChange {
+                image = imagePlayer.image
+            } else {
+                image = #imageLiteral(resourceName: "medium_Avatar")
+            }
+            
+            let newPlayer = Player(photo: (image?.pngData())!,
+                                   name: namePlayer.text!,
+                                   teamNumber: Int(teamNumber.text!)!,
+                                   payment: payment.text ?? "0",
+                                   isFavourite: iGo.isOn,
+                                   rating: Int(rating.text!)!,
+                                   position: "ФВР",
+                                   numberOfGames: Int(numberOfGames.text!)!,
+                                   numberOfGoals: Int(numberOfGoals.text!)!,
+                                   winGame: Int(winGame.text!)!,
+                                   losGame: Int(losGame.text!)!)
+        players = newPlayer
+        
+        StorageManager.shared.reSavePlayer(player: newPlayer, at: indexPath.row)
+            
+        }
     
 }
 

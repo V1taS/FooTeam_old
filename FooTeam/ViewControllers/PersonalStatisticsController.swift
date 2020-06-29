@@ -22,11 +22,11 @@ class PersonalStatisticsController: UIViewController {
     @IBOutlet weak var losGame: UILabel!
     
     var players: Player!
-    
+    var indexPath: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,8 +49,20 @@ class PersonalStatisticsController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditePlayerTableViewControllerSegue" {
-            let EditePlayerVC = segue.destination as! EditePlayerTableViewController
-            EditePlayerVC.players = players
+            let editePlayerVC = segue.destination as! EditePlayerTableViewController
+            editePlayerVC.players = players
+            editePlayerVC.indexPath = self.indexPath
         }
+    }
+    
+    // Метод который отрабатывает выход из ViewController
+    // Мы на него будем ссылаться
+    @IBAction func unwindSeguePersonal(_ segue: UIStoryboardSegue) {
+        
+        guard let editiVC = segue.source as? EditePlayerTableViewController else { return }
+        
+        editiVC.saveNewPlayer()
+        
+        players = editiVC.players
     }
 }
