@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainViewController: UIViewController {
     
@@ -22,14 +23,16 @@ class MainViewController: UIViewController {
     
     @IBOutlet var reserve: [UILabel]!
     
-    var players = Team.shared.teamAll
+    //MARK: - Получаем данные из базы
+    var players: Results<Player>!
     
     var networkWeatherManager = NetworkWeatherManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        players = Team.shared.teamAll
+        //MARK: - инициализируем объект players
+        players = realm.objects(Player.self)
         
         OnlyName.shared.getTeamOne(players: Team.shared.reserve,
                                    name: reserve)
@@ -119,14 +122,14 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return players.count
+        return players.isEmpty ? 0 : players.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionView", for: indexPath) as! CellViewController
         let player = players[indexPath.row]
         
-        cell.imageCell.image = UIImage(data: player.photo)
+        cell.imageCell.image = UIImage(data: player.photo!)
         cell.labelCell.text = player.name
         cell.imageCell.layer.cornerRadius = cell.imageCell.frame.size.height / 2
         cell.imageCell.clipsToBounds = true
@@ -159,7 +162,7 @@ extension MainViewController: UITableViewDataSource {
         let player = players[indexPath.row]
         
         cell.namePlayers.text = player.name
-        cell.imagePlayers.image = UIImage(data: player.photo)
+        cell.imagePlayers.image = UIImage(data: player.photo!)
         
         cell.imagePlayers.layer.cornerRadius = cell.imagePlayers.frame.width / 2
         

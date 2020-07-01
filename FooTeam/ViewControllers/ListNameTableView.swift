@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ListNameTableView: UITableViewController {
     
-    // Основной Функционал в ModelList
-    var players = Team.shared.teamAll
+    var players: Results<Player>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        players = realm.objects(Player.self)
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
@@ -45,7 +46,7 @@ class ListNameTableView: UITableViewController {
         
         // Обращаемся к методу который сохраняет данные
         addVC.saveNewPlayer()
-        players = StorageManager.shared.fetchPlayers()
+//        players = StorageManager.shared.fetchPlayers()
         // Перезагружаем tableView
         tableView.reloadData()
     }
@@ -82,10 +83,10 @@ class ListNameTableView: UITableViewController {
         
     
         
-        if UIImage(data: player.photo) == nil {
-            cell.imagePlayer.image = UIImage(data: player.photo)
+        if UIImage(data: player.photo!) == nil {
+            cell.imagePlayer.image = UIImage(data: player.photo!)
         } else {
-            cell.imagePlayer.image = UIImage(data: player.photo)
+            cell.imagePlayer.image = UIImage(data: player.photo!)
         }
         
         // Скруглили Imageview
@@ -110,8 +111,9 @@ class ListNameTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            players.remove(at: indexPath.row)
-            StorageManager.shared.deletePlayer(at: indexPath.row)
+            let player = players[indexPath.row]
+            StorageManager.deletePlayer(player)
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.reloadData()
         }
@@ -123,11 +125,11 @@ class ListNameTableView: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let movePlayers = players.remove(at: sourceIndexPath.row)
-        StorageManager.shared.deletePlayer(at: sourceIndexPath.row)
+        let movePlayers = players[sourceIndexPath.row]
+        StorageManager.deletePlayer(movePlayers)
         
-        players.insert(movePlayers, at: destinationIndexPath.row)
-        StorageManager.shared.insertPlayer(player: movePlayers, at: destinationIndexPath.row)
+//        players.insert(movePlayers, at: destinationIndexPath.row)
+//        StorageManager.shared.insertPlayer(player: movePlayers, at: destinationIndexPath.row)
         tableView.reloadData()
     }
     
@@ -141,16 +143,16 @@ class ListNameTableView: UITableViewController {
     
     func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
         
-        var object = players[indexPath.row]
+        let object = players[indexPath.row]
         let action = UIContextualAction(style: .normal, title: "I GO") { (action, view, completion) in
             object.isFavourite = !object.isFavourite
-            
-            self.players[indexPath.row] = object
+            var player = self.players[indexPath.row]
+            player = object
             completion(true)
         }
         action.backgroundColor = object.isFavourite ? #colorLiteral(red: 0, green: 0.364138335, blue: 0.1126995459, alpha: 1) : .systemGray
         action.image = UIImage(systemName: "person.badge.plus")
-        StorageManager.shared.reSavePlayer(player: object, at: indexPath.row)
+//        StorageManager.shared.reSavePlayer(player: object, at: indexPath.row)
         return action
     }
     

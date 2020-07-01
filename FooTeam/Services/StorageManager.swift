@@ -6,50 +6,43 @@
 //  Copyright © 2020 Vitalii Sosin. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
+
+let realm = try! Realm()
 
 class StorageManager {
     
-    static let shared = StorageManager()
-    
-    private let userDefaults = UserDefaults.standard
-    private let contactKey = "FoTeam"
-    
-    func savePlayer(with player: Player) {
-        var players = fetchPlayers()
-        players.append(player)
-        guard let data = try? JSONEncoder().encode(players) else { return }
-        userDefaults.set(data, forKey: contactKey)
+    //MARK: - метод сохранения
+    static func savePlayer(_ player: Player) {
+        
+        try! realm.write {
+            realm.add(player)
+        }
     }
     
-    func fetchPlayers() -> [Player] {
-        guard let data = userDefaults.object(forKey: contactKey) as? Data else { return [] }
-        guard let players = try? JSONDecoder().decode([Player].self, from: data) else { return [] }
-        return players
+    //MARK: - метод удаления
+    static func deletePlayer(_ player: Player) {
+        
+        try! realm.write {
+            realm.delete(player)
+        }
     }
     
-    func deletePlayer(at index: Int) {
-        var players = fetchPlayers()
-        players.remove(at: index)
+    //MARK: - метод перезаписи
+    static func rewritePlayer(_ currentPlayer: Player, newPlayer: Player) {
         
-        guard let data = try? JSONEncoder().encode(players) else { return }
-        userDefaults.set(data, forKey: contactKey)
-    }
-    
-    func insertPlayer(player: Player, at index: Int) {
-        var players = fetchPlayers()
-        
-        players.insert(player, at: index)
-        
-        guard let data = try? JSONEncoder().encode(players) else { return }
-        userDefaults.set(data, forKey: contactKey)
-    }
-    
-    func reSavePlayer(player: Player, at index: Int) {
-        var players = fetchPlayers()
-        players[index] = player
-        
-        guard let data = try? JSONEncoder().encode(players) else { return }
-        userDefaults.set(data, forKey: contactKey)
+        try! realm.write {
+            currentPlayer.photo = newPlayer.photo
+            currentPlayer.name = newPlayer.name
+            currentPlayer.teamNumber = newPlayer.teamNumber
+            currentPlayer.payment = newPlayer.payment
+            currentPlayer.isFavourite = newPlayer.isFavourite
+            currentPlayer.rating = newPlayer.rating
+            currentPlayer.position = newPlayer.position
+            currentPlayer.numberOfGames = newPlayer.numberOfGames
+            currentPlayer.numberOfGoals = newPlayer.numberOfGoals
+            currentPlayer.winGame = newPlayer.winGame
+            currentPlayer.losGame = newPlayer.losGame
+        }
     }
 }

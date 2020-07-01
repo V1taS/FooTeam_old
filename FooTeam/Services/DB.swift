@@ -12,7 +12,7 @@ class DB {
     
     static let shared = DB()
     
-    var players = StorageManager.shared.fetchPlayers()
+    var players = [Player]()
     
     private init() {}
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddPlayerTableViewController: UITableViewController {
     
@@ -16,9 +17,8 @@ class AddPlayerTableViewController: UITableViewController {
     @IBOutlet weak var namePlayer: UITextField!
     @IBOutlet weak var payMent: UITextField!
     
-    var newPlayer: Player?
     var imageIsChange = false
-    var players: Player!
+    var players: Results<Player>!
     var editModeIsOn = false
     
     override func viewDidLoad() {
@@ -100,25 +100,28 @@ class AddPlayerTableViewController: UITableViewController {
     func saveNewPlayer() {
         
         var image: UIImage?
-//         var imageIsChange = false
+        //         var imageIsChange = false
         if imageIsChange {
             image = imagePlayer.image
         } else {
-            image = #imageLiteral(resourceName: "medium_Avatar")
+            image = #imageLiteral(resourceName: "Даулет")
         }
         
-        let newPlayer = Player(photo: (image?.pngData())!,
+        let imageDate = image?.pngData()
+        
+        let newPlayer = Player(photo: imageDate,
                                name: namePlayer.text!,
-                               teamNumber: 3,
-                               payment: payMent.text ?? "0",
+                               teamNumber: 0,
+                               payment: payMent.text!,
                                isFavourite: true,
-                               rating: 0,
-                               position: "ФВР",
+                               rating: 50,
+                               position: "ФРВ",
                                numberOfGames: 0,
                                numberOfGoals: 0,
                                winGame: 0,
                                losGame: 0)
-        StorageManager.shared.savePlayer(with: newPlayer)
+        
+        StorageManager.savePlayer(newPlayer)
         
     }
     

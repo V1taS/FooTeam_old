@@ -84,7 +84,7 @@ class NameAndPhoto {
         for player in players {
             let image = player.photo
             photo[count].layer.cornerRadius = photo[count].frame.width / 2
-            photo[count].image = UIImage(data: image)
+            photo[count].image = UIImage(data: image!)
             name[count].text = player.name
             count += 1
         }

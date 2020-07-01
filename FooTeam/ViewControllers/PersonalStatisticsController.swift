@@ -32,18 +32,18 @@ class PersonalStatisticsController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        rating.text = String(players.rating)
+//        rating.text = String(players.rating)
         position.text = players.position
         
         namePlayers.text = players.name
-        photoPlayers.image = UIImage(data: players.photo)
+        photoPlayers.image = UIImage(data: players.photo!)
         photoPlayers.layer.cornerRadius = photoPlayers.frame.width / 2
         
-        numberOfGames.text = String(players.numberOfGames)
-        numberOfGoals.text = String(players.numberOfGoals)
-        
-        winGame.text = String(players.winGame)
-        losGame.text = String(players.losGame)
+//        numberOfGames.text = String(players.numberOfGames)
+//        numberOfGoals.text = String(players.numberOfGoals)
+//
+//        winGame.text = String(players.winGame)
+//        losGame.text = String(players.losGame)
     }
     
     // MARK: - Navigation

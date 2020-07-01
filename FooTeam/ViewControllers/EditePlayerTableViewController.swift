@@ -22,8 +22,10 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
     @IBOutlet weak var winGame: UITextField!
     @IBOutlet weak var losGame: UITextField!
     
-    var positionPicker: PickerView?
-    var teamNumberPicker: PickerView?
+    let arrayPosition = ["ФРВ", "ЦП", "ЦЗ", "ВРТ"]
+    let arrayTeamNumber = ["0", "1", "2"]
+    
+    var pickerView: PickerView?
     
     var positionToolBar: UIToolbar?
     var teamNumberToolBar: UIToolbar?
@@ -36,14 +38,13 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        positionPicker = PickerView()
-        teamNumberPicker = PickerView()
+        pickerView = PickerView()
+        
+        switchPickerView(textField: teamNumber)
+        switchPickerView(textField: position)
         
         positionToolBar = UIToolbar()
         teamNumberToolBar = UIToolbar()
-        
-        setPickerViewString(picker: positionPicker!)
-        teamNumbersetPickerView(picker: teamNumberPicker!)
         
         positionToolBar(toolBar: positionToolBar)
         teamNumberToolBar(toolBar: teamNumberToolBar)
@@ -51,7 +52,7 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
         setStat()
         
         tableView.tableFooterView = UIView()
-
+        
     }
     
     
@@ -59,25 +60,48 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
     }
     
     private func setStat() {
-        imagePlayer.image = UIImage(data: players.photo)
+        imagePlayer.image = UIImage(data: players.photo!)
         namePlayer.text = players.name
-        teamNumber.text = String(players.teamNumber)
-        teamNumber.inputView = teamNumberPicker
+//        teamNumber.text = String(players.teamNumber)
+//        teamNumber.inputView = teamNumberPicker
         payment.text = players.payment
         iGo.isOn = players.isFavourite
-        rating.text = String(players.rating)
-        position.inputView = positionPicker
-        numberOfGames.text = String(players.numberOfGames)
-        numberOfGoals.text = String(players.numberOfGoals)
-        winGame.text = String(players.winGame)
-        losGame.text = String(players.losGame)
+//        rating.text = String(players.rating)
+//        position.inputView = positionPicker
+//        numberOfGames.text = String(players.numberOfGames)
+//        numberOfGoals.text = String(players.numberOfGoals)
+//        winGame.text = String(players.winGame)
+//        losGame.text = String(players.losGame)
     }
     
-    private func setPickerViewString(picker: PickerView) {
+    func switchPickerView(textField: UITextField) {
         
-        picker.data = ["ФРВ", "ЦП", "ЦЗ", "ВРТ"]
+        switch textField.tag {
+        case 0:
+            setPickerView(picker: pickerView!,
+            textField: teamNumber,
+            arrayData: arrayTeamNumber)
+        case 1:
+            setPickerView(picker: pickerView!,
+            textField: position,
+            arrayData: arrayPosition)
+        default:
+            print("Не выбран не один текст филд")
+        }
+    }
+    
+    private func setPickerView(picker: PickerView,
+                                     textField: UITextField,
+                                     arrayData: [String]) {
         
-        // dark mode detected
+        picker.data = arrayData
+        setDarkAndLightModePicker(picker)
+        picker.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        textField.inputView = picker
+    }
+    
+    func setDarkAndLightModePicker(_ picker: PickerView ) {
+        
         switch traitCollection.userInterfaceStyle {
         case .light, .unspecified:
             picker.tintColor = .black
@@ -88,28 +112,6 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
         @unknown default:
             fatalError()
         }
-        
-        picker.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        
-    }
-    
-    private func teamNumbersetPickerView(picker: PickerView) {
-        
-        picker.data = ["0", "1", "2"]
-        
-        // dark mode detected
-        switch traitCollection.userInterfaceStyle {
-        case .light, .unspecified:
-            picker.tintColor = .black
-            picker.backgroundColor = .white
-        case .dark:
-            picker.tintColor = .white
-            picker.backgroundColor = .black
-        @unknown default:
-            fatalError()
-        }
-        
-        picker.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
     func teamNumberToolBar(toolBar: UIToolbar?) {
@@ -170,7 +172,7 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
      */
     @objc func doneBtnClicked(_ button: UIBarButtonItem?) {
         teamNumber?.resignFirstResponder()
-        teamNumber.text = teamNumberPicker?.selectedValue
+//        teamNumber.text = teamNumberPicker?.selectedValue
     }
     
     func positionToolBar(toolBar: UIToolbar?) {
@@ -231,7 +233,7 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
      */
     @objc func doneBtn(_ button: UIBarButtonItem?) {
         position?.resignFirstResponder()
-        position.text = positionPicker?.selectedValue
+//        position.text = positionPicker?.selectedValue
     }
     
     // MARK: - Table View Delegate
@@ -242,7 +244,7 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
             
             let cameraIcon = #imageLiteral(resourceName: "camera") // image literal
             let photoIcon = #imageLiteral(resourceName: "photo")  // image literal
-
+            
             let actionSheet = UIAlertController(title: nil,
                                                 message: nil,
                                                 preferredStyle: .actionSheet)
@@ -276,7 +278,7 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
     }
     
     func chooseImagePicker(source: UIImagePickerController.SourceType) {
-
+        
         if UIImagePickerController.isSourceTypeAvailable(source){
             
             let imagePicker = UIImagePickerController()
@@ -296,31 +298,31 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
     }
     
     func saveNewPlayer() {
-            
-            var image: UIImage?
-            imageIsChange = true
-            if imageIsChange {
-                image = imagePlayer.image
-            } else {
-                image = #imageLiteral(resourceName: "medium_Avatar")
-            }
-            
-            let newPlayer = Player(photo: (image?.pngData())!,
-                                   name: namePlayer.text!,
-                                   teamNumber: Int(teamNumber.text!)!,
-                                   payment: payment.text ?? "0",
-                                   isFavourite: iGo.isOn,
-                                   rating: Int(rating.text!)!,
-                                   position: "ФВР",
-                                   numberOfGames: Int(numberOfGames.text!)!,
-                                   numberOfGoals: Int(numberOfGoals.text!)!,
-                                   winGame: Int(winGame.text!)!,
-                                   losGame: Int(losGame.text!)!)
-        players = newPlayer
         
-        StorageManager.shared.reSavePlayer(player: newPlayer, at: indexPath.row)
-            
+        var image: UIImage?
+        imageIsChange = true
+        if imageIsChange {
+            image = imagePlayer.image
+        } else {
+            image = #imageLiteral(resourceName: "medium_Avatar")
         }
+        
+//        let newPlayer = Player(photo: (image?.pngData())!,
+//                               name: namePlayer.text!,
+//                               teamNumber: Int(teamNumber.text!)!,
+//                               payment: payment.text ?? "0",
+//                               isFavourite: iGo.isOn,
+//                               rating: Int(rating.text!)!,
+//                               position: "ФВР",
+//                               numberOfGames: Int(numberOfGames.text!)!,
+//                               numberOfGoals: Int(numberOfGoals.text!)!,
+//                               winGame: Int(winGame.text!)!,
+//                               losGame: Int(losGame.text!)!)
+//        players = newPlayer
+//
+//        StorageManager.shared.reSavePlayer(player: newPlayer, at: indexPath.row)
+        
+    }
     
 }
 

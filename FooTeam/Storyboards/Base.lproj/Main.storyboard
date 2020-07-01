@@ -945,7 +945,7 @@
                                                             <color key="textColor" name="BlackAndWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ФРВ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6X-vT-NIu">
+                                                        <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ФРВ" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6X-vT-NIu">
                                                             <rect key="frame" x="0.0" y="21.5" width="260" height="34"/>
                                                             <color key="backgroundColor" name="WhiteAndBlack"/>
                                                             <color key="tintColor" name="BlackAndWhite"/>
@@ -1872,15 +1872,33 @@
                                             <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTF-Z4-bih">
+                                            <rect key="frame" x="241" y="31" width="25" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="av6-t0-Pcy">
+                                            <rect key="frame" x="357" y="11" width="36" height="38.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="L4k-eu-XDb" firstAttribute="leading" secondItem="lEB-U0-xvD" secondAttribute="trailing" constant="16" id="6T9-Dr-K7J"/>
                                         <constraint firstAttribute="bottom" secondItem="tkv-0Z-idZ" secondAttribute="bottom" constant="8" id="6gz-wf-RWx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="av6-t0-Pcy" secondAttribute="trailing" constant="1" id="Cxn-zB-6zg"/>
                                         <constraint firstItem="tkv-0Z-idZ" firstAttribute="leading" relation="lessThanOrEqual" secondItem="fK2-Aa-mQV" secondAttribute="leading" constant="353" id="EAM-2d-Wk8"/>
+                                        <constraint firstItem="av6-t0-Pcy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fK2-Aa-mQV" secondAttribute="leadingMargin" id="HNZ-sq-kR8"/>
                                         <constraint firstItem="L4k-eu-XDb" firstAttribute="top" secondItem="fK2-Aa-mQV" secondAttribute="top" constant="8" id="TFu-eg-pKW"/>
                                         <constraint firstItem="lEB-U0-xvD" firstAttribute="leading" secondItem="fK2-Aa-mQV" secondAttribute="leadingMargin" id="Uoj-VC-fTQ"/>
+                                        <constraint firstItem="xTF-Z4-bih" firstAttribute="top" secondItem="fK2-Aa-mQV" secondAttribute="topMargin" constant="20" id="W8H-Ju-LhY"/>
                                         <constraint firstAttribute="trailing" secondItem="tkv-0Z-idZ" secondAttribute="trailing" constant="16" id="X7i-Gn-pQ1"/>
+                                        <constraint firstItem="av6-t0-Pcy" firstAttribute="top" secondItem="fK2-Aa-mQV" secondAttribute="topMargin" id="Zsb-YB-E06"/>
                                         <constraint firstItem="lEB-U0-xvD" firstAttribute="top" secondItem="fK2-Aa-mQV" secondAttribute="topMargin" id="brF-16-zRi"/>
+                                        <constraint firstItem="xTF-Z4-bih" firstAttribute="leading" secondItem="lEB-U0-xvD" secondAttribute="trailing" constant="121" id="elO-4J-lZg"/>
+                                        <constraint firstItem="av6-t0-Pcy" firstAttribute="leading" secondItem="xTF-Z4-bih" secondAttribute="trailing" constant="91" id="yem-R7-JvR"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="WhiteAndBlack"/>
@@ -2207,7 +2225,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nXh-Ac-dWn"/>
+        <segue reference="evd-kk-GUw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="4" width="644" height="900"/>
