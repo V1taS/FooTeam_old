@@ -15,6 +15,8 @@ class Team {
     
     private init() {}
     
+    static let rating = "rating = 90 OR rating = 91 OR rating = 92 OR rating = 93 OR rating = 94 OR rating = 95 OR rating = 96 OR rating = 97 OR rating = 98 OR rating = 99"
+    
     //MARK: - Список кто идет
     func getIgo(_ players: [Player]) -> [Player] {
         var igoPlayers: [Player] = []

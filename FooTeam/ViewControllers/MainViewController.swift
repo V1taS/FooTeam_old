@@ -25,7 +25,6 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    
     //MARK: - Получаем данные из базы
     var players: Results<Player>!
     
@@ -56,6 +55,7 @@ class MainViewController: UIViewController {
         collectionViewTopPlayers.reloadData()
         
         //        pl.savePlayer()
+        tableViewNewPlayers.tableFooterView = UIView()
         
     }
     
@@ -69,18 +69,18 @@ class MainViewController: UIViewController {
         collectionViewTopPlayers.reloadData()
         tableViewNewPlayers.reloadData()
         
+        tableViewNewPlayers.tableFooterView = UIView()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if let indexPath = tableViewNewPlayers.indexPathForSelectedRow {
+//        if let indexPath = tableViewNewPlayers.indexPathForSelectedRow {
             
             if segue.identifier == "HomeSeguetoPS" {
                 let personStatSegueVC = segue.destination as! PersonalStatisticsController
-                personStatSegueVC.players = sender as? Player
-                personStatSegueVC.indexPath = indexPath
+                personStatSegueVC.player = sender as? Player
             } 
-        }
+//        }
     }
     
     // MARK: - API parse
@@ -145,18 +145,23 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let players = self.players.filter("\(Team.rating)").sorted(byKeyPath: "rating", ascending: false)
         return players.isEmpty ? 0 : players.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionView", for: indexPath) as! CellViewController
         
+        let players = self.players.filter("\(Team.rating)").sorted(byKeyPath: "rating", ascending: false)
         let player = players[indexPath.row]
         
         cell.imageCell.image = UIImage(data: player.photo!)
         cell.labelCell.text = player.name
         cell.imageCell.layer.cornerRadius = cell.imageCell.frame.size.height / 2
         cell.imageCell.clipsToBounds = true
+        
+        cell.imageCell.layer.borderWidth = 2
+        cell.imageCell.layer.borderColor = #colorLiteral(red: 1, green: 0.4017014802, blue: 0.3975783288, alpha: 1)
         return cell
     }
 }
@@ -165,8 +170,10 @@ extension MainViewController: UICollectionViewDataSource {
 
 extension MainViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let players = self.players.filter("\(Team.rating)").sorted(byKeyPath: "rating", ascending: false)
         let player = players[indexPath.row]
         performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
+        
         collectionView.deselectItem(at: indexPath, animated: true)
     }
 }
@@ -191,13 +198,13 @@ extension MainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellNewPlayer", for: indexPath) as! MainNewPlayersTableViewCell
         
         if segmentedControl.selectedSegmentIndex == 0 {
-            let players = self.players.filter("teamNumber = 1")
+            let players = self.players.filter("teamNumber = 1").sorted(byKeyPath: "name", ascending: true)
             
             let player = players[indexPath.row]
             cell.namePlayers.text = player.name
             return cell
         } else {
-            let players = self.players.filter("teamNumber = 2")
+            let players = self.players.filter("teamNumber = 2").sorted(byKeyPath: "name", ascending: true)
             let player = players[indexPath.row]
             
             cell.namePlayers.text = player.name
@@ -212,14 +219,14 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if segmentedControl.selectedSegmentIndex == 0 {
-            let players = self.players.filter("teamNumber = 1")
+            let players = self.players.filter("teamNumber = 1").sorted(byKeyPath: "name", ascending: true)
             
             let player = players[indexPath.row]
             performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
             tableView.deselectRow(at: indexPath, animated: true)
             
         } else {
-            let players = self.players.filter("teamNumber = 2")
+            let players = self.players.filter("teamNumber = 2").sorted(byKeyPath: "name", ascending: true)
             
             let player = players[indexPath.row]
             performSegue(withIdentifier: "HomeSeguetoPS", sender: player)

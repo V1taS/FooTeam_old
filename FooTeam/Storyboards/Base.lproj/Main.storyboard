@@ -768,8 +768,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZRA-w7-O5Q">
-                                <rect key="frame" x="0.0" y="131.5" width="414" height="100"/>
-                                <color key="backgroundColor" name="WhiteAndBlack"/>
+                                <rect key="frame" x="0.0" y="130" width="414" height="100"/>
+                                <color key="backgroundColor" red="0.12644425030000001" green="0.14330491419999999" blue="0.24707210060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" name="BlackAndWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="MkB-UM-bVA"/>
@@ -778,11 +778,11 @@
                                     <size key="itemSize" width="99.5" height="99.5"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionView" id="hFk-RE-7FO" customClass="CellViewController" customModule="FooTeam" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.5" width="99.5" height="99.5"/>
+                                        <rect key="frame" x="16" y="0.5" width="99.5" height="99.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sho-ms-wJ9">
                                             <rect key="frame" x="0.0" y="0.0" width="99.5" height="99.5"/>
@@ -835,14 +835,14 @@
                                     <outlet property="delegate" destination="E73-YY-Y4E" id="1I6-aJ-VvL"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ТОП Игроки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LmT-9C-lUu">
-                                <rect key="frame" x="155.5" y="100" width="103" height="24"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ТОП Игроков" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LmT-9C-lUu">
+                                <rect key="frame" x="141.5" y="96" width="131" height="26.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="22"/>
                                 <color key="textColor" name="BlackAndWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WuT-3H-0Kv" userLabel="Погода">
-                                <rect key="frame" x="103" y="234" width="208.5" height="72"/>
+                                <rect key="frame" x="103" y="232.5" width="208.5" height="72"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AWe-8N-6Fn">
                                         <rect key="frame" x="0.0" y="0.0" width="208.5" height="24"/>
@@ -910,9 +910,10 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" name="WhiteAndBlack"/>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sQV-Cm-KLZ">
-                                <rect key="frame" x="0.0" y="387" width="414" height="32"/>
+                                <rect key="frame" x="0.0" y="385.5" width="414" height="32"/>
                                 <color key="backgroundColor" red="0.12644425030000001" green="0.14330491419999999" blue="0.24707210060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="Команда - 1"/>
@@ -924,7 +925,7 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7v-iM-epv">
-                                <rect key="frame" x="0.0" y="314" width="414" height="65"/>
+                                <rect key="frame" x="0.0" y="312.5" width="414" height="65"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMH-xF-Kq4">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="24"/>
@@ -1028,7 +1029,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="20" sectionFooterHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="b5r-1l-Bzl">
-                                <rect key="frame" x="8" y="426" width="398" height="387"/>
+                                <rect key="frame" x="8" y="424.5" width="398" height="388.5"/>
                                 <color key="backgroundColor" name="WhiteAndBlack"/>
                                 <color key="tintColor" name="BlackAndWhite"/>
                                 <color key="sectionIndexColor" name="BlackAndWhite"/>
@@ -1090,7 +1091,7 @@
                             <constraint firstItem="sQV-Cm-KLZ" firstAttribute="trailing" secondItem="KLq-C6-NDk" secondAttribute="trailing" id="Sxm-rp-1zn"/>
                             <constraint firstItem="b5r-1l-Bzl" firstAttribute="bottom" secondItem="KLq-C6-NDk" secondAttribute="bottom" id="T4S-0c-IaY"/>
                             <constraint firstItem="ZRA-w7-O5Q" firstAttribute="top" secondItem="LmT-9C-lUu" secondAttribute="bottom" constant="7.5" id="TQs-u3-Fl1"/>
-                            <constraint firstItem="LmT-9C-lUu" firstAttribute="top" secondItem="KLq-C6-NDk" secondAttribute="top" constant="12" id="UgH-KZ-n4I"/>
+                            <constraint firstItem="LmT-9C-lUu" firstAttribute="top" secondItem="KLq-C6-NDk" secondAttribute="top" constant="8" id="cFI-Ge-IJw"/>
                             <constraint firstItem="KLq-C6-NDk" firstAttribute="trailing" secondItem="b5r-1l-Bzl" secondAttribute="trailing" constant="8" id="m7X-kY-4Va"/>
                             <constraint firstItem="WuT-3H-0Kv" firstAttribute="top" secondItem="ZRA-w7-O5Q" secondAttribute="bottom" constant="2.5" id="sdW-iH-1t6"/>
                             <constraint firstItem="E7v-iM-epv" firstAttribute="trailing" secondItem="KLq-C6-NDk" secondAttribute="trailing" id="w6W-BE-wii"/>
@@ -1115,56 +1116,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIH-aK-0tY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2450.7246376811595" y="151.33928571428569"/>
-        </scene>
-        <!--Составы-->
-        <scene sceneID="ROS-kE-ByP">
-            <objects>
-                <tableViewController id="v9s-HY-flw" customClass="CommandStructureTableViewController" customModule="FooTeam" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lDE-Bj-f4C">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellCommandStructure" id="J8s-RV-gge">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J8s-RV-gge" id="KMz-bY-i1i">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" name="WhiteAndBlack"/>
-                                <color key="tintColor" name="BlackAndWhite"/>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="v9s-HY-flw" id="ltZ-gz-6FY"/>
-                            <outlet property="delegate" destination="v9s-HY-flw" id="OQ2-Mc-JhV"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Составы" largeTitleDisplayMode="always" id="qxL-BP-Fet"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hRV-Dg-XbX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2690" y="884"/>
-        </scene>
-        <!--Составы-->
-        <scene sceneID="1Ai-Fh-qQR">
-            <objects>
-                <navigationController id="zZv-HF-pba" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Составы" image="sportscourt" catalog="system" selectedImage="sportscourt" id="4V1-EX-xBT"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8cg-aJ-nMZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="BlackAndWhite"/>
-                        <color key="barTintColor" name="WhiteAndBlack"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="v9s-HY-flw" kind="relationship" relationship="rootViewController" id="dT4-Lo-adf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S33-lg-8qJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1769" y="884"/>
         </scene>
         <!--Игроки-->
         <scene sceneID="bt0-KE-pPF">
@@ -1524,7 +1475,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="mYs-wy-92U" kind="relationship" relationship="viewControllers" id="Rns-hj-3kU"/>
-                        <segue destination="zZv-HF-pba" kind="relationship" relationship="viewControllers" id="tuW-ru-AiJ"/>
                         <segue destination="p6G-Zd-Un5" kind="relationship" relationship="viewControllers" id="xel-O4-0Gv"/>
                     </connections>
                 </tabBarController>
@@ -1563,7 +1513,6 @@
         <image name="khimki" width="871" height="1200"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="russia" width="1200" height="800"/>
-        <image name="sportscourt" catalog="system" width="128" height="83"/>
         <image name="stub" width="195" height="196"/>
         <image name="Александр Руховец" width="796" height="964"/>
         <namedColor name="BlackAndWhite">

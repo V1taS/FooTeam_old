@@ -21,36 +21,49 @@ class PersonalStatisticsController: UIViewController {
     @IBOutlet weak var winGame: UILabel!
     @IBOutlet weak var losGame: UILabel!
     
-    var players: Player!
+    var player: Player!
     var indexPath: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        rating.text = "\(player.rating)"
+        position.text = player.position
+        
+        namePlayers.text = player.name
+        photoPlayers.image = UIImage(data: player.photo!)
+        photoPlayers.layer.cornerRadius = photoPlayers.frame.width / 3
+        
+        numberOfGames.text = String(player.numberOfGames)
+        numberOfGoals.text = String(player.numberOfGoals)
+
+        winGame.text = String(player.winGame)
+        losGame.text = String(player.losGame)
     
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        rating.text = String(players.rating)
-        position.text = players.position
+        rating.text = String(player.rating)
+        position.text = player.position
         
-        namePlayers.text = players.name
-        photoPlayers.image = UIImage(data: players.photo!)
+        namePlayers.text = player.name
+        photoPlayers.image = UIImage(data: player.photo!)
         photoPlayers.layer.cornerRadius = photoPlayers.frame.width / 3
         
-        numberOfGames.text = String(players.numberOfGames)
-        numberOfGoals.text = String(players.numberOfGoals)
+        numberOfGames.text = String(player.numberOfGames)
+        numberOfGoals.text = String(player.numberOfGoals)
 
-        winGame.text = String(players.winGame)
-        losGame.text = String(players.losGame)
+        winGame.text = String(player.winGame)
+        losGame.text = String(player.losGame)
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditePlayerTableViewControllerSegue" {
             let editePlayerVC = segue.destination as! EditePlayerTableViewController
-            editePlayerVC.player = players
+            editePlayerVC.player = player
             editePlayerVC.indexPath = self.indexPath
         }
     }
@@ -62,6 +75,6 @@ class PersonalStatisticsController: UIViewController {
         guard let editiVC = segue.source as? EditePlayerTableViewController else { return }
         
         editiVC.savePlayer()
-        players = editiVC.player
+        player = editiVC.player
     }
 }

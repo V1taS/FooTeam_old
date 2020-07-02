@@ -32,7 +32,7 @@ class ListNameTableView: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
             if segue.identifier == "ListNameTableViewSegue" {
                 let personStatSegueVC = segue.destination as! PersonalStatisticsController
-                personStatSegueVC.players = sender as? Player
+                personStatSegueVC.player = sender as? Player
                 personStatSegueVC.indexPath = indexPath
             }
         }
@@ -151,9 +151,4 @@ class ListNameTableView: UITableViewController {
         action.image = UIImage(systemName: "person.badge.plus")
         return action
     }
-    
-    func setBorderInTeam() {
-        
-    }
-    
 }
