@@ -423,28 +423,54 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="HMN-8K-SUl">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="iHP-Fe-NkQ">
                                                     <rect key="frame" x="77" y="9" width="260" height="52.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i-GO:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr9-BK-H1n">
-                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" name="BlackAndWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-hL-TRc">
-                                                            <rect key="frame" x="0.0" y="21.5" width="262" height="31"/>
-                                                            <color key="tintColor" name="BlackAndWhite"/>
-                                                        </switch>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="HMN-8K-SUl">
+                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="52.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i-GO:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr9-BK-H1n">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" name="BlackAndWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XRy-hL-TRc">
+                                                                    <rect key="frame" x="0.0" y="21.5" width="82" height="31"/>
+                                                                    <color key="tintColor" name="BlackAndWhite"/>
+                                                                </switch>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="80" id="ST5-8r-akW"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="vSb-YW-mrw">
+                                                            <rect key="frame" x="180" y="0.0" width="80" height="52.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inTeam:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhy-fK-AA7" userLabel="inTeam:">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" name="BlackAndWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u5q-CY-DNc">
+                                                                    <rect key="frame" x="0.0" y="21.5" width="82" height="31"/>
+                                                                    <color key="tintColor" name="BlackAndWhite"/>
+                                                                </switch>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="80" id="h9J-AN-mcL"/>
+                                                            </constraints>
+                                                        </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="260" id="lfp-JK-5yc"/>
+                                                        <constraint firstAttribute="width" constant="260" id="Qrd-uE-YKq"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="HMN-8K-SUl" firstAttribute="centerY" secondItem="kfV-BU-WRF" secondAttribute="centerY" id="Dan-o2-AXA"/>
-                                                <constraint firstItem="HMN-8K-SUl" firstAttribute="centerX" secondItem="kfV-BU-WRF" secondAttribute="centerX" id="zId-B0-4p3"/>
+                                                <constraint firstItem="iHP-Fe-NkQ" firstAttribute="centerY" secondItem="kfV-BU-WRF" secondAttribute="centerY" id="XTM-4B-KGI"/>
+                                                <constraint firstItem="iHP-Fe-NkQ" firstAttribute="centerX" secondItem="kfV-BU-WRF" secondAttribute="centerX" id="gRb-mb-yU0"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="WhiteAndBlack"/>
@@ -716,6 +742,7 @@
                     <connections>
                         <outlet property="iGo" destination="XRy-hL-TRc" id="wcq-t5-mpq"/>
                         <outlet property="imagePlayer" destination="Ffe-RV-xA9" id="3Ok-kI-A3z"/>
+                        <outlet property="inTeam" destination="u5q-CY-DNc" id="twS-2W-qA1"/>
                         <outlet property="losGame" destination="pj9-ha-wm2" id="m7X-p9-UGi"/>
                         <outlet property="namePlayer" destination="Kq8-kl-Py5" id="GBq-q5-cZX"/>
                         <outlet property="numberOfGames" destination="JBf-4Y-muv" id="N1H-tZ-duh"/>
@@ -814,298 +841,6 @@
                                 <color key="textColor" name="BlackAndWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bAJ-t1-2Rq">
-                                <rect key="frame" x="0.0" y="314" width="414" height="5"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1h-Im-SEH">
-                                        <rect key="frame" x="0.0" y="0.0" width="207" height="5"/>
-                                        <color key="backgroundColor" red="1" green="0.27058823529999998" blue="0.2274509804" alpha="0.39415667808219179" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCX-up-Dg5">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="5"/>
-                                        <color key="backgroundColor" red="0.039215686270000001" green="0.51764705879999995" blue="1" alpha="0.40360124143835618" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="5" id="AhN-gq-Kd5"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="zEM-VE-pcF">
-                                <rect key="frame" x="8" y="327" width="398" height="143"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fWQ-h5-EAl">
-                                        <rect key="frame" x="0.0" y="0.0" width="190" height="143"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDB-w3-i00">
-                                                <rect key="frame" x="0.0" y="0.0" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ede-W0-Ndm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="eOK-9Z-n9O"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9k6-1U-TWx">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dav-uK-mUz">
-                                                <rect key="frame" x="0.0" y="24.5" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="2." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l0-eE-CLQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="bKB-cb-rS2"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUx-DW-jDV">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eE-9I-0l8">
-                                                <rect key="frame" x="0.0" y="49" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="3." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4T1-sn-MRd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="8kT-Nh-Mw7"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIQ-2c-mF5">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yg-LP-6kz">
-                                                <rect key="frame" x="0.0" y="73.5" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drM-Eg-RhS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="7Rj-PE-Sl4"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ap-0U-rVY">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHL-kA-xRe">
-                                                <rect key="frame" x="0.0" y="98" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z07-U6-Hdf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="5vq-Qy-MEk"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np7-XT-NJs">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBs-hc-PHr">
-                                                <rect key="frame" x="0.0" y="122.5" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOw-JQ-Ich">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="WFS-BN-ewi"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aj5-qd-DFB">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1Mj-3m-ite">
-                                        <rect key="frame" x="208" y="0.0" width="190" height="143"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZO-4v-edr">
-                                                <rect key="frame" x="0.0" y="0.0" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVW-TC-i4Z">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="f24-Vq-WvS"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cID-oM-kat">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KgR-7r-rNG">
-                                                <rect key="frame" x="0.0" y="24.5" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="2." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bq-yz-3xC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="fLl-U1-BJG"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssU-9q-Lm8">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ild-DT-kHQ">
-                                                <rect key="frame" x="0.0" y="49" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySI-gL-Liv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="bci-NA-AFh"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUt-wU-FCw">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jz0-ml-r50">
-                                                <rect key="frame" x="0.0" y="73.5" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZI-V0-pMn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="5WM-jK-IrX"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HP-WV-TdM">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B52-0o-x2p">
-                                                <rect key="frame" x="0.0" y="98" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeO-5M-RNy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="WCc-W1-I03"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDA-Xo-BwR">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rs-oP-PZG">
-                                                <rect key="frame" x="0.0" y="122.5" width="175.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnU-au-vhd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="15" height="20.5"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="SEs-xu-mrw"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Артур илларионоввиа" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqq-dN-Crg">
-                                                        <rect key="frame" x="15" y="0.0" width="160.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="17"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8p-s9-YYu">
-                                <rect key="frame" x="0.0" y="478" width="414" height="5"/>
-                                <color key="backgroundColor" red="0.044739867109295783" green="1" blue="0.0" alpha="0.21168664383561644" colorSpace="custom" customColorSpace="displayP3"/>
-                            </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="3DX-u0-jVm">
-                                <rect key="frame" x="20" y="491" width="374" height="24"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Запасные игроки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaT-zQ-7iO">
-                                        <rect key="frame" x="0.0" y="0.0" width="164.5" height="24"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
-                                        <color key="textColor" name="BlackAndWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новые игроки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlY-y9-4Iu">
-                                        <rect key="frame" x="209.5" y="0.0" width="164.5" height="24"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
-                                        <color key="textColor" name="BlackAndWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WuT-3H-0Kv" userLabel="Погода">
                                 <rect key="frame" x="103" y="234" width="208.5" height="72"/>
                                 <subviews>
@@ -1169,207 +904,217 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="iyl-b1-xVQ" firstAttribute="top" secondItem="Yu7-ZK-zAh" secondAttribute="top" id="1B5-E6-0kP"/>
+                                            <constraint firstItem="iyl-b1-xVQ" firstAttribute="centerX" secondItem="Yu7-ZK-zAh" secondAttribute="centerX" id="cGH-es-i94"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Uzm-je-eG1">
-                                <rect key="frame" x="8" y="523" width="398" height="270"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="sQV-Cm-KLZ">
+                                <rect key="frame" x="0.0" y="387" width="414" height="32"/>
+                                <color key="backgroundColor" red="0.12644425030000001" green="0.14330491419999999" blue="0.24707210060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <segments>
+                                    <segment title="Команда - 1"/>
+                                    <segment title="Команда - 2"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.12644425030000001" green="0.14330491419999999" blue="0.24707210060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="segmentedControlChoice:" destination="E73-YY-Y4E" eventType="valueChanged" id="e6I-Pw-eoV"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7v-iM-epv">
+                                <rect key="frame" x="0.0" y="314" width="414" height="65"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="1wx-4L-m2t">
-                                        <rect key="frame" x="0.0" y="0.0" width="197" height="158"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMH-xF-Kq4">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="24"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9K-YA-Zys">
-                                                <rect key="frame" x="0.0" y="0.0" width="5" height="23"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1X2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n24-kT-hlj">
+                                                <rect key="frame" x="8" y="4" width="24.5" height="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94807175933190813" green="1" blue="0.94986550673472436" alpha="0.039169520547945202" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="n24-kT-hlj" firstAttribute="top" secondItem="xMH-xF-Kq4" secondAttribute="top" constant="4" id="85P-CA-jHJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="n24-kT-hlj" secondAttribute="bottom" constant="4" id="a1d-h3-Z60"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="n24-kT-hlj" secondAttribute="trailing" constant="20" symbolic="YES" id="fMJ-3P-11S"/>
+                                            <constraint firstItem="n24-kT-hlj" firstAttribute="leading" secondItem="xMH-xF-Kq4" secondAttribute="leading" constant="8" id="w9q-F3-GRz"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4n0-gO-88z">
+                                        <rect key="frame" x="8" y="24" width="398" height="41"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6pz-Ul-TvY">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="41"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbP-SF-rid">
-                                                        <rect key="frame" x="0.0" y="0.0" width="5" height="23"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="19"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="П1:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LnO-Mh-0Ja">
+                                                        <rect key="frame" x="0.0" y="0.0" width="24.5" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.99419910363065855" blue="0.91936694080581294" alpha="0.34342893835616439" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAU-Ie-p8e">
+                                                        <rect key="frame" x="54.5" y="0.0" width="22" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66O-yr-peG">
-                                                <rect key="frame" x="0.0" y="27" width="5" height="23"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVk-uB-CZZ">
+                                                <rect key="frame" x="107.5" y="0.0" width="2" height="41"/>
+                                                <color key="backgroundColor" red="0.16160780189999999" green="0.17884007099999999" blue="0.2745229602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="2" id="daT-ze-IPJ"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6EE-aG-eHD">
+                                                <rect key="frame" x="140.5" y="0.0" width="107.5" height="41"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAA-cs-HdW">
-                                                        <rect key="frame" x="0.0" y="0.0" width="5" height="23"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="19"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ничья:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsC-wB-0jM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.99419910359999997" blue="0.91936694080000003" alpha="0.34342893839999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlL-AM-NnU">
+                                                        <rect key="frame" x="83.5" y="0.0" width="24" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3a-Hd-MC2">
-                                                <rect key="frame" x="0.0" y="54" width="5" height="23"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pCs-CK-FCA">
+                                                <rect key="frame" x="278.5" y="0.0" width="2" height="41"/>
+                                                <color key="backgroundColor" red="0.16160780189999999" green="0.17884007099999999" blue="0.2745229602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="2" id="A9R-w3-GRT"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="cDz-bs-nFg">
+                                                <rect key="frame" x="311.5" y="0.0" width="86.5" height="41"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeE-4O-ktx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="5" height="23"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="19"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="П2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDb-ZK-shb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="27" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="1" green="0.99419910359999997" blue="0.91936694080000003" alpha="0.34342893839999999" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fv8-NN-don">
-                                                <rect key="frame" x="0.0" y="81" width="5" height="23"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcx-mw-Dv4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="5" height="23"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="19"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOu-I5-w6q">
-                                                <rect key="frame" x="0.0" y="108" width="5" height="23"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yh-yn-J1m">
-                                                        <rect key="frame" x="0.0" y="0.0" width="5" height="23"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="19"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eq0-GN-oin">
-                                                <rect key="frame" x="0.0" y="135" width="5" height="23"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zZ-Y3-O6b">
-                                                        <rect key="frame" x="0.0" y="0.0" width="5" height="23"/>
-                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-UltraLight" family="Apple SD Gothic Neo" pointSize="19"/>
-                                                        <color key="textColor" name="BlackAndWhite"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJv-cr-g3l">
+                                                        <rect key="frame" x="57" y="0.0" width="29.5" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="20" sectionFooterHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="b5r-1l-Bzl">
-                                        <rect key="frame" x="201" y="0.0" width="197" height="270"/>
-                                        <color key="backgroundColor" name="WhiteAndBlack"/>
-                                        <color key="tintColor" name="BlackAndWhite"/>
-                                        <color key="sectionIndexColor" name="BlackAndWhite"/>
-                                        <color key="sectionIndexBackgroundColor" name="WhiteAndBlack"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellNewPlayer" id="rwG-gm-Y2K" customClass="MainNewPlayersTableViewCell" customModule="FooTeam" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="197" height="70"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rwG-gm-Y2K" id="KAR-dd-2Dz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="197" height="70"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-Yi-eC7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="197" height="70"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aOF-Af-TTa">
-                                                                    <rect key="frame" x="0.0" y="5" width="60" height="60"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="60" id="A2r-Y3-mab"/>
-                                                                        <constraint firstAttribute="height" constant="60" id="dCZ-kO-3vg"/>
-                                                                    </constraints>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Артур Илларионовпаапкп" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xn1-45-FaE">
-                                                                    <rect key="frame" x="70" y="0.0" width="127" height="70"/>
-                                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="xn1-45-FaE" firstAttribute="top" secondItem="NTC-Yi-eC7" secondAttribute="top" id="1PM-Ha-5rR"/>
-                                                                <constraint firstAttribute="bottom" secondItem="xn1-45-FaE" secondAttribute="bottom" id="vB1-aR-6Xz"/>
-                                                            </constraints>
-                                                        </stackView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" name="WhiteAndBlack"/>
-                                                    <color key="tintColor" name="BlackAndWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="NTC-Yi-eC7" secondAttribute="trailing" id="0Zg-Ye-2al"/>
-                                                        <constraint firstAttribute="bottom" secondItem="NTC-Yi-eC7" secondAttribute="bottom" id="14w-lz-pjg"/>
-                                                        <constraint firstItem="NTC-Yi-eC7" firstAttribute="leading" secondItem="KAR-dd-2Dz" secondAttribute="leading" id="juT-eL-Ouj"/>
-                                                        <constraint firstItem="NTC-Yi-eC7" firstAttribute="top" secondItem="KAR-dd-2Dz" secondAttribute="top" id="rRA-xM-03R"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                                <connections>
-                                                    <outlet property="imagePlayers" destination="aOF-Af-TTa" id="Fzi-ik-kHI"/>
-                                                    <outlet property="namePlayers" destination="xn1-45-FaE" id="VXy-0Q-4D0"/>
-                                                </connections>
-                                            </tableViewCell>
-                                        </prototypes>
-                                        <connections>
-                                            <outlet property="dataSource" destination="E73-YY-Y4E" id="80b-WN-D3T"/>
-                                            <outlet property="delegate" destination="E73-YY-Y4E" id="yC6-g6-QyC"/>
-                                        </connections>
-                                    </tableView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.15686274509803921" blue="0.42745098039215684" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="b5r-1l-Bzl" secondAttribute="bottom" id="GsB-2Y-qjk"/>
+                                    <constraint firstAttribute="bottom" secondItem="4n0-gO-88z" secondAttribute="bottom" id="KJS-fM-zxG"/>
+                                    <constraint firstItem="4n0-gO-88z" firstAttribute="top" secondItem="xMH-xF-Kq4" secondAttribute="bottom" id="MOS-Mk-WeH"/>
+                                    <constraint firstItem="xMH-xF-Kq4" firstAttribute="leading" secondItem="E7v-iM-epv" secondAttribute="leading" id="Y9X-Qb-I0b"/>
+                                    <constraint firstItem="4n0-gO-88z" firstAttribute="leading" secondItem="E7v-iM-epv" secondAttribute="leading" constant="8" id="Zlz-ts-fiH"/>
+                                    <constraint firstAttribute="trailing" secondItem="4n0-gO-88z" secondAttribute="trailing" constant="8" id="bbP-WL-eVi"/>
+                                    <constraint firstAttribute="bottom" secondItem="xMH-xF-Kq4" secondAttribute="bottom" constant="41" id="osF-JU-eWH"/>
+                                    <constraint firstItem="xMH-xF-Kq4" firstAttribute="top" secondItem="E7v-iM-epv" secondAttribute="top" id="pxq-zP-ue5"/>
+                                    <constraint firstAttribute="trailing" secondItem="xMH-xF-Kq4" secondAttribute="trailing" id="xwt-I4-SIP"/>
                                 </constraints>
-                            </stackView>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="44" estimatedRowHeight="-1" sectionHeaderHeight="20" sectionFooterHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="b5r-1l-Bzl">
+                                <rect key="frame" x="8" y="426" width="398" height="387"/>
+                                <color key="backgroundColor" name="WhiteAndBlack"/>
+                                <color key="tintColor" name="BlackAndWhite"/>
+                                <color key="sectionIndexColor" name="BlackAndWhite"/>
+                                <color key="sectionIndexBackgroundColor" name="WhiteAndBlack"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CellNewPlayer" id="rwG-gm-Y2K" customClass="MainNewPlayersTableViewCell" customModule="FooTeam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="398" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rwG-gm-Y2K" id="KAR-dd-2Dz">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-Yi-eC7">
+                                                    <rect key="frame" x="16" y="8" width="366" height="28"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Артур Илларионовпаапкп" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xn1-45-FaE">
+                                                            <rect key="frame" x="0.0" y="4" width="366" height="20.5"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="WhiteAndBlack"/>
+                                            <color key="tintColor" name="BlackAndWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="NTC-Yi-eC7" firstAttribute="top" secondItem="KAR-dd-2Dz" secondAttribute="top" constant="8" id="2iI-t0-n4T"/>
+                                                <constraint firstItem="NTC-Yi-eC7" firstAttribute="leading" secondItem="KAR-dd-2Dz" secondAttribute="leading" constant="16" id="8oq-1d-DDD"/>
+                                                <constraint firstAttribute="trailing" secondItem="NTC-Yi-eC7" secondAttribute="trailing" constant="16" id="UY6-Aa-cYN"/>
+                                                <constraint firstAttribute="bottom" secondItem="NTC-Yi-eC7" secondAttribute="bottom" constant="8" id="ot4-U9-h7c"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="namePlayers" destination="xn1-45-FaE" id="VXy-0Q-4D0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="E73-YY-Y4E" id="80b-WN-D3T"/>
+                                    <outlet property="delegate" destination="E73-YY-Y4E" id="yC6-g6-QyC"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" name="WhiteAndBlack"/>
+                        <color key="tintColor" red="0.94807175933190813" green="1" blue="0.94986550673472436" alpha="0.038687928082191778" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Uzm-je-eG1" firstAttribute="top" secondItem="3DX-u0-jVm" secondAttribute="bottom" constant="8" id="3Md-QP-2VI"/>
-                            <constraint firstItem="3DX-u0-jVm" firstAttribute="leading" secondItem="KLq-C6-NDk" secondAttribute="leading" constant="20" id="48w-Dv-CYd"/>
+                            <constraint firstItem="sQV-Cm-KLZ" firstAttribute="top" secondItem="E7v-iM-epv" secondAttribute="bottom" constant="8" id="28a-i5-K6p"/>
+                            <constraint firstItem="b5r-1l-Bzl" firstAttribute="top" secondItem="sQV-Cm-KLZ" secondAttribute="bottom" constant="8" id="2Rb-7e-7pg"/>
+                            <constraint firstItem="E7v-iM-epv" firstAttribute="top" secondItem="WuT-3H-0Kv" secondAttribute="bottom" constant="8" id="2ie-Ip-nZc"/>
+                            <constraint firstItem="sQV-Cm-KLZ" firstAttribute="leading" secondItem="KLq-C6-NDk" secondAttribute="leading" id="4l8-c7-kqk"/>
+                            <constraint firstItem="b5r-1l-Bzl" firstAttribute="leading" secondItem="KLq-C6-NDk" secondAttribute="leading" constant="8" id="4lg-dj-V5L"/>
+                            <constraint firstItem="E7v-iM-epv" firstAttribute="leading" secondItem="KLq-C6-NDk" secondAttribute="leading" id="8v4-D1-lUm"/>
                             <constraint firstItem="WuT-3H-0Kv" firstAttribute="centerX" secondItem="bvw-cg-Tg7" secondAttribute="centerX" id="B8O-ys-49X"/>
                             <constraint firstItem="ZRA-w7-O5Q" firstAttribute="leading" secondItem="KLq-C6-NDk" secondAttribute="leading" id="C8N-dR-vsM"/>
-                            <constraint firstItem="zEM-VE-pcF" firstAttribute="top" secondItem="bAJ-t1-2Rq" secondAttribute="bottom" constant="8" id="CT6-gt-pMP"/>
-                            <constraint firstItem="KLq-C6-NDk" firstAttribute="trailing" secondItem="zEM-VE-pcF" secondAttribute="trailing" constant="8" id="CxT-PL-Y6q"/>
-                            <constraint firstItem="Uzm-je-eG1" firstAttribute="leading" secondItem="KLq-C6-NDk" secondAttribute="leading" constant="8" id="ExV-UZ-gOM"/>
                             <constraint firstItem="KLq-C6-NDk" firstAttribute="trailing" secondItem="ZRA-w7-O5Q" secondAttribute="trailing" id="F88-y0-1uT"/>
-                            <constraint firstItem="KLq-C6-NDk" firstAttribute="bottom" secondItem="Uzm-je-eG1" secondAttribute="bottom" constant="20" id="PWg-Z5-Jar"/>
-                            <constraint firstItem="3DX-u0-jVm" firstAttribute="top" secondItem="k8p-s9-YYu" secondAttribute="bottom" constant="8" id="Psu-pB-I6w"/>
+                            <constraint firstItem="sQV-Cm-KLZ" firstAttribute="trailing" secondItem="KLq-C6-NDk" secondAttribute="trailing" id="Sxm-rp-1zn"/>
+                            <constraint firstItem="b5r-1l-Bzl" firstAttribute="bottom" secondItem="KLq-C6-NDk" secondAttribute="bottom" id="T4S-0c-IaY"/>
                             <constraint firstItem="ZRA-w7-O5Q" firstAttribute="top" secondItem="LmT-9C-lUu" secondAttribute="bottom" constant="7.5" id="TQs-u3-Fl1"/>
                             <constraint firstItem="LmT-9C-lUu" firstAttribute="top" secondItem="KLq-C6-NDk" secondAttribute="top" constant="12" id="UgH-KZ-n4I"/>
-                            <constraint firstItem="k8p-s9-YYu" firstAttribute="top" secondItem="zEM-VE-pcF" secondAttribute="bottom" constant="8" id="a9r-O3-w2Y"/>
-                            <constraint firstItem="bAJ-t1-2Rq" firstAttribute="leading" secondItem="KLq-C6-NDk" secondAttribute="leading" id="bnt-PN-s89"/>
-                            <constraint firstItem="3DX-u0-jVm" firstAttribute="top" secondItem="bvw-cg-Tg7" secondAttribute="top" constant="491" id="g72-Nb-Ccz"/>
-                            <constraint firstAttribute="trailing" secondItem="k8p-s9-YYu" secondAttribute="trailing" id="izZ-zc-lPv"/>
-                            <constraint firstItem="bAJ-t1-2Rq" firstAttribute="top" secondItem="WuT-3H-0Kv" secondAttribute="bottom" constant="8" id="jMB-LC-xLX"/>
-                            <constraint firstItem="KLq-C6-NDk" firstAttribute="trailing" secondItem="bAJ-t1-2Rq" secondAttribute="trailing" id="kWa-Kq-BdU"/>
-                            <constraint firstItem="KLq-C6-NDk" firstAttribute="trailing" secondItem="3DX-u0-jVm" secondAttribute="trailing" constant="20" id="rw7-FB-rPU"/>
+                            <constraint firstItem="KLq-C6-NDk" firstAttribute="trailing" secondItem="b5r-1l-Bzl" secondAttribute="trailing" constant="8" id="m7X-kY-4Va"/>
                             <constraint firstItem="WuT-3H-0Kv" firstAttribute="top" secondItem="ZRA-w7-O5Q" secondAttribute="bottom" constant="2.5" id="sdW-iH-1t6"/>
-                            <constraint firstItem="k8p-s9-YYu" firstAttribute="leading" secondItem="KLq-C6-NDk" secondAttribute="leading" id="t4k-u5-Bii"/>
-                            <constraint firstItem="zEM-VE-pcF" firstAttribute="leading" secondItem="KLq-C6-NDk" secondAttribute="leading" constant="8" id="vOj-BZ-59N"/>
+                            <constraint firstItem="E7v-iM-epv" firstAttribute="trailing" secondItem="KLq-C6-NDk" secondAttribute="trailing" id="w6W-BE-wii"/>
                             <constraint firstItem="LmT-9C-lUu" firstAttribute="centerX" secondItem="bvw-cg-Tg7" secondAttribute="centerX" id="wAt-O7-ZJT"/>
-                            <constraint firstItem="KLq-C6-NDk" firstAttribute="trailing" secondItem="Uzm-je-eG1" secondAttribute="trailing" constant="8" id="xPi-ec-Yoc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KLq-C6-NDk"/>
                     </view>
                     <navigationItem key="navigationItem" title="FooTeam" id="cKN-IE-VMN"/>
                     <connections>
+                        <outlet property="betTeamMidleLabel" destination="SlL-AM-NnU" id="vqp-u5-Bca"/>
+                        <outlet property="betTeamOneLabel" destination="UAU-Ie-p8e" id="uug-Hs-9zB"/>
+                        <outlet property="betTeamTwoLabel" destination="fJv-cr-g3l" id="CjL-Mj-hyM"/>
                         <outlet property="collectionViewTopPlayers" destination="ZRA-w7-O5Q" id="U6Y-C3-Nb2"/>
+                        <outlet property="segmentedControl" destination="sQV-Cm-KLZ" id="hhG-2x-ySh"/>
                         <outlet property="tableViewNewPlayers" destination="b5r-1l-Bzl" id="f32-Pr-AhI"/>
                         <outlet property="tempCloudLabel" destination="MCC-ci-Dik" id="fvw-dP-kea"/>
                         <outlet property="temperatureLabel" destination="eRz-mo-Wrj" id="n6l-dL-h5O"/>
                         <outlet property="timeLabel" destination="CYC-AZ-cmZ" id="rgg-yz-Noj"/>
-                        <outletCollection property="nameTemOne" destination="9k6-1U-TWx" collectionClass="NSMutableArray" id="vkT-Wu-drc"/>
-                        <outletCollection property="nameTemOne" destination="qUx-DW-jDV" collectionClass="NSMutableArray" id="3Oy-cc-Hz2"/>
-                        <outletCollection property="nameTemTwo" destination="cID-oM-kat" collectionClass="NSMutableArray" id="6yc-is-wZv"/>
-                        <outletCollection property="nameTemTwo" destination="ssU-9q-Lm8" collectionClass="NSMutableArray" id="TUg-WY-ACA"/>
-                        <outletCollection property="nameTemTwo" destination="qUt-wU-FCw" collectionClass="NSMutableArray" id="Vtc-kq-wvL"/>
-                        <outletCollection property="nameTemTwo" destination="3HP-WV-TdM" collectionClass="NSMutableArray" id="zLz-BP-ceD"/>
-                        <outletCollection property="nameTemTwo" destination="UDA-Xo-BwR" collectionClass="NSMutableArray" id="wke-5s-nrd"/>
-                        <outletCollection property="nameTemTwo" destination="bqq-dN-Crg" collectionClass="NSMutableArray" id="1dX-1Z-9Ym"/>
-                        <outletCollection property="nameTemOne" destination="aIQ-2c-mF5" collectionClass="NSMutableArray" id="ESX-9Y-O40"/>
-                        <outletCollection property="nameTemOne" destination="8ap-0U-rVY" collectionClass="NSMutableArray" id="v9D-5g-VEn"/>
-                        <outletCollection property="nameTemOne" destination="Np7-XT-NJs" collectionClass="NSMutableArray" id="bgS-1E-8Bx"/>
-                        <outletCollection property="nameTemOne" destination="Aj5-qd-DFB" collectionClass="NSMutableArray" id="bNx-jM-Ctd"/>
-                        <outletCollection property="reserve" destination="wbP-SF-rid" collectionClass="NSMutableArray" id="Kha-KO-pjb"/>
-                        <outletCollection property="reserve" destination="uAA-cs-HdW" collectionClass="NSMutableArray" id="D7L-ou-EFG"/>
-                        <outletCollection property="reserve" destination="qeE-4O-ktx" collectionClass="NSMutableArray" id="4Kh-LT-bLi"/>
-                        <outletCollection property="reserve" destination="hcx-mw-Dv4" collectionClass="NSMutableArray" id="zsv-6N-FjS"/>
-                        <outletCollection property="reserve" destination="3yh-yn-J1m" collectionClass="NSMutableArray" id="uIV-Am-FaP"/>
-                        <outletCollection property="reserve" destination="1zZ-Y3-O6b" collectionClass="NSMutableArray" id="egh-2q-JtE"/>
                         <segue destination="Fc7-YQ-ddE" kind="show" identifier="HomeSeguetoPS" id="nXh-Ac-dWn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIH-aK-0tY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2451" y="152"/>
+            <point key="canvasLocation" x="2450.7246376811595" y="151.33928571428569"/>
         </scene>
         <!--Составы-->
         <scene sceneID="ROS-kE-ByP">
@@ -1484,12 +1229,6 @@
                                             <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🔺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTF-Z4-bih">
-                                            <rect key="frame" x="241" y="31" width="25" height="24"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="av6-t0-Pcy">
                                             <rect key="frame" x="357" y="11" width="36" height="38.5"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
@@ -1505,12 +1244,9 @@
                                         <constraint firstItem="av6-t0-Pcy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fK2-Aa-mQV" secondAttribute="leadingMargin" id="HNZ-sq-kR8"/>
                                         <constraint firstItem="L4k-eu-XDb" firstAttribute="top" secondItem="fK2-Aa-mQV" secondAttribute="top" constant="8" id="TFu-eg-pKW"/>
                                         <constraint firstItem="lEB-U0-xvD" firstAttribute="leading" secondItem="fK2-Aa-mQV" secondAttribute="leadingMargin" id="Uoj-VC-fTQ"/>
-                                        <constraint firstItem="xTF-Z4-bih" firstAttribute="top" secondItem="fK2-Aa-mQV" secondAttribute="topMargin" constant="20" id="W8H-Ju-LhY"/>
                                         <constraint firstAttribute="trailing" secondItem="tkv-0Z-idZ" secondAttribute="trailing" constant="16" id="X7i-Gn-pQ1"/>
                                         <constraint firstItem="av6-t0-Pcy" firstAttribute="top" secondItem="fK2-Aa-mQV" secondAttribute="topMargin" id="Zsb-YB-E06"/>
                                         <constraint firstItem="lEB-U0-xvD" firstAttribute="top" secondItem="fK2-Aa-mQV" secondAttribute="topMargin" id="brF-16-zRi"/>
-                                        <constraint firstItem="xTF-Z4-bih" firstAttribute="leading" secondItem="lEB-U0-xvD" secondAttribute="trailing" constant="121" id="elO-4J-lZg"/>
-                                        <constraint firstItem="av6-t0-Pcy" firstAttribute="leading" secondItem="xTF-Z4-bih" secondAttribute="trailing" constant="91" id="yem-R7-JvR"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" name="WhiteAndBlack"/>
@@ -1547,7 +1283,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5l-SE-72C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4237.68115942029" y="1591.7410714285713"/>
+            <point key="canvasLocation" x="4157" y="1592"/>
         </scene>
         <!--Новый игрок-->
         <scene sceneID="K7E-i4-nTG">
@@ -1818,7 +1554,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="evd-kk-GUw"/>
+        <segue reference="nXh-Ac-dWn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="4" width="644" height="900"/>

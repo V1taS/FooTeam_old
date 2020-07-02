@@ -16,6 +16,7 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
     @IBOutlet weak var teamNumber: UITextField!
     @IBOutlet weak var payment: UITextField!
     @IBOutlet weak var iGo: UISwitch!
+    @IBOutlet weak var inTeam: UISwitch!
     @IBOutlet weak var rating: UITextField!
     @IBOutlet weak var position: UITextField!
     @IBOutlet weak var numberOfGames: UITextField!
@@ -65,6 +66,7 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
         payment.text = player.payment
         position.text = player.position
         iGo.isOn = player.isFavourite
+        inTeam.isOn = player.inTeam
         rating.text = String(player.rating)
         numberOfGames.text = String(player.numberOfGames)
         numberOfGoals.text = String(player.numberOfGoals)
@@ -280,6 +282,7 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
             player.teamNumber = Int(teamNumber.text!)!
             player.payment = payment.text!
             player.isFavourite = iGo.isOn
+            player.inTeam = inTeam.isOn
             player.rating = Int(rating.text!)!
             player.position = position.text!
             player.numberOfGames = Int(numberOfGames.text!)!

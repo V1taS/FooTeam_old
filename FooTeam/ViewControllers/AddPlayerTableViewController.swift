@@ -18,7 +18,7 @@ class AddPlayerTableViewController: UITableViewController {
     @IBOutlet weak var payMent: UITextField!
     @IBOutlet weak var position: UITextField!
     
-    let arraypayMent = ["500", "1000", "1500", "2000"]
+    let arraypayMent = ["0", "500", "1000", "1500"]
     let arrayPosition = ["ФРВ", "ЦП", "ЦЗ", "ВРТ"]
     
     var payMentPickerView: PickerView?
@@ -282,7 +282,8 @@ class AddPlayerTableViewController: UITableViewController {
                                numberOfGames: 0,
                                numberOfGoals: 0,
                                winGame: 0,
-                               losGame: 0)
+                               losGame: 0,
+                               inTeam: false)
         
         StorageManager.savePlayer(newPlayer)
         

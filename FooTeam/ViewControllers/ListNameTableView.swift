@@ -14,14 +14,16 @@ class ListNameTableView: UITableViewController {
     var players: Results<Player>!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        players = realm.objects(Player.self)
+    super.viewDidLoad()
         
-        self.navigationItem.leftBarButtonItem = self.editButtonItem
+        players = realm.objects(Player.self)
+        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        players = realm.objects(Player.self)
         tableView.reloadData()
     }
     
@@ -37,15 +39,10 @@ class ListNameTableView: UITableViewController {
     }
     
     // Метод который отрабатывает выход из ViewController
-    // Мы на него будем ссылаться
     @IBAction func unwindSegueListSave(_ segue: UIStoryboardSegue) {
         
         guard let addVC = segue.source as? AddPlayerTableViewController else { return }
-        
-        // Обращаемся к методу который сохраняет данные
         addVC.saveNewPlayer()
-//        players = StorageManager.shared.fetchPlayers()
-        // Перезагружаем tableView
         tableView.reloadData()
     }
     
@@ -57,11 +54,13 @@ class ListNameTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayersCell", for: indexPath) as! ListNameTableViewCell
         
+        let players = self.players.sorted(byKeyPath: "rating", ascending: false)
+        
         let player = players[indexPath.row]
         
         // Имя игрока
         cell.namePlayer.text = player.name
-        cell.ratingPlayer.text = "Райтинг: \(player.rating)"
+        cell.ratingPlayer.text = "Рейтинг: \(player.rating)"
         cell.numberOfGamesLeft.text = "Баланс: \(player.payment) руб."
         cell.positionPlayer.text = player.position
         
@@ -83,8 +82,6 @@ class ListNameTableView: UITableViewController {
             cell.iGo.textColor = .red
         }
         
-    
-        
         if UIImage(data: player.photo!) == nil {
             cell.imagePlayer.image = UIImage(data: player.photo!)
         } else {
@@ -96,11 +93,20 @@ class ListNameTableView: UITableViewController {
         // Обрезали по краям
         cell.imagePlayer.clipsToBounds = true
         
+        if player.inTeam {
+            cell.imagePlayer.layer.borderWidth = 1
+            cell.imagePlayer.layer.borderColor = UIColor.green.cgColor
+        } else {
+            cell.imagePlayer.layer.borderWidth = 1
+            cell.imagePlayer.layer.borderColor = UIColor.systemGray5.cgColor
+        }
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let players = self.players.sorted(byKeyPath: "rating", ascending: false)
         let player = players[indexPath.row]
         performSegue(withIdentifier: "ListNameTableViewSegue", sender: player)
         tableView.deselectRow(at: indexPath, animated: true)
@@ -119,20 +125,6 @@ class ListNameTableView: UITableViewController {
             
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
-    }
-    
-    // MARK: - Move players from listItem
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let movePlayers = players[sourceIndexPath.row]
-        StorageManager.deletePlayer(movePlayers)
-        
-//        players.insert(movePlayers, at: destinationIndexPath.row)
-//        StorageManager.shared.insertPlayer(player: movePlayers, at: destinationIndexPath.row)
-        tableView.reloadData()
     }
     
     // MARK: - Leading Swipe Actions
@@ -157,8 +149,11 @@ class ListNameTableView: UITableViewController {
         }
         action.backgroundColor = player.isFavourite ? #colorLiteral(red: 0, green: 0.364138335, blue: 0.1126995459, alpha: 1) : .systemGray
         action.image = UIImage(systemName: "person.badge.plus")
-//        StorageManager.shared.reSavePlayer(player: object, at: indexPath.row)
         return action
+    }
+    
+    func setBorderInTeam() {
+        
     }
     
 }

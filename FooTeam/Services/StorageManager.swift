@@ -34,15 +34,6 @@ class StorageManager {
         try! realm.write {
             currentPlayer.photo = newPlayer.photo
             currentPlayer.name = newPlayer.name
-            currentPlayer.teamNumber = newPlayer.teamNumber
-            currentPlayer.payment = newPlayer.payment
-            currentPlayer.isFavourite = newPlayer.isFavourite
-            currentPlayer.rating = newPlayer.rating
-            currentPlayer.position = newPlayer.position
-            currentPlayer.numberOfGames = newPlayer.numberOfGames
-            currentPlayer.numberOfGoals = newPlayer.numberOfGoals
-            currentPlayer.winGame = newPlayer.winGame
-            currentPlayer.losGame = newPlayer.losGame
         }
     }
 }

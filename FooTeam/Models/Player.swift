@@ -15,7 +15,9 @@ class Player: Object {
     
     @objc dynamic var teamNumber = 0
     @objc dynamic var payment = ""
+    
     @objc dynamic var isFavourite = true
+    @objc dynamic var inTeam = false
     
     @objc dynamic var rating = 0
     @objc dynamic var position = "ФРВ"
@@ -25,6 +27,8 @@ class Player: Object {
     
     @objc dynamic var winGame = 0
     @objc dynamic var losGame = 0
+    
+    
     
     convenience init(photo: Data?,
                      name: String?,
@@ -36,7 +40,8 @@ class Player: Object {
                      numberOfGames: Int,
                      numberOfGoals: Int,
                      winGame: Int,
-                     losGame: Int) {
+                     losGame: Int,
+                     inTeam: Bool?) {
         self.init()
         
         self.photo = photo
@@ -74,6 +79,7 @@ class Player: Object {
             newPlayer.numberOfGoals = 0
             newPlayer.winGame = 0
             newPlayer.losGame = 0
+            newPlayer.inTeam = false
             
             StorageManager.savePlayer(newPlayer)
         }

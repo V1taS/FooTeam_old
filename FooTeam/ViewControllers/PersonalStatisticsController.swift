@@ -37,7 +37,7 @@ class PersonalStatisticsController: UIViewController {
         
         namePlayers.text = players.name
         photoPlayers.image = UIImage(data: players.photo!)
-        photoPlayers.layer.cornerRadius = photoPlayers.frame.width / 2
+        photoPlayers.layer.cornerRadius = photoPlayers.frame.width / 3
         
         numberOfGames.text = String(players.numberOfGames)
         numberOfGoals.text = String(players.numberOfGoals)
