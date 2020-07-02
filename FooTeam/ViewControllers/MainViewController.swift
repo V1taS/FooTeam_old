@@ -26,6 +26,8 @@ class MainViewController: UIViewController {
     //MARK: - Получаем данные из базы
     var players: Results<Player>!
     
+    let pl = Player()
+    
     var networkWeatherManager = NetworkWeatherManager()
     
     override func viewDidLoad() {
@@ -34,27 +36,34 @@ class MainViewController: UIViewController {
         //MARK: - инициализируем объект players
         players = realm.objects(Player.self)
         
-        OnlyName.shared.getTeamOne(players: Team.shared.reserve,
-                                   name: reserve)
-        
-        OnlyName.shared.getTeamOne(players: Team.shared.teamOne,
-                                   name: nameTemOne)
-        
-        OnlyName.shared.getTeamOne(players: Team.shared.teamTwo,
-                                   name: nameTemTwo)
-        
+//        OnlyName.shared.getTeamOne(players: Team.shared.reserve,
+//                                   name: reserve)
+//
+//        OnlyName.shared.getTeamOne(players: Team.shared.teamOne,
+//                                   name: nameTemOne)
+//
+//        OnlyName.shared.getTeamOne(players: Team.shared.teamTwo,
+//                                   name: nameTemTwo)
+//
         timeFoot(timeLabel: timeLabel)
         onCompletionWeather()
         networkWeatherManager.fetchCurrentWeather()
         
         tableViewNewPlayers.reloadData()
         
-        //        Player.getPlayer()
+//        pl.savePlayer()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        //MARK: - инициализируем объект players
+        players = realm.objects(Player.self)
+        
+        tableViewNewPlayers.reloadData()
+        collectionViewTopPlayers.reloadData()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -127,6 +136,7 @@ extension MainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCollectionView", for: indexPath) as! CellViewController
+        
         let player = players[indexPath.row]
         
         cell.imageCell.image = UIImage(data: player.photo!)
@@ -153,7 +163,7 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return players.count
+        return players.isEmpty ? 0 : players.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

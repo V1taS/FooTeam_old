@@ -36,8 +36,6 @@ class ListNameTableView: UITableViewController {
         }
     }
     
-   
-    
     // Метод который отрабатывает выход из ViewController
     // Мы на него будем ссылаться
     @IBAction func unwindSegueListSave(_ segue: UIStoryboardSegue) {
@@ -64,13 +62,17 @@ class ListNameTableView: UITableViewController {
         // Имя игрока
         cell.namePlayer.text = player.name
         cell.ratingPlayer.text = "Райтинг: \(player.rating)"
-        cell.numberOfGamesLeft.text = "Осталось игр: \(player.payment)"
+        cell.numberOfGamesLeft.text = "Баланс: \(player.payment) руб."
         cell.positionPlayer.text = player.position
         
         if player.teamNumber == 1 {
-            cell.teamSelection.text = "Команда: 🔴"
+            cell.teamSelection.text = "Команда: 1️⃣"
         } else if player.teamNumber == 2 {
-            cell.teamSelection.text = "Команда: 🔵"
+            cell.teamSelection.text = "Команда: 2️⃣"
+        } else if player.teamNumber == 3 {
+            cell.teamSelection.text = "Команда: 3️⃣"
+        } else if player.teamNumber == 4 {
+            cell.teamSelection.text = "Команда: 4️⃣"
         } else {
             cell.teamSelection.text = "Команда: 🤷🏻‍♂️"
         }
@@ -111,11 +113,11 @@ class ListNameTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            
             let player = players[indexPath.row]
             StorageManager.deletePlayer(player)
             
             tableView.deleteRows(at: [indexPath], with: .fade)
-            tableView.reloadData()
         }
     }
     
@@ -143,14 +145,17 @@ class ListNameTableView: UITableViewController {
     
     func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
         
-        let object = players[indexPath.row]
+        let player = players[indexPath.row]
         let action = UIContextualAction(style: .normal, title: "I GO") { (action, view, completion) in
-            object.isFavourite = !object.isFavourite
-            var player = self.players[indexPath.row]
-            player = object
+
+            try! realm.write {
+                player.isFavourite = !player.isFavourite
+            }
+            
+            self.tableView.reloadRows(at: [indexPath], with: .top)
             completion(true)
         }
-        action.backgroundColor = object.isFavourite ? #colorLiteral(red: 0, green: 0.364138335, blue: 0.1126995459, alpha: 1) : .systemGray
+        action.backgroundColor = player.isFavourite ? #colorLiteral(red: 0, green: 0.364138335, blue: 0.1126995459, alpha: 1) : .systemGray
         action.image = UIImage(systemName: "person.badge.plus")
 //        StorageManager.shared.reSavePlayer(player: object, at: indexPath.row)
         return action

@@ -32,25 +32,25 @@ class PersonalStatisticsController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        rating.text = String(players.rating)
+        rating.text = String(players.rating)
         position.text = players.position
         
         namePlayers.text = players.name
         photoPlayers.image = UIImage(data: players.photo!)
         photoPlayers.layer.cornerRadius = photoPlayers.frame.width / 2
         
-//        numberOfGames.text = String(players.numberOfGames)
-//        numberOfGoals.text = String(players.numberOfGoals)
-//
-//        winGame.text = String(players.winGame)
-//        losGame.text = String(players.losGame)
+        numberOfGames.text = String(players.numberOfGames)
+        numberOfGoals.text = String(players.numberOfGoals)
+
+        winGame.text = String(players.winGame)
+        losGame.text = String(players.losGame)
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditePlayerTableViewControllerSegue" {
             let editePlayerVC = segue.destination as! EditePlayerTableViewController
-            editePlayerVC.players = players
+            editePlayerVC.player = players
             editePlayerVC.indexPath = self.indexPath
         }
     }
@@ -61,8 +61,7 @@ class PersonalStatisticsController: UIViewController {
         
         guard let editiVC = segue.source as? EditePlayerTableViewController else { return }
         
-        editiVC.saveNewPlayer()
-        
-        players = editiVC.players
+        editiVC.savePlayer()
+        players = editiVC.player
     }
 }

@@ -16,6 +16,16 @@ class AddPlayerTableViewController: UITableViewController {
     @IBOutlet weak var imagePlayer: UIImageView!
     @IBOutlet weak var namePlayer: UITextField!
     @IBOutlet weak var payMent: UITextField!
+    @IBOutlet weak var position: UITextField!
+    
+    let arraypayMent = ["500", "1000", "1500", "2000"]
+    let arrayPosition = ["ФРВ", "ЦП", "ЦЗ", "ВРТ"]
+    
+    var payMentPickerView: PickerView?
+    var positionPickerView: PickerView?
+    
+    var payMentToolBar: UIToolbar?
+    var positionToolBar: UIToolbar?
     
     var imageIsChange = false
     var players: Results<Player>!
@@ -23,6 +33,16 @@ class AddPlayerTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        payMentPickerView = PickerView()
+        setPickerView(picker: payMentPickerView!, textField: payMent, arrayData: arraypayMent)
+        payMentToolBar = UIToolbar()
+        payMentToolBar(toolBar: payMentToolBar)
+        
+        positionPickerView = PickerView()
+        setPickerView(picker: positionPickerView!, textField: position, arrayData: arrayPosition)
+        positionToolBar = UIToolbar()
+        positionToolBar(toolBar: positionToolBar)
         
         // В Футоре TableViewController избавляемся от разлиновки (от черточек) путям подставления обычного View где нет контента
         tableView.tableFooterView = UIView()
@@ -34,6 +54,149 @@ class AddPlayerTableViewController: UITableViewController {
         // Каждый раз при редактировании поля (namePlayer) будет срабатывать этот метод который в свою очередь будет вызывать метод #selector(textFieldChanged) а метод #selector(textFieldChanged) - будет следить за тем что заполнено ли текстовое поле или нет, если заполнено то кнопка SAVE будет доступна.
         namePlayer.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         
+    }
+    
+    //Mark: -
+    private func setPickerView(picker: PickerView,
+                               textField: UITextField,
+                               arrayData: [String]) {
+        
+        picker.data = arrayData
+        setDarkAndLightModePicker(picker)
+        picker.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        textField.inputView = picker
+        setDarkAndLightModePicker(picker)
+    }
+    
+    func setDarkAndLightModePicker(_ picker: PickerView ) {
+        
+        switch traitCollection.userInterfaceStyle {
+        case .light, .unspecified:
+            picker.tintColor = .black
+            picker.backgroundColor = .white
+        case .dark:
+            picker.tintColor = .white
+            picker.backgroundColor = .black
+        @unknown default:
+            fatalError()
+        }
+    }
+    
+    //MARK: - positionToolBar
+    func positionToolBar(toolBar: UIToolbar?) {
+        
+        toolBar?.autoresizingMask = .flexibleHeight
+        
+        // dark mode detected
+        switch traitCollection.userInterfaceStyle {
+        case .light, .unspecified:
+            //this customization is optional
+            toolBar?.barStyle = .default
+            toolBar?.tintColor = .black
+            toolBar?.backgroundColor = .white
+            toolBar?.barTintColor = .systemGray5
+            toolBar?.isTranslucent = true
+        case .dark:
+            //this customization is optional
+            toolBar?.barStyle = .default
+            toolBar?.tintColor = .white
+            toolBar?.backgroundColor = .black
+            toolBar?.barTintColor = .black
+            toolBar?.isTranslucent = true
+        @unknown default:
+            fatalError()
+        }
+        
+        var frame = toolBar?.frame
+        frame?.size.height = 44.0
+        toolBar?.frame = frame!
+        
+        let cancelButton = UIBarButtonItem(title: "Отмена",
+                                           style: .done,
+                                           target: self,
+                                           action: #selector(cancelBtn))
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil) //a flexible space between the two buttons
+        
+        let doneButton = UIBarButtonItem(title: "Готово",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(doneBtn))
+        
+        //Add the items to the toolbar
+        toolBar?.items = [cancelButton, flexSpace, doneButton]
+        
+        position.inputAccessoryView = toolBar
+    }
+    
+    @objc func cancelBtn(_ button: UIBarButtonItem?, item: UITextField) {
+        position.resignFirstResponder()
+    }
+    @objc func doneBtn(_ button: UIBarButtonItem?) {
+        position?.resignFirstResponder()
+        position.text = positionPickerView?.selectedValue
+    }
+    
+    //MARK: - payMentToolBar
+    func payMentToolBar(toolBar: UIToolbar?) {
+        
+        toolBar?.autoresizingMask = .flexibleHeight
+        
+        // dark mode detected
+        switch traitCollection.userInterfaceStyle {
+        case .light, .unspecified:
+            //this customization is optional
+            toolBar?.barStyle = .default
+            toolBar?.tintColor = .black
+            toolBar?.backgroundColor = .white
+            toolBar?.barTintColor = .systemGray5
+            toolBar?.isTranslucent = true
+        case .dark:
+            //this customization is optional
+            toolBar?.barStyle = .default
+            toolBar?.tintColor = .white
+            toolBar?.backgroundColor = .black
+            toolBar?.barTintColor = .black
+            toolBar?.isTranslucent = true
+        @unknown default:
+            fatalError()
+        }
+        
+        var frame = toolBar?.frame
+        frame?.size.height = 44.0
+        toolBar?.frame = frame!
+        
+        let cancelButton = UIBarButtonItem(title: "Отмена",
+                                           style: .done,
+                                           target: self,
+                                           action: #selector(cancelBtnClicked))
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil) //a flexible space between the two buttons
+        
+        let doneButton = UIBarButtonItem(title: "Готово",
+                                         style: .done,
+                                         target: self,
+                                         action: #selector(doneBtnClicked))
+        
+        //Add the items to the toolbar
+        toolBar?.items = [cancelButton, flexSpace, doneButton]
+        
+        payMent.inputAccessoryView = toolBar
+    }
+    
+    /**
+     Called when the cancel button of the `pickerAccessory` was clicked. Dismsses the picker
+     */
+    @objc func cancelBtnClicked(_ button: UIBarButtonItem?, item: UITextField) {
+        payMent.resignFirstResponder()
+    }
+    
+    /**
+     Called when the done button of the `pickerAccessory` was clicked. Dismisses the picker and puts the selected value into the textField
+     */
+    @objc func doneBtnClicked(_ button: UIBarButtonItem?) {
+        payMent?.resignFirstResponder()
+        payMent.text = payMentPickerView?.selectedValue
     }
     
     // MARK: - Table View Delegate

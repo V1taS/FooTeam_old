@@ -13,72 +13,71 @@ class Team {
     
     static let shared = Team()
     
-    var teamOne: [Player] { team[0] }
-    var teamTwo: [Player] { team[1] }
-    var teamAll: [Player] { DB.shared.players }
-    var teamAllRandom: [Player] { team[0] + team[1] + team[2] }
-    var reserve: [Player] { team[2] }
-    
-    private var team = Sorted.shared.getData()
-    
     private init() {}
-}
-
-//MARK: - Sorted логика сортировки
-class Sorted {
     
-    static let shared = Sorted()
-    
-    private let players = DB.shared.players
-    
-    func getData() -> [[Player]] {
+    //MARK: - Список кто идет
+    func getIgo(_ players: [Player]) -> [Player] {
+        var igoPlayers: [Player] = []
         
-        let randomPlayers = players.shuffled()
-        
-        var teamOne = [Player]()
-        var teamTwo = [Player]()
-        var reserve = [Player]()
-        
-        for player in randomPlayers {
-            guard player.isFavourite else { break }
-            
-            if teamOne.count <= 5 {
-                teamOne.append(player)
-                continue
-            } else if teamTwo.count <= 5 {
-                teamTwo.append(player)
-                continue
+        for player in players {
+            if player.isFavourite {
+                igoPlayers.append(player)
             }
-            reserve.append(player)
         }
-        return [teamOne, teamTwo, reserve]
+        return igoPlayers
     }
     
-    private init() {}
-}
-
-
-//MARK: - Устанавливает имена
-class OnlyName {
+    //MARK: - Количество команд
+    func getListOfTeams(_ number: Int) -> [[Player]] {
+        
+        var teams: [[Player]] = []
+        
+        for _ in 0...number {
+            let team = [Player]()
+            teams.append(team)
+        }
+        return teams
+    }
     
-    static let shared = OnlyName()
     
-    func getTeamOne(players: [Player], name: [UILabel])  {
+    //MARK: - Делаем сортировку игроков
+    func getListTeam(numberTeams: Int) -> [[Player]] {
+        
+        let players = [Player]()
+        
+        var teamsArray = getListOfTeams(numberTeams)
+        let playersIgo = getIgo(players)
+        let numberPlayersInTeam = playersIgo.count / teamsArray.count
+        var reserv = 0
+        var indexTeam = 0
+        
+        if !numberPlayersInTeam.isMultiple(of: numberTeams) {
+            reserv += 1
+        }
+        
+        for player in playersIgo {
+            
+            if teamsArray[indexTeam].count <= numberPlayersInTeam - 1 {
+                teamsArray[indexTeam].append(player)
+            } else {
+                indexTeam += 1
+                teamsArray[indexTeam].append(player)
+            }
+        }
+        return [players]
+    }
+    
+    //MARK: - Устанавливает имена
+    func setTeamOne(players: [Player], name: [UILabel])  {
         var count = 0
         for player in players {
             name[count].text = player.name
             count += 1
         }
     }
-    private init() {}
-}
-
-//MARK: - Устанавливает имена и фото
-class NameAndPhoto {
     
-    static let shared = NameAndPhoto()
-    
-    func getTeamOne(players: [Player], name: [UILabel], photo: [UIImageView])  {
+    //MARK: - Устанавливает имена и фото
+    func setTeamOne(players: [Player], name: [UILabel], photo: [UIImageView])  {
         
         var count = 0
         for player in players {
@@ -89,5 +88,4 @@ class NameAndPhoto {
             count += 1
         }
     }
-    private init() {}
 }

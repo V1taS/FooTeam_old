@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class EditePlayerTableViewController: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
@@ -23,25 +24,27 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
     @IBOutlet weak var losGame: UITextField!
     
     let arrayPosition = ["ФРВ", "ЦП", "ЦЗ", "ВРТ"]
-    let arrayTeamNumber = ["0", "1", "2"]
+    let arrayTeamNumber = ["0", "1", "2", "3", "4"]
     
-    var pickerView: PickerView?
+    var positionPickerView: PickerView?
+    var teamNumberPickerView: PickerView?
     
     var positionToolBar: UIToolbar?
     var teamNumberToolBar: UIToolbar?
     
     var imageIsChange = false
     
-    var players: Player!
+    var player: Player!
     var indexPath: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pickerView = PickerView()
+        positionPickerView = PickerView()
+        teamNumberPickerView = PickerView()
         
-        switchPickerView(textField: teamNumber)
-        switchPickerView(textField: position)
+        setPickerView(picker: positionPickerView!, textField: position, arrayData: arrayPosition)
+        setPickerView(picker: teamNumberPickerView!, textField: teamNumber, arrayData: arrayTeamNumber)
         
         positionToolBar = UIToolbar()
         teamNumberToolBar = UIToolbar()
@@ -55,49 +58,29 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
         
     }
     
-    
-    @IBAction func saveButton(_ sender: UIBarButtonItem) {
-    }
-    
     private func setStat() {
-        imagePlayer.image = UIImage(data: players.photo!)
-        namePlayer.text = players.name
-//        teamNumber.text = String(players.teamNumber)
-//        teamNumber.inputView = teamNumberPicker
-        payment.text = players.payment
-        iGo.isOn = players.isFavourite
-//        rating.text = String(players.rating)
-//        position.inputView = positionPicker
-//        numberOfGames.text = String(players.numberOfGames)
-//        numberOfGoals.text = String(players.numberOfGoals)
-//        winGame.text = String(players.winGame)
-//        losGame.text = String(players.losGame)
-    }
-    
-    func switchPickerView(textField: UITextField) {
-        
-        switch textField.tag {
-        case 0:
-            setPickerView(picker: pickerView!,
-            textField: teamNumber,
-            arrayData: arrayTeamNumber)
-        case 1:
-            setPickerView(picker: pickerView!,
-            textField: position,
-            arrayData: arrayPosition)
-        default:
-            print("Не выбран не один текст филд")
-        }
+        imagePlayer.image = UIImage(data: player.photo!)
+        namePlayer.text = player.name
+        teamNumber.text = String(player.teamNumber)
+        payment.text = player.payment
+        position.text = player.position
+        iGo.isOn = player.isFavourite
+        rating.text = String(player.rating)
+        numberOfGames.text = String(player.numberOfGames)
+        numberOfGoals.text = String(player.numberOfGoals)
+        winGame.text = String(player.winGame)
+        losGame.text = String(player.losGame)
     }
     
     private func setPickerView(picker: PickerView,
-                                     textField: UITextField,
-                                     arrayData: [String]) {
+                               textField: UITextField,
+                               arrayData: [String]) {
         
         picker.data = arrayData
         setDarkAndLightModePicker(picker)
         picker.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         textField.inputView = picker
+        setDarkAndLightModePicker(picker)
     }
     
     func setDarkAndLightModePicker(_ picker: PickerView ) {
@@ -172,7 +155,7 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
      */
     @objc func doneBtnClicked(_ button: UIBarButtonItem?) {
         teamNumber?.resignFirstResponder()
-//        teamNumber.text = teamNumberPicker?.selectedValue
+        teamNumber.text = teamNumberPickerView?.selectedValue
     }
     
     func positionToolBar(toolBar: UIToolbar?) {
@@ -221,19 +204,12 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
         position.inputAccessoryView = toolBar
     }
     
-    /**
-     Called when the cancel button of the `pickerAccessory` was clicked. Dismsses the picker
-     */
     @objc func cancelBtn(_ button: UIBarButtonItem?, item: UITextField) {
         position.resignFirstResponder()
     }
-    
-    /**
-     Called when the done button of the `pickerAccessory` was clicked. Dismisses the picker and puts the selected value into the textField
-     */
     @objc func doneBtn(_ button: UIBarButtonItem?) {
         position?.resignFirstResponder()
-//        position.text = positionPicker?.selectedValue
+        position.text = positionPickerView?.selectedValue
     }
     
     // MARK: - Table View Delegate
@@ -297,31 +273,20 @@ class EditePlayerTableViewController: UITableViewController, UIImagePickerContro
         dismiss(animated: true)
     }
     
-    func saveNewPlayer() {
-        
-        var image: UIImage?
-        imageIsChange = true
-        if imageIsChange {
-            image = imagePlayer.image
-        } else {
-            image = #imageLiteral(resourceName: "medium_Avatar")
+    func savePlayer() {
+        try! realm.write {
+            player.photo = imagePlayer.image?.pngData()
+            player.name = namePlayer.text
+            player.teamNumber = Int(teamNumber.text!)!
+            player.payment = payment.text!
+            player.isFavourite = iGo.isOn
+            player.rating = Int(rating.text!)!
+            player.position = position.text!
+            player.numberOfGames = Int(numberOfGames.text!)!
+            player.numberOfGoals = Int(numberOfGoals.text!)!
+            player.winGame = Int(winGame.text!)!
+            player.losGame = Int(losGame.text!)!
         }
-        
-//        let newPlayer = Player(photo: (image?.pngData())!,
-//                               name: namePlayer.text!,
-//                               teamNumber: Int(teamNumber.text!)!,
-//                               payment: payment.text ?? "0",
-//                               isFavourite: iGo.isOn,
-//                               rating: Int(rating.text!)!,
-//                               position: "ФВР",
-//                               numberOfGames: Int(numberOfGames.text!)!,
-//                               numberOfGoals: Int(numberOfGoals.text!)!,
-//                               winGame: Int(winGame.text!)!,
-//                               losGame: Int(losGame.text!)!)
-//        players = newPlayer
-//
-//        StorageManager.shared.reSavePlayer(player: newPlayer, at: indexPath.row)
-        
     }
     
 }
