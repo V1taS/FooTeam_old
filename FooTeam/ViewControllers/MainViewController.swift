@@ -38,15 +38,6 @@ class MainViewController: UIViewController {
         //MARK: - инициализируем объект players
         players = realm.objects(Player.self)
         
-        //        OnlyName.shared.getTeamOne(players: Team.shared.reserve,
-        //                                   name: reserve)
-        //
-        //        OnlyName.shared.getTeamOne(players: Team.shared.teamOne,
-        //                                   name: nameTemOne)
-        //
-        //        OnlyName.shared.getTeamOne(players: Team.shared.teamTwo,
-        //                                   name: nameTemTwo)
-        //
         timeFoot(timeLabel: timeLabel)
         onCompletionWeather()
         networkWeatherManager.fetchCurrentWeather()
@@ -55,8 +46,9 @@ class MainViewController: UIViewController {
         collectionViewTopPlayers.reloadData()
         
         //        pl.savePlayer()
+        segmentedControlTitel()
+        bet()
         tableViewNewPlayers.tableFooterView = UIView()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,23 +56,22 @@ class MainViewController: UIViewController {
         
         //MARK: - инициализируем объект players
         players = realm.objects(Player.self)
+        bet()
         
         tableViewNewPlayers.reloadData()
         collectionViewTopPlayers.reloadData()
-        tableViewNewPlayers.reloadData()
+        
+        segmentedControlTitel()
         
         tableViewNewPlayers.tableFooterView = UIView()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-//        if let indexPath = tableViewNewPlayers.indexPathForSelectedRow {
             
             if segue.identifier == "HomeSeguetoPS" {
                 let personStatSegueVC = segue.destination as! PersonalStatisticsController
                 personStatSegueVC.player = sender as? Player
-            } 
-//        }
+            }
     }
     
     // MARK: - API parse
@@ -135,9 +126,39 @@ class MainViewController: UIViewController {
         
         if segmentedControl.selectedSegmentIndex == 0 {
             tableViewNewPlayers.reloadData()
+            segmentedControlTitel()
         } else {
+            segmentedControlTitel()
             tableViewNewPlayers.reloadData()
         }
+    }
+    
+    private func bet() {
+        let teamOne = self.players.filter("isFavourite = true").filter("teamNumber = 1")
+        let teamTwo = self.players.filter("isFavourite = true").filter("teamNumber = 2")
+        var teamOneTotal = 0
+        var teamTwoTotal = 0
+        
+        for player in teamOne {
+            teamOneTotal += player.rating
+        }
+        
+        for player in teamTwo {
+            teamTwoTotal += player.rating
+        }
+        
+        let targetOneTotal = String(format: "%.1f", Double(teamOneTotal) / 99 / 2 + 1)
+        let targetTwoTotal = String(format: "%.1f", Double(teamTwoTotal) / 99 / 2 + 1)
+         let targetMidleTotal = String(format: "%.1f", (Double(teamOneTotal) / 99 - Double(teamTwoTotal) / 99) + 1 )
+        
+        betTeamOneLabel.text = targetOneTotal
+        betTeamTwoLabel.text = targetTwoTotal
+        betTeamMidleLabel.text = targetMidleTotal
+    }
+    
+    private func segmentedControlTitel() {
+        segmentedControl.setTitle("Команда - 1 (\(self.players.filter("isFavourite = true").filter("teamNumber = 1").count))", forSegmentAt: 0)
+        segmentedControl.setTitle("Команда - 2 (\(self.players.filter("isFavourite = true").filter("teamNumber = 2").count))", forSegmentAt: 1)
     }
     
 }
@@ -185,10 +206,10 @@ extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if segmentedControl.selectedSegmentIndex == 0 {
-            let players = self.players.filter("teamNumber = 1")
+            let players = self.players.filter("isFavourite = true").filter("teamNumber = 1")
             return players.isEmpty ? 0 : players.count
         } else {
-            let players = self.players.filter("teamNumber = 2")
+            let players = self.players.filter("isFavourite = true").filter("teamNumber = 2")
             return players.isEmpty ? 0 : players.count
         }
         
@@ -198,16 +219,17 @@ extension MainViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellNewPlayer", for: indexPath) as! MainNewPlayersTableViewCell
         
         if segmentedControl.selectedSegmentIndex == 0 {
-            let players = self.players.filter("teamNumber = 1").sorted(byKeyPath: "name", ascending: true)
+            let players = self.players.filter("isFavourite = true").filter("teamNumber = 1").sorted(byKeyPath: "name", ascending: true)
             
             let player = players[indexPath.row]
             cell.namePlayers.text = player.name
+            cell.rating.text = "\(player.rating)"
             return cell
         } else {
-            let players = self.players.filter("teamNumber = 2").sorted(byKeyPath: "name", ascending: true)
+            let players = self.players.filter("isFavourite = true").filter("teamNumber = 2").sorted(byKeyPath: "name", ascending: true)
             let player = players[indexPath.row]
-            
             cell.namePlayers.text = player.name
+            cell.rating.text = "\(player.rating)"
             return cell
         }
     }
@@ -219,14 +241,14 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if segmentedControl.selectedSegmentIndex == 0 {
-            let players = self.players.filter("teamNumber = 1").sorted(byKeyPath: "name", ascending: true)
+            let players = self.players.filter("isFavourite = true").filter("teamNumber = 1").sorted(byKeyPath: "name", ascending: true)
             
             let player = players[indexPath.row]
             performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
             tableView.deselectRow(at: indexPath, animated: true)
             
         } else {
-            let players = self.players.filter("teamNumber = 2").sorted(byKeyPath: "name", ascending: true)
+            let players = self.players.filter("isFavourite = true").filter("teamNumber = 2").sorted(byKeyPath: "name", ascending: true)
             
             let player = players[indexPath.row]
             performSegue(withIdentifier: "HomeSeguetoPS", sender: player)

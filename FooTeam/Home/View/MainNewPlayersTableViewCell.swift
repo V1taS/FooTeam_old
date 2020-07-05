@@ -10,6 +10,6 @@ import UIKit
 
 class MainNewPlayersTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var imagePlayers: UIImageView!
+    @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var namePlayers: UILabel!
 }

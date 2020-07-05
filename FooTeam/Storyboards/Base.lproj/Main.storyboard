@@ -1042,14 +1042,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="398" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-Yi-eC7">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NTC-Yi-eC7">
                                                     <rect key="frame" x="16" y="8" width="366" height="28"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Артур Илларионовпаапкп" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xn1-45-FaE">
-                                                            <rect key="frame" x="0.0" y="4" width="366" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Артур Илларионовпаапкп" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xn1-45-FaE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="28"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="250" id="tpf-UP-cZV"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOw-dE-ACb">
+                                                            <rect key="frame" x="324" y="0.0" width="42" height="28"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -1066,6 +1075,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="namePlayers" destination="xn1-45-FaE" id="VXy-0Q-4D0"/>
+                                            <outlet property="rating" destination="hOw-dE-ACb" id="Ozr-UD-wdm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1221,6 +1231,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Игроки" id="Gth-uj-ild">
+                        <barButtonItem key="leftBarButtonItem" springLoaded="YES" style="done" systemItem="refresh" id="pPL-ue-13G">
+                            <color key="tintColor" name="BlackAndWhite"/>
+                            <connections>
+                                <action selector="refreshTeam:" destination="sDG-er-4GU" id="yJc-ot-asA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fpM-ch-u5D">
                             <color key="tintColor" name="BlackAndWhite"/>
                             <connections>

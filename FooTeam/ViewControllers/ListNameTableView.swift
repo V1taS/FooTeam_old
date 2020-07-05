@@ -14,9 +14,10 @@ class ListNameTableView: UITableViewController {
     var players: Results<Player>!
     
     override func viewDidLoad() {
-    super.viewDidLoad()
+        super.viewDidLoad()
         
         players = realm.objects(Player.self)
+        title = "Игроки (\(players.filter("isFavourite = true").count))"
         tableView.reloadData()
     }
     
@@ -24,6 +25,8 @@ class ListNameTableView: UITableViewController {
         super.viewWillAppear(animated)
         
         players = realm.objects(Player.self)
+        
+        title = "Игроки (\(players.filter("isFavourite = true").count))"
         tableView.reloadData()
     }
     
@@ -46,6 +49,26 @@ class ListNameTableView: UITableViewController {
         tableView.reloadData()
     }
     
+    @IBAction func refreshTeam(_ sender: UIBarButtonItem) {
+        var teamOne: [Player] = []
+        var teamTwo: [Player] = []
+        
+        // сортируем игроков по возрастанию и распределяем по командам
+        for player in self.players.filter("isFavourite = true").sorted(byKeyPath: "rating", ascending: false) {
+            if teamOne.count == teamTwo.count {
+                teamOne.append(player)
+                try! realm.write {
+                    player.teamNumber = 1
+                }
+            } else {
+                teamTwo.append(player)
+                try! realm.write {
+                    player.teamNumber = 2
+                }
+            }
+        }
+        tableView.reloadData()
+    }
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return players.count
@@ -128,27 +151,27 @@ class ListNameTableView: UITableViewController {
     }
     
     // MARK: - Leading Swipe Actions
-    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
-        let favourite = favouriteAction(at: indexPath)
-        
-        return UISwipeActionsConfiguration(actions: [favourite])
-    }
     
-    func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
-        
-        let player = players[indexPath.row]
-        let action = UIContextualAction(style: .normal, title: "I GO") { (action, view, completion) in
-
-            try! realm.write {
-                player.isFavourite = !player.isFavourite
-            }
-            
-            self.tableView.reloadRows(at: [indexPath], with: .top)
-            completion(true)
+        override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    
+            let favourite = favouriteAction(at: indexPath)
+    
+            return UISwipeActionsConfiguration(actions: [favourite])
         }
-        action.backgroundColor = player.isFavourite ? #colorLiteral(red: 0, green: 0.364138335, blue: 0.1126995459, alpha: 1) : .systemGray
-        action.image = UIImage(systemName: "person.badge.plus")
-        return action
-    }
+    
+        func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
+            let playersSorted = self.players.sorted(byKeyPath: "rating", ascending: false)
+            let player = playersSorted[indexPath.row]
+            let action = UIContextualAction(style: .normal, title: "I GO") { (action, view, completion) in
+                try! realm.write {
+                    player.isFavourite = !player.isFavourite
+                }
+                self.tableView.reloadRows(at: [indexPath], with: .top)
+                self.title = "Игроки (\(self.players.filter("isFavourite = true").count))"
+                completion(true)
+            }
+            action.backgroundColor = player.isFavourite ? #colorLiteral(red: 0, green: 0.364138335, blue: 0.1126995459, alpha: 1) : .systemGray
+            action.image = UIImage(systemName: "person.badge.plus")
+            return action
+        }
 }
