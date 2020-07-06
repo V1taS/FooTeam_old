@@ -35,6 +35,9 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tabItems = tabBarController?.tabBar.items
+        tabItems?[1].badgeValue = "+1"
+        
         //MARK: - инициализируем объект players
         players = realm.objects(Player.self)
         
@@ -46,9 +49,13 @@ class MainViewController: UIViewController {
         collectionViewTopPlayers.reloadData()
         
         //        pl.savePlayer()
-        segmentedControlTitel()
         bet()
+        forfardRating()
+        havebekRating()
+        protectionRating()
+        goalkeaperRating()
         tableViewNewPlayers.tableFooterView = UIView()
+        segmentedControlInsertTeam()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,17 +68,222 @@ class MainViewController: UIViewController {
         tableViewNewPlayers.reloadData()
         collectionViewTopPlayers.reloadData()
         
-        segmentedControlTitel()
-        
         tableViewNewPlayers.tableFooterView = UIView()
+        segmentedControlInsertTeam()
+        segmentedControl.selectedSegmentIndex = 0
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "HomeSeguetoPS" {
+            let personStatSegueVC = segue.destination as! PersonalStatisticsController
+            personStatSegueVC.player = sender as? Player
+        }
+    }
+    
+    func goalkeaperRating() {
+        for player in players.filter("position = 'ВРТ'") {
             
-            if segue.identifier == "HomeSeguetoPS" {
-                let personStatSegueVC = segue.destination as! PersonalStatisticsController
-                personStatSegueVC.player = sender as? Player
+            var rating = 49
+            
+            let countGame = player.numberOfGames
+            
+            if countGame < 1 {
+                rating += 1
+            } else if countGame == 1 {
+                
+                if player.winGame == 1 {
+                    rating += 36
+                } else {
+                    rating += 30
+                }
+                
+            } else {
+                
+                if player.winGame > player.losGame {
+                    rating += 36
+                } else {
+                    rating += 30
+                }
             }
+            
+            if player.inTeam == true { rating += 7 }
+            
+            if rating >= 100 {
+                try! realm.write {
+                    player.rating = 99
+                }
+            } else {
+                try! realm.write {
+                    player.rating = rating
+                }
+            }
+        }
+    }
+    
+    func protectionRating() {
+        for player in players.filter("position = 'ЦЗ'") {
+            
+            var rating = 49
+            
+            let countGame = player.numberOfGames
+            let countGoals = player.numberOfGoals
+            
+            if countGame < 1 {
+                rating += 1
+            } else if countGame == 1 {
+                
+                if player.winGame == 1 {
+                    rating += 32
+                } else {
+                    rating += 6
+                }
+                
+                switch countGoals {
+                case 0:
+                    rating += 0
+                case 1:
+                    rating += 9
+                default:
+                    rating += 13
+                }
+                
+            } else {
+                
+                let midleGoals = ((countGoals / countGame) * 19)
+                
+                if midleGoals > 40 {
+                    rating += 41
+                } else if midleGoals <= 10 {
+                    rating += 21
+                } else {
+                    rating += midleGoals
+                }
+                
+                if player.winGame > player.losGame {
+                    rating += 22
+                } else {
+                    rating += 7
+                }
+            }
+            
+            if player.inTeam == true { rating += 7 }
+            
+            if rating >= 100 {
+                try! realm.write {
+                    player.rating = 99
+                }
+            } else {
+                try! realm.write {
+                    player.rating = rating
+                }
+            }
+        }
+    }
+    
+    func havebekRating() {
+        for player in players.filter("position = 'ЦП'") {
+            
+            var rating = 49
+            
+            let countGame = player.numberOfGames
+            let countGoals = player.numberOfGoals
+            
+            if countGame < 1 {
+                rating += 1
+            } else if countGame == 1 {
+                
+                if player.winGame == 1 {
+                    rating += 12
+                } else {
+                    rating += 6
+                }
+                
+                switch countGoals {
+                case 0:
+                    rating += 10
+                case 1:
+                    rating += 16
+                case 2...3:
+                    rating += 19
+                default:
+                    rating += 31
+                }
+                
+            } else {
+                
+                let midleGoals = ((countGoals / countGame) * 19)
+                
+                if midleGoals > 40 {
+                    rating += 41
+                } else if midleGoals <= 10 {
+                    rating += 21
+                } else {
+                    rating += midleGoals
+                }
+            }
+            
+            if player.inTeam == true { rating += 7 }
+            
+            if rating >= 100 {
+                try! realm.write {
+                    player.rating = 99
+                }
+            } else {
+                try! realm.write {
+                    player.rating = rating
+                }
+            }
+        }
+    }
+    
+    func forfardRating() {
+        for player in players.filter("position = 'ФРВ'") {
+            
+            var rating = 49
+            
+            let countGame = player.numberOfGames
+            let countGoals = player.numberOfGoals
+            
+            if countGame < 1 {
+                rating += 1
+            } else if countGame == 1 {
+                rating += 10
+                switch countGoals {
+                case 0...1:
+                    rating += 9
+                case 2...3:
+                    rating += 17
+                case 4:
+                    rating += 25
+                default:
+                    rating += 29
+                }
+            } else {
+                
+                let midleGoals = ((countGoals / countGame) * 19)
+                
+                if midleGoals > 40 {
+                    rating += 37
+                } else if midleGoals <= 10 {
+                    rating += 22
+                } else {
+                    rating += midleGoals
+                }
+            }
+            
+            if player.inTeam == true { rating += 7 }
+            
+            if rating >= 100 {
+                try! realm.write {
+                    player.rating = 99
+                }
+            } else {
+                try! realm.write {
+                    player.rating = rating
+                }
+            }
+        }
     }
     
     // MARK: - API parse
@@ -126,10 +338,37 @@ class MainViewController: UIViewController {
         
         if segmentedControl.selectedSegmentIndex == 0 {
             tableViewNewPlayers.reloadData()
-            segmentedControlTitel()
         } else {
-            segmentedControlTitel()
             tableViewNewPlayers.reloadData()
+        }
+    }
+    
+    func segmentedControlInsertTeam() {
+        
+        segmentedControl.removeAllSegments()
+        let igoPlayers = self.players.filter("isFavourite = true")
+        
+        var countPlayersInTeam = 5
+        let decrementIgoPlayers = igoPlayers.count - 1
+        
+        if igoPlayers.count % 5 == 0 || decrementIgoPlayers % 5 == 0  {
+            countPlayersInTeam = 5
+        }
+        
+        if igoPlayers.count % 6 == 0  || decrementIgoPlayers % 6 == 0  {
+            countPlayersInTeam = 6
+        }
+        
+        if igoPlayers.count % 7 == 0 {
+            countPlayersInTeam = 7
+        }
+        
+        let countTeams = igoPlayers.count / countPlayersInTeam
+        
+        for index in 0..<countTeams {
+            segmentedControl.insertSegment(withTitle: "Команда - \(index + 1)",
+                at: index,
+                animated: false)
         }
     }
     
@@ -147,18 +386,13 @@ class MainViewController: UIViewController {
             teamTwoTotal += player.rating
         }
         
-        let targetOneTotal = String(format: "%.1f", Double(teamOneTotal) / 99 / 2 + 1)
-        let targetTwoTotal = String(format: "%.1f", Double(teamTwoTotal) / 99 / 2 + 1)
-         let targetMidleTotal = String(format: "%.1f", (Double(teamOneTotal) / 99 - Double(teamTwoTotal) / 99) + 1 )
+//        let targetOneTotal = String(format: "%.1f", Double(teamOneTotal) / 99 / 2 + 1)
+//        let targetTwoTotal = String(format: "%.1f", Double(teamTwoTotal) / 99 / 2 + 1)
+//        let targetMidleTotal = String(format: "%.1f", (Double(teamOneTotal) / 99 - Double(teamTwoTotal) / 99) + 1 )
         
-        betTeamOneLabel.text = targetOneTotal
-        betTeamTwoLabel.text = targetTwoTotal
-        betTeamMidleLabel.text = targetMidleTotal
-    }
-    
-    private func segmentedControlTitel() {
-        segmentedControl.setTitle("Команда - 1 (\(self.players.filter("isFavourite = true").filter("teamNumber = 1").count))", forSegmentAt: 0)
-        segmentedControl.setTitle("Команда - 2 (\(self.players.filter("isFavourite = true").filter("teamNumber = 2").count))", forSegmentAt: 1)
+        betTeamOneLabel.text = "..."
+        betTeamTwoLabel.text = "..."
+        betTeamMidleLabel.text = "..."
     }
     
 }
@@ -205,54 +439,99 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if segmentedControl.selectedSegmentIndex == 0 {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
             let players = self.players.filter("isFavourite = true").filter("teamNumber = 1")
             return players.isEmpty ? 0 : players.count
-        } else {
+        case 1:
             let players = self.players.filter("isFavourite = true").filter("teamNumber = 2")
             return players.isEmpty ? 0 : players.count
+        case 2:
+            let players = self.players.filter("isFavourite = true").filter("teamNumber = 3")
+            return players.isEmpty ? 0 : players.count
+        case 3:
+            let players = self.players.filter("isFavourite = true").filter("teamNumber = 4")
+            return players.isEmpty ? 0 : players.count
+        default:
+            return players.isEmpty ? 0 : players.count
         }
+    }
         
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellNewPlayer", for: indexPath) as! MainNewPlayersTableViewCell
+            
+            switch segmentedControl.selectedSegmentIndex {
+            case 0:
+                let players = self.players.filter("isFavourite = true").filter("teamNumber = 1").sorted(byKeyPath: "rating", ascending: false)
+                
+                let player = players[indexPath.row]
+                cell.namePlayers.text = player.name
+                cell.rating.text = "\(player.rating)"
+                return cell
+            case 1:
+                let players = self.players.filter("isFavourite = true").filter("teamNumber = 2").sorted(byKeyPath: "rating", ascending: false)
+                let player = players[indexPath.row]
+                cell.namePlayers.text = player.name
+                cell.rating.text = "\(player.rating)"
+                return cell
+            case 2:
+                let players = self.players.filter("isFavourite = true").filter("teamNumber = 3").sorted(byKeyPath: "rating", ascending: false)
+                let player = players[indexPath.row]
+                cell.namePlayers.text = player.name
+                cell.rating.text = "\(player.rating)"
+                return cell
+            case 3:
+                let players = self.players.filter("isFavourite = true").filter("teamNumber = 4").sorted(byKeyPath: "rating", ascending: false)
+                let player = players[indexPath.row]
+                cell.namePlayers.text = player.name
+                cell.rating.text = "\(player.rating)"
+                return cell
+            default:
+                let players = self.players.filter("isFavourite = true").filter("teamNumber = 0").sorted(byKeyPath: "rating", ascending: false)
+                let player = players[indexPath.row]
+                cell.namePlayers.text = player.name
+                cell.rating.text = "\(player.rating)"
+                return cell
+            }
+        }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellNewPlayer", for: indexPath) as! MainNewPlayersTableViewCell
-        
-        if segmentedControl.selectedSegmentIndex == 0 {
-            let players = self.players.filter("isFavourite = true").filter("teamNumber = 1").sorted(byKeyPath: "name", ascending: true)
+    // MARK: - Table view Delegate
+    
+    extension MainViewController: UITableViewDelegate {
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
-            let player = players[indexPath.row]
-            cell.namePlayers.text = player.name
-            cell.rating.text = "\(player.rating)"
-            return cell
-        } else {
-            let players = self.players.filter("isFavourite = true").filter("teamNumber = 2").sorted(byKeyPath: "name", ascending: true)
-            let player = players[indexPath.row]
-            cell.namePlayers.text = player.name
-            cell.rating.text = "\(player.rating)"
-            return cell
+            switch segmentedControl.selectedSegmentIndex {
+            case 0:
+                let players = self.players.filter("isFavourite = true").filter("teamNumber = 1").sorted(byKeyPath: "rating", ascending: false)
+                
+                let player = players[indexPath.row]
+                performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
+                tableView.deselectRow(at: indexPath, animated: true)
+            case 1:
+                let players = self.players.filter("isFavourite = true").filter("teamNumber = 2").sorted(byKeyPath: "rating", ascending: false)
+                
+                let player = players[indexPath.row]
+                performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
+                tableView.deselectRow(at: indexPath, animated: true)
+            case 2:
+                let players = self.players.filter("isFavourite = true").filter("teamNumber = 3").sorted(byKeyPath: "rating", ascending: false)
+                
+                let player = players[indexPath.row]
+                performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
+                tableView.deselectRow(at: indexPath, animated: true)
+            case 3:
+                let players = self.players.filter("isFavourite = true").filter("teamNumber = 4").sorted(byKeyPath: "rating", ascending: false)
+                
+                let player = players[indexPath.row]
+                performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
+                tableView.deselectRow(at: indexPath, animated: true)
+            default:
+                let players = self.players.filter("isFavourite = true").filter("teamNumber = 0").sorted(byKeyPath: "rating", ascending: false)
+                
+                let player = players[indexPath.row]
+                performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
+                tableView.deselectRow(at: indexPath, animated: true)
+            }
         }
-    }
-}
-
-// MARK: - Table view Delegate
-
-extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if segmentedControl.selectedSegmentIndex == 0 {
-            let players = self.players.filter("isFavourite = true").filter("teamNumber = 1").sorted(byKeyPath: "name", ascending: true)
-            
-            let player = players[indexPath.row]
-            performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
-            tableView.deselectRow(at: indexPath, animated: true)
-            
-        } else {
-            let players = self.players.filter("isFavourite = true").filter("teamNumber = 2").sorted(byKeyPath: "name", ascending: true)
-            
-            let player = players[indexPath.row]
-            performSegue(withIdentifier: "HomeSeguetoPS", sender: player)
-            tableView.deselectRow(at: indexPath, animated: true)
-        }
-    }
 }

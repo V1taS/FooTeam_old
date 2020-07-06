@@ -9,15 +9,23 @@
 import UIKit
 import RealmSwift
 
+enum CurrentTeam {
+    case teamOne, teamTwo, teamFree, teamFour
+}
+
 class ListNameTableView: UITableViewController {
     
+    @IBOutlet weak var navBar: UINavigationItem!
     var players: Results<Player>!
+    var currenTeam = CurrentTeam.teamOne
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         players = realm.objects(Player.self)
-        title = "Игроки (\(players.filter("isFavourite = true").count))"
+        
+        navBar.title = "Играют - \(self.players.filter("isFavourite = true").count), В команде - \(self.players.filter("inTeam = true").count)"
+        
         tableView.reloadData()
     }
     
@@ -25,8 +33,6 @@ class ListNameTableView: UITableViewController {
         super.viewWillAppear(animated)
         
         players = realm.objects(Player.self)
-        
-        title = "Игроки (\(players.filter("isFavourite = true").count))"
         tableView.reloadData()
     }
     
@@ -50,23 +56,122 @@ class ListNameTableView: UITableViewController {
     }
     
     @IBAction func refreshTeam(_ sender: UIBarButtonItem) {
-        var teamOne: [Player] = []
-        var teamTwo: [Player] = []
         
-        // сортируем игроков по возрастанию и распределяем по командам
-        for player in self.players.filter("isFavourite = true").sorted(byKeyPath: "rating", ascending: false) {
-            if teamOne.count == teamTwo.count {
-                teamOne.append(player)
-                try! realm.write {
-                    player.teamNumber = 1
+        let igoPlayers = self.players.filter("isFavourite = true")
+        
+        var countPlayersInTeam = 5
+        let decrementIgoPlayers = igoPlayers.count - 1
+        
+        if igoPlayers.count % 5 == 0 || decrementIgoPlayers % 5 == 0  {
+            countPlayersInTeam = 5
+        }
+        
+        if igoPlayers.count % 6 == 0  || decrementIgoPlayers % 6 == 0  {
+            countPlayersInTeam = 6
+        }
+        
+        if igoPlayers.count % 7 == 0 {
+            countPlayersInTeam = 7
+        }
+        
+        let countTeams = igoPlayers.count / countPlayersInTeam
+        
+        switch countTeams {
+        case 2:
+            // сортируем игроков по возрастанию и распределяем по командам
+            for player in self.players.filter("isFavourite = true").sorted(byKeyPath: "rating", ascending: false) {
+                switch currenTeam {
+                    
+                case .teamOne:
+                    try! realm.write {
+                        player.teamNumber = 1
+                    }
+                    currenTeam = .teamTwo
+                case .teamTwo:
+                    try! realm.write {
+                        player.teamNumber = 2
+                    }
+                    currenTeam = .teamOne
+                case .teamFree:
+                    print("Error Sort players case 2")
+                case .teamFour:
+                    print("Error Sort players case 2")
                 }
-            } else {
-                teamTwo.append(player)
-                try! realm.write {
-                    player.teamNumber = 2
+            }
+        case 3:
+            // сортируем игроков по возрастанию и распределяем по командам
+            for player in self.players.filter("isFavourite = true").sorted(byKeyPath: "rating", ascending: false) {
+                switch currenTeam {
+                    
+                case .teamOne:
+                    try! realm.write {
+                        player.teamNumber = 1
+                    }
+                    currenTeam = .teamTwo
+                case .teamTwo:
+                    try! realm.write {
+                        player.teamNumber = 2
+                    }
+                    currenTeam = .teamFree
+                case .teamFree:
+                    try! realm.write {
+                        player.teamNumber = 3
+                    }
+                    currenTeam = .teamOne
+                case .teamFour:
+                    print("Error Sort players case 3")
+                }
+            }
+        case 4:
+            // сортируем игроков по возрастанию и распределяем по командам
+            for player in self.players.filter("isFavourite = true").sorted(byKeyPath: "rating", ascending: false) {
+                switch currenTeam {
+                    
+                case .teamOne:
+                    try! realm.write {
+                        player.teamNumber = 1
+                    }
+                    currenTeam = .teamTwo
+                case .teamTwo:
+                    try! realm.write {
+                        player.teamNumber = 2
+                    }
+                    currenTeam = .teamFree
+                case .teamFree:
+                    try! realm.write {
+                        player.teamNumber = 3
+                    }
+                    currenTeam = .teamFour
+                case .teamFour:
+                    try! realm.write {
+                        player.teamNumber = 4
+                    }
+                    currenTeam = .teamOne
+                }
+            }
+        default:
+            // сортируем игроков по возрастанию и распределяем по командам
+            for player in self.players.filter("isFavourite = true").sorted(byKeyPath: "rating", ascending: false) {
+                switch currenTeam {
+                    
+                case .teamOne:
+                    try! realm.write {
+                        player.teamNumber = 1
+                    }
+                    currenTeam = .teamTwo
+                case .teamTwo:
+                    try! realm.write {
+                        player.teamNumber = 2
+                    }
+                    currenTeam = .teamOne
+                case .teamFree:
+                    print("Error Sort players case 2")
+                case .teamFour:
+                    print("Error Sort players case 2")
                 }
             }
         }
+        
         tableView.reloadData()
     }
     // MARK: - Table view data source
@@ -77,7 +182,7 @@ class ListNameTableView: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayersCell", for: indexPath) as! ListNameTableViewCell
         
-        let players = self.players.sorted(byKeyPath: "rating", ascending: false)
+        let players = self.players.sorted(byKeyPath: "inTeam", ascending: false)
         
         let player = players[indexPath.row]
         
@@ -129,7 +234,7 @@ class ListNameTableView: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let players = self.players.sorted(byKeyPath: "rating", ascending: false)
+        let players = self.players.sorted(byKeyPath: "inTeam", ascending: false)
         let player = players[indexPath.row]
         performSegue(withIdentifier: "ListNameTableViewSegue", sender: player)
         tableView.deselectRow(at: indexPath, animated: true)
@@ -152,26 +257,26 @@ class ListNameTableView: UITableViewController {
     
     // MARK: - Leading Swipe Actions
     
-        override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let favourite = favouriteAction(at: indexPath)
+        
+        return UISwipeActionsConfiguration(actions: [favourite])
+    }
     
-            let favourite = favouriteAction(at: indexPath)
-    
-            return UISwipeActionsConfiguration(actions: [favourite])
-        }
-    
-        func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
-            let playersSorted = self.players.sorted(byKeyPath: "rating", ascending: false)
-            let player = playersSorted[indexPath.row]
-            let action = UIContextualAction(style: .normal, title: "I GO") { (action, view, completion) in
-                try! realm.write {
-                    player.isFavourite = !player.isFavourite
-                }
-                self.tableView.reloadRows(at: [indexPath], with: .top)
-                self.title = "Игроки (\(self.players.filter("isFavourite = true").count))"
-                completion(true)
+    func favouriteAction(at indexPath: IndexPath) -> UIContextualAction {
+        let playersSorted = self.players.sorted(byKeyPath: "inTeam", ascending: false)
+        let player = playersSorted[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: "I GO") { (action, view, completion) in
+            try! realm.write {
+                player.isFavourite = !player.isFavourite
             }
-            action.backgroundColor = player.isFavourite ? #colorLiteral(red: 0, green: 0.364138335, blue: 0.1126995459, alpha: 1) : .systemGray
-            action.image = UIImage(systemName: "person.badge.plus")
-            return action
+            self.tableView.reloadRows(at: [indexPath], with: .top)
+            self.navBar.title = "Играют - \(self.players.filter("isFavourite = true").count), В команде - \(self.players.filter("inTeam = true").count)"
+            completion(true)
         }
+        action.backgroundColor = player.isFavourite ? #colorLiteral(red: 0, green: 0.364138335, blue: 0.1126995459, alpha: 1) : .systemGray
+        action.image = UIImage(systemName: "person.badge.plus")
+        return action
+    }
 }

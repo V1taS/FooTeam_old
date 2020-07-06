@@ -43,31 +43,7 @@ class Team {
     
     
     //MARK: - Делаем сортировку игроков
-    func getListTeam(numberTeams: Int) -> [[Player]] {
-        
-        let players = [Player]()
-        
-        var teamsArray = getListOfTeams(numberTeams)
-        let playersIgo = getIgo(players)
-        let numberPlayersInTeam = playersIgo.count / teamsArray.count
-        var reserv = 0
-        var indexTeam = 0
-        
-        if !numberPlayersInTeam.isMultiple(of: numberTeams) {
-            reserv += 1
-        }
-        
-        for player in playersIgo {
-            
-            if teamsArray[indexTeam].count <= numberPlayersInTeam - 1 {
-                teamsArray[indexTeam].append(player)
-            } else {
-                indexTeam += 1
-                teamsArray[indexTeam].append(player)
-            }
-        }
-        return [players]
-    }
+
     
     //MARK: - Устанавливает имена
     func setTeamOne(players: [Player], name: [UILabel])  {

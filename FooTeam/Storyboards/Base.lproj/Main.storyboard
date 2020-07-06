@@ -1245,6 +1245,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="navBar" destination="Gth-uj-ild" id="CIl-Bt-7f8"/>
                         <segue destination="Fc7-YQ-ddE" kind="show" identifier="ListNameTableViewSegue" id="evd-kk-GUw"/>
                     </connections>
                 </tableViewController>
