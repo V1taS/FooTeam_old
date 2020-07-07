@@ -50,19 +50,18 @@ class MainViewController: UIViewController {
         
         //        pl.savePlayer()
         bet()
-        forfardRating()
-        havebekRating()
-        protectionRating()
-        goalkeaperRating()
+
+        Team.shared.goalkeaperRating(players)
+        Team.shared.protectionRating(players)
+        Team.shared.havebekRating(players)
+        Team.shared.forfardRating(players)
+        
         tableViewNewPlayers.tableFooterView = UIView()
         segmentedControlInsertTeam()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        //MARK: - инициализируем объект players
-        players = realm.objects(Player.self)
         bet()
         
         tableViewNewPlayers.reloadData()
@@ -78,211 +77,6 @@ class MainViewController: UIViewController {
         if segue.identifier == "HomeSeguetoPS" {
             let personStatSegueVC = segue.destination as! PersonalStatisticsController
             personStatSegueVC.player = sender as? Player
-        }
-    }
-    
-    func goalkeaperRating() {
-        for player in players.filter("position = 'ВРТ'") {
-            
-            var rating = 49
-            
-            let countGame = player.numberOfGames
-            
-            if countGame < 1 {
-                rating += 1
-            } else if countGame == 1 {
-                
-                if player.winGame == 1 {
-                    rating += 36
-                } else {
-                    rating += 30
-                }
-                
-            } else {
-                
-                if player.winGame > player.losGame {
-                    rating += 36
-                } else {
-                    rating += 30
-                }
-            }
-            
-            if player.inTeam == true { rating += 7 }
-            
-            if rating >= 100 {
-                try! realm.write {
-                    player.rating = 99
-                }
-            } else {
-                try! realm.write {
-                    player.rating = rating
-                }
-            }
-        }
-    }
-    
-    func protectionRating() {
-        for player in players.filter("position = 'ЦЗ'") {
-            
-            var rating = 49
-            
-            let countGame = player.numberOfGames
-            let countGoals = player.numberOfGoals
-            
-            if countGame < 1 {
-                rating += 1
-            } else if countGame == 1 {
-                
-                if player.winGame == 1 {
-                    rating += 32
-                } else {
-                    rating += 6
-                }
-                
-                switch countGoals {
-                case 0:
-                    rating += 0
-                case 1:
-                    rating += 9
-                default:
-                    rating += 13
-                }
-                
-            } else {
-                
-                let midleGoals = ((countGoals / countGame) * 19)
-                
-                if midleGoals > 40 {
-                    rating += 41
-                } else if midleGoals <= 10 {
-                    rating += 21
-                } else {
-                    rating += midleGoals
-                }
-                
-                if player.winGame > player.losGame {
-                    rating += 22
-                } else {
-                    rating += 7
-                }
-            }
-            
-            if player.inTeam == true { rating += 7 }
-            
-            if rating >= 100 {
-                try! realm.write {
-                    player.rating = 99
-                }
-            } else {
-                try! realm.write {
-                    player.rating = rating
-                }
-            }
-        }
-    }
-    
-    func havebekRating() {
-        for player in players.filter("position = 'ЦП'") {
-            
-            var rating = 49
-            
-            let countGame = player.numberOfGames
-            let countGoals = player.numberOfGoals
-            
-            if countGame < 1 {
-                rating += 1
-            } else if countGame == 1 {
-                
-                if player.winGame == 1 {
-                    rating += 12
-                } else {
-                    rating += 6
-                }
-                
-                switch countGoals {
-                case 0:
-                    rating += 10
-                case 1:
-                    rating += 16
-                case 2...3:
-                    rating += 19
-                default:
-                    rating += 31
-                }
-                
-            } else {
-                
-                let midleGoals = ((countGoals / countGame) * 19)
-                
-                if midleGoals > 40 {
-                    rating += 41
-                } else if midleGoals <= 10 {
-                    rating += 21
-                } else {
-                    rating += midleGoals
-                }
-            }
-            
-            if player.inTeam == true { rating += 7 }
-            
-            if rating >= 100 {
-                try! realm.write {
-                    player.rating = 99
-                }
-            } else {
-                try! realm.write {
-                    player.rating = rating
-                }
-            }
-        }
-    }
-    
-    func forfardRating() {
-        for player in players.filter("position = 'ФРВ'") {
-            
-            var rating = 49
-            
-            let countGame = player.numberOfGames
-            let countGoals = player.numberOfGoals
-            
-            if countGame < 1 {
-                rating += 1
-            } else if countGame == 1 {
-                rating += 10
-                switch countGoals {
-                case 0...1:
-                    rating += 9
-                case 2...3:
-                    rating += 17
-                case 4:
-                    rating += 25
-                default:
-                    rating += 29
-                }
-            } else {
-                
-                let midleGoals = ((countGoals / countGame) * 19)
-                
-                if midleGoals > 40 {
-                    rating += 37
-                } else if midleGoals <= 10 {
-                    rating += 22
-                } else {
-                    rating += midleGoals
-                }
-            }
-            
-            if player.inTeam == true { rating += 7 }
-            
-            if rating >= 100 {
-                try! realm.write {
-                    player.rating = 99
-                }
-            } else {
-                try! realm.write {
-                    player.rating = rating
-                }
-            }
         }
     }
     
@@ -324,6 +118,13 @@ class MainViewController: UIViewController {
         case 5:
             //            print("Сегодня Четверг")
             timeLabel.text = " через: 5 дней"
+            let players = self.players.filter("inTeam = true")
+            players.forEach { player in
+                try! realm.write {
+                    let paymentInt = Int(player.payment)! - 288
+                    player.payment = String(paymentInt)
+                }
+            }
         case 6:
             //            print("Сегодня Пятница")
             timeLabel.text = " через: 4 дня"
@@ -385,14 +186,14 @@ class MainViewController: UIViewController {
         for player in teamTwo {
             teamTwoTotal += player.rating
         }
+
+        let teamOneBet = Double(teamTwoTotal) / Double(teamOneTotal) + 1.0
+        let teamTwoBet = Double(teamOneTotal) / Double(teamTwoTotal) + 1.0
+        let teamMidle = (teamOneBet + teamTwoBet) / 2
         
-//        let targetOneTotal = String(format: "%.1f", Double(teamOneTotal) / 99 / 2 + 1)
-//        let targetTwoTotal = String(format: "%.1f", Double(teamTwoTotal) / 99 / 2 + 1)
-//        let targetMidleTotal = String(format: "%.1f", (Double(teamOneTotal) / 99 - Double(teamTwoTotal) / 99) + 1 )
-        
-        betTeamOneLabel.text = "..."
-        betTeamTwoLabel.text = "..."
-        betTeamMidleLabel.text = "..."
+        betTeamOneLabel.text = String(format: "%.2f", teamOneBet)
+        betTeamTwoLabel.text = String(format: "%.2f", teamTwoBet)
+        betTeamMidleLabel.text = String(format: "%.2f", teamMidle)
     }
     
 }

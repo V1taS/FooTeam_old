@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PersonalStatisticsController: UIViewController {
     
@@ -21,11 +22,17 @@ class PersonalStatisticsController: UIViewController {
     @IBOutlet weak var winGame: UILabel!
     @IBOutlet weak var losGame: UILabel!
     
+    //MARK: - Получаем данные из базы
+    var players: Results<Player>!
+    
     var player: Player!
     var indexPath: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //MARK: - инициализируем объект players
+        players = realm.objects(Player.self)
         
         rating.text = "\(player.rating)"
         position.text = player.position
@@ -76,5 +83,10 @@ class PersonalStatisticsController: UIViewController {
         
         editiVC.savePlayer()
         player = editiVC.player
+        
+        Team.shared.goalkeaperRating(players)
+        Team.shared.protectionRating(players)
+        Team.shared.havebekRating(players)
+        Team.shared.forfardRating(players)
     }
 }

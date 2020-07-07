@@ -28,8 +28,6 @@ class Player: Object {
     @objc dynamic var winGame = 0
     @objc dynamic var losGame = 0
     
-    
-    
     convenience init(photo: Data?,
                      name: String?,
                      teamNumber: Int,
