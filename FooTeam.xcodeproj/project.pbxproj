@@ -13,11 +13,12 @@
 		1B28324D246B73B900C675F9 /* CurrentWeatherDater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324C246B73B900C675F9 /* CurrentWeatherDater.swift */; };
 		1B28324F246B7A1500C675F9 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324E246B7A1500C675F9 /* CurrentWeather.swift */; };
 		1B3F6C9A24A6C28800630F44 /* EditePlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F6C9924A6C28800630F44 /* EditePlayerTableViewController.swift */; };
+		1B47244624B7CC1700853889 /* CalendarFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47244524B7CC1700853889 /* CalendarFooTeam.swift */; };
+		1B49B40724B53E6200C33233 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49B40624B53E6200C33233 /* Notifications.swift */; };
 		1B4FECD1245AF5610007EAB5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD0245AF5610007EAB5 /* MainViewController.swift */; };
 		1B4FECD3245AF8FF0007EAB5 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */; };
 		1B50A9E824A7EDE500B25D2C /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50A9E724A7EDE500B25D2C /* PickerView.swift */; };
 		1B539712247DFE3D0042879D /* PersonalStatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B539711247DFE3D0042879D /* PersonalStatisticsController.swift */; };
-		1B5B6A9124AD5BEA00889433 /* CommandStructureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B6A9024AD5BEA00889433 /* CommandStructureTableViewController.swift */; };
 		1B66CCDA24A541C500F03ED4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B66CCD924A541C500F03ED4 /* GoogleService-Info.plist */; };
 		1BC6093F247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6093E247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift */; };
 		1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDC9E6247B85C400BFC139 /* Team.swift */; };
@@ -40,11 +41,13 @@
 		1B28324C246B73B900C675F9 /* CurrentWeatherDater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherDater.swift; sourceTree = "<group>"; };
 		1B28324E246B7A1500C675F9 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		1B3F6C9924A6C28800630F44 /* EditePlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditePlayerTableViewController.swift; sourceTree = "<group>"; };
+		1B47244524B7CC1700853889 /* CalendarFooTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarFooTeam.swift; sourceTree = "<group>"; };
+		1B49B40524B53CB800C33233 /* FooTeam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FooTeam.entitlements; sourceTree = "<group>"; };
+		1B49B40624B53E6200C33233 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		1B4FECD0245AF5610007EAB5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
 		1B50A9E724A7EDE500B25D2C /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		1B539711247DFE3D0042879D /* PersonalStatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalStatisticsController.swift; sourceTree = "<group>"; };
-		1B5B6A9024AD5BEA00889433 /* CommandStructureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandStructureTableViewController.swift; sourceTree = "<group>"; };
 		1B66CCD924A541C500F03ED4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1BC6093E247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewPlayersTableViewCell.swift; sourceTree = "<group>"; };
 		1BDDC9E6247B85C400BFC139 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				1BDDC9E6247B85C400BFC139 /* Team.swift */,
 				1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */,
 				1B25FFD024A54D25009BC7CE /* StorageManager.swift */,
+				1B49B40624B53E6200C33233 /* Notifications.swift */,
+				1B47244524B7CC1700853889 /* CalendarFooTeam.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -143,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				1B4FECD0245AF5610007EAB5 /* MainViewController.swift */,
-				1B5B6A9024AD5BEA00889433 /* CommandStructureTableViewController.swift */,
 				1B539711247DFE3D0042879D /* PersonalStatisticsController.swift */,
 				1B3F6C9924A6C28800630F44 /* EditePlayerTableViewController.swift */,
 				1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */,
@@ -194,6 +198,7 @@
 		1BF4C9852450A7F1006EEAC5 /* FooTeam */ = {
 			isa = PBXGroup;
 			children = (
+				1B49B40524B53CB800C33233 /* FooTeam.entitlements */,
 				1BEA42EE247B4A3000A4A000 /* StoryBoards */,
 				1BEA42F3247B4AAC00A4A000 /* Models */,
 				1BEA42F2247B4AA400A4A000 /* View */,
@@ -339,18 +344,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B49B40724B53E6200C33233 /* Notifications.swift in Sources */,
 				1BC6093F247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift in Sources */,
 				1B4FECD3245AF8FF0007EAB5 /* CellViewController.swift in Sources */,
 				1B3F6C9A24A6C28800630F44 /* EditePlayerTableViewController.swift in Sources */,
 				1B28324F246B7A1500C675F9 /* CurrentWeather.swift in Sources */,
 				1B25FFD124A54D25009BC7CE /* StorageManager.swift in Sources */,
-				1B5B6A9124AD5BEA00889433 /* CommandStructureTableViewController.swift in Sources */,
 				1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */,
 				1BF097EF245AAE4900971451 /* AddPlayerTableViewController.swift in Sources */,
 				1B539712247DFE3D0042879D /* PersonalStatisticsController.swift in Sources */,
 				1B50A9E824A7EDE500B25D2C /* PickerView.swift in Sources */,
 				1B4FECD1245AF5610007EAB5 /* MainViewController.swift in Sources */,
 				1B283249246B6BC700C675F9 /* Constants.swift in Sources */,
+				1B47244624B7CC1700853889 /* CalendarFooTeam.swift in Sources */,
 				1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */,
 				1BF4C99B2450CCC8006EEAC5 /* ListNameTableView.swift in Sources */,
 				1B28324D246B73B900C675F9 /* CurrentWeatherDater.swift in Sources */,
@@ -502,6 +508,7 @@
 			baseConfigurationReference = E0E171FD3D7E30BF3770F5C9 /* Pods-FooTeam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FooTeam/FooTeam.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34VDSPZYU9;
 				INFOPLIST_FILE = "$(SRCROOT)/FooTeam/App/Info.plist";
@@ -522,6 +529,7 @@
 			baseConfigurationReference = 93E3AB80B0541B0458271250 /* Pods-FooTeam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FooTeam/FooTeam.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34VDSPZYU9;
 				INFOPLIST_FILE = "$(SRCROOT)/FooTeam/App/Info.plist";

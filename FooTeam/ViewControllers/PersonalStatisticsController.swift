@@ -31,22 +31,7 @@ class PersonalStatisticsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MARK: - инициализируем объект players
         players = realm.objects(Player.self)
-        
-        rating.text = "\(player.rating)"
-        position.text = player.position
-        
-        namePlayers.text = player.name
-        photoPlayers.image = UIImage(data: player.photo!)
-        photoPlayers.layer.cornerRadius = photoPlayers.frame.width / 3
-        
-        numberOfGames.text = String(player.numberOfGames)
-        numberOfGoals.text = String(player.numberOfGoals)
-
-        winGame.text = String(player.winGame)
-        losGame.text = String(player.losGame)
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,9 +69,6 @@ class PersonalStatisticsController: UIViewController {
         editiVC.savePlayer()
         player = editiVC.player
         
-        Team.shared.goalkeaperRating(players)
-        Team.shared.protectionRating(players)
-        Team.shared.havebekRating(players)
-        Team.shared.forfardRating(players)
+        Team.shared.overallRating(players)
     }
 }
