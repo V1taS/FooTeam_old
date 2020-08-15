@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RealmSwift
 import UserNotifications
 
 @UIApplicationMain
@@ -17,18 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let notifications = Notifications()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        // Обновление модели (удаление или добавление) делаем +1 к (schemaVersion: _)
-
-        Realm.Configuration.defaultConfiguration = Realm.Configuration(
-            schemaVersion: 1,
-            migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 1) {
-                    migration.enumerateObjects(ofType: Player.className()) { oldObject, newObject in }
-                }
-            })
-        // удаление базы при изменении модели
-//        Realm.Configuration.defaultConfiguration.deleteRealmIfMigrationNeeded = true
         
         notifications.requestAutorization()
         notifications.notificationCenter.delegate = notifications

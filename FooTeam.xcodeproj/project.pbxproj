@@ -3,68 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B25FFD124A54D25009BC7CE /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B25FFD024A54D25009BC7CE /* StorageManager.swift */; };
 		1B283249246B6BC700C675F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B283248246B6BC700C675F9 /* Constants.swift */; };
 		1B28324B246B6C0800C675F9 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */; };
-		1B28324D246B73B900C675F9 /* CurrentWeatherDater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324C246B73B900C675F9 /* CurrentWeatherDater.swift */; };
-		1B28324F246B7A1500C675F9 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324E246B7A1500C675F9 /* CurrentWeather.swift */; };
-		1B3F6C9A24A6C28800630F44 /* EditePlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F6C9924A6C28800630F44 /* EditePlayerTableViewController.swift */; };
 		1B47244624B7CC1700853889 /* CalendarFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47244524B7CC1700853889 /* CalendarFooTeam.swift */; };
 		1B49B40724B53E6200C33233 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49B40624B53E6200C33233 /* Notifications.swift */; };
-		1B4FECD1245AF5610007EAB5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD0245AF5610007EAB5 /* MainViewController.swift */; };
-		1B4FECD3245AF8FF0007EAB5 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */; };
-		1B50A9E824A7EDE500B25D2C /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50A9E724A7EDE500B25D2C /* PickerView.swift */; };
-		1B539712247DFE3D0042879D /* PersonalStatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B539711247DFE3D0042879D /* PersonalStatisticsController.swift */; };
-		1B66CCDA24A541C500F03ED4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B66CCD924A541C500F03ED4 /* GoogleService-Info.plist */; };
-		1BC6093F247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6093E247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift */; };
 		1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDC9E6247B85C400BFC139 /* Team.swift */; };
-		1BF097EF245AAE4900971451 /* AddPlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */; };
 		1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */; };
 		1BF4C9892450A7F1006EEAC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */; };
-		1BF4C98E2450A7F2006EEAC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4C98C2450A7F2006EEAC5 /* Main.storyboard */; };
 		1BF4C9902450A7F3006EEAC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4C98F2450A7F3006EEAC5 /* Assets.xcassets */; };
 		1BF4C9932450A7F3006EEAC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */; };
-		1BF4C99B2450CCC8006EEAC5 /* ListNameTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */; };
-		1BF4C9A12450DF9E006EEAC5 /* ListNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9A02450DF9E006EEAC5 /* ListNameTableViewCell.swift */; };
-		1BF4C9A32450E04D006EEAC5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9A22450E04D006EEAC5 /* Player.swift */; };
-		955F68B69FB72480815F3DE5 /* Pods_FooTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8931CC27BFF2DBB4DC9BE77 /* Pods_FooTeam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B25FFD024A54D25009BC7CE /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		1B283248246B6BC700C675F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
-		1B28324C246B73B900C675F9 /* CurrentWeatherDater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherDater.swift; sourceTree = "<group>"; };
-		1B28324E246B7A1500C675F9 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
-		1B3F6C9924A6C28800630F44 /* EditePlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditePlayerTableViewController.swift; sourceTree = "<group>"; };
 		1B47244524B7CC1700853889 /* CalendarFooTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarFooTeam.swift; sourceTree = "<group>"; };
 		1B49B40524B53CB800C33233 /* FooTeam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FooTeam.entitlements; sourceTree = "<group>"; };
 		1B49B40624B53E6200C33233 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		1B4FECD0245AF5610007EAB5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
-		1B50A9E724A7EDE500B25D2C /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
-		1B539711247DFE3D0042879D /* PersonalStatisticsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalStatisticsController.swift; sourceTree = "<group>"; };
-		1B66CCD924A541C500F03ED4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		1BC6093E247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewPlayersTableViewCell.swift; sourceTree = "<group>"; };
 		1BDDC9E6247B85C400BFC139 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerTableViewController.swift; sourceTree = "<group>"; };
 		1BF4C9832450A7F1006EEAC5 /* FooTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FooTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1BF4C98D2450A7F2006EEAC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BF4C98F2450A7F3006EEAC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BF4C9922450A7F3006EEAC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BF4C9942450A7F3006EEAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNameTableView.swift; sourceTree = "<group>"; };
-		1BF4C9A02450DF9E006EEAC5 /* ListNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNameTableViewCell.swift; sourceTree = "<group>"; };
-		1BF4C9A22450E04D006EEAC5 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		93E3AB80B0541B0458271250 /* Pods-FooTeam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooTeam.release.xcconfig"; path = "Target Support Files/Pods-FooTeam/Pods-FooTeam.release.xcconfig"; sourceTree = "<group>"; };
-		E0E171FD3D7E30BF3770F5C9 /* Pods-FooTeam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooTeam.debug.xcconfig"; path = "Target Support Files/Pods-FooTeam/Pods-FooTeam.debug.xcconfig"; sourceTree = "<group>"; };
-		E8931CC27BFF2DBB4DC9BE77 /* Pods_FooTeam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FooTeam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				955F68B69FB72480815F3DE5 /* Pods_FooTeam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,23 +50,6 @@
 				1B283248246B6BC700C675F9 /* Constants.swift */,
 			);
 			path = "Supporting files";
-			sourceTree = "<group>";
-		};
-		1B50B390247E1D5A00392148 /* UICollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				1B4FECD2245AF8FF0007EAB5 /* CellViewController.swift */,
-			);
-			path = UICollectionViewCell;
-			sourceTree = "<group>";
-		};
-		1B539716247E18790042879D /* Weather */ = {
-			isa = PBXGroup;
-			children = (
-				1B28324C246B73B900C675F9 /* CurrentWeatherDater.swift */,
-				1B28324E246B7A1500C675F9 /* CurrentWeather.swift */,
-			);
-			path = Weather;
 			sourceTree = "<group>";
 		};
 		1B66CCD824A5410A00F03ED4 /* Sources */ = {
@@ -117,7 +65,6 @@
 			children = (
 				1BDDC9E6247B85C400BFC139 /* Team.swift */,
 				1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */,
-				1B25FFD024A54D25009BC7CE /* StorageManager.swift */,
 				1B49B40624B53E6200C33233 /* Notifications.swift */,
 				1B47244524B7CC1700853889 /* CalendarFooTeam.swift */,
 			);
@@ -130,7 +77,6 @@
 				1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */,
 				1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */,
 				1BF4C9942450A7F3006EEAC5 /* Info.plist */,
-				1B66CCD924A541C500F03ED4 /* GoogleService-Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -138,43 +84,9 @@
 		1BEA42EE247B4A3000A4A000 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				1BF4C98C2450A7F2006EEAC5 /* Main.storyboard */,
 				1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
-			sourceTree = "<group>";
-		};
-		1BEA42F1247B4A9A00A4A000 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				1B4FECD0245AF5610007EAB5 /* MainViewController.swift */,
-				1B539711247DFE3D0042879D /* PersonalStatisticsController.swift */,
-				1B3F6C9924A6C28800630F44 /* EditePlayerTableViewController.swift */,
-				1BF4C99A2450CCC8006EEAC5 /* ListNameTableView.swift */,
-				1BF097EE245AAE4900971451 /* AddPlayerTableViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		1BEA42F2247B4AA400A4A000 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1B50B390247E1D5A00392148 /* UICollectionViewCell */,
-				1BC6093E247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift */,
-				1BF4C9A02450DF9E006EEAC5 /* ListNameTableViewCell.swift */,
-				1B50A9E724A7EDE500B25D2C /* PickerView.swift */,
-			);
-			name = View;
-			path = Home/View;
-			sourceTree = "<group>";
-		};
-		1BEA42F3247B4AAC00A4A000 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1BF4C9A22450E04D006EEAC5 /* Player.swift */,
-				1B539716247E18790042879D /* Weather */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		1BF4C97A2450A7F1006EEAC5 = {
@@ -182,8 +94,6 @@
 			children = (
 				1BF4C9852450A7F1006EEAC5 /* FooTeam */,
 				1BF4C9842450A7F1006EEAC5 /* Products */,
-				B8AFFE287CC30A0B210A3415 /* Pods */,
-				859F6067D563EFDBFDF4D7DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,32 +110,12 @@
 			children = (
 				1B49B40524B53CB800C33233 /* FooTeam.entitlements */,
 				1BEA42EE247B4A3000A4A000 /* StoryBoards */,
-				1BEA42F3247B4AAC00A4A000 /* Models */,
-				1BEA42F2247B4AA400A4A000 /* View */,
-				1BEA42F1247B4A9A00A4A000 /* ViewControllers */,
 				1B96BECF2496D98200AAF68B /* Services */,
 				1B283247246B6B3C00C675F9 /* Supporting files */,
 				1B66CCD824A5410A00F03ED4 /* Sources */,
 				1BEA42ED247B4A2700A4A000 /* App */,
 			);
 			path = FooTeam;
-			sourceTree = "<group>";
-		};
-		859F6067D563EFDBFDF4D7DF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E8931CC27BFF2DBB4DC9BE77 /* Pods_FooTeam.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B8AFFE287CC30A0B210A3415 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E0E171FD3D7E30BF3770F5C9 /* Pods-FooTeam.debug.xcconfig */,
-				93E3AB80B0541B0458271250 /* Pods-FooTeam.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,11 +125,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BF4C9972450A7F3006EEAC5 /* Build configuration list for PBXNativeTarget "FooTeam" */;
 			buildPhases = (
-				2FC1A7AF31F443C0E825D8A4 /* [CP] Check Pods Manifest.lock */,
 				1BF4C97F2450A7F1006EEAC5 /* Sources */,
 				1BF4C9802450A7F1006EEAC5 /* Frameworks */,
 				1BF4C9812450A7F1006EEAC5 /* Resources */,
-				BE693BEFF5292FFA6A0F6E54 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,55 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BF4C9932450A7F3006EEAC5 /* LaunchScreen.storyboard in Resources */,
-				1B66CCDA24A541C500F03ED4 /* GoogleService-Info.plist in Resources */,
 				1BF4C9902450A7F3006EEAC5 /* Assets.xcassets in Resources */,
-				1BF4C98E2450A7F2006EEAC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2FC1A7AF31F443C0E825D8A4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FooTeam-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE693BEFF5292FFA6A0F6E54 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1BF4C97F2450A7F1006EEAC5 /* Sources */ = {
@@ -345,24 +189,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B49B40724B53E6200C33233 /* Notifications.swift in Sources */,
-				1BC6093F247A1D6500D3CC9B /* MainNewPlayersTableViewCell.swift in Sources */,
-				1B4FECD3245AF8FF0007EAB5 /* CellViewController.swift in Sources */,
-				1B3F6C9A24A6C28800630F44 /* EditePlayerTableViewController.swift in Sources */,
-				1B28324F246B7A1500C675F9 /* CurrentWeather.swift in Sources */,
-				1B25FFD124A54D25009BC7CE /* StorageManager.swift in Sources */,
 				1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */,
-				1BF097EF245AAE4900971451 /* AddPlayerTableViewController.swift in Sources */,
-				1B539712247DFE3D0042879D /* PersonalStatisticsController.swift in Sources */,
-				1B50A9E824A7EDE500B25D2C /* PickerView.swift in Sources */,
-				1B4FECD1245AF5610007EAB5 /* MainViewController.swift in Sources */,
 				1B283249246B6BC700C675F9 /* Constants.swift in Sources */,
 				1B47244624B7CC1700853889 /* CalendarFooTeam.swift in Sources */,
 				1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */,
-				1BF4C99B2450CCC8006EEAC5 /* ListNameTableView.swift in Sources */,
-				1B28324D246B73B900C675F9 /* CurrentWeatherDater.swift in Sources */,
-				1BF4C9A32450E04D006EEAC5 /* Player.swift in Sources */,
 				1BF4C9892450A7F1006EEAC5 /* SceneDelegate.swift in Sources */,
-				1BF4C9A12450DF9E006EEAC5 /* ListNameTableViewCell.swift in Sources */,
 				1B28324B246B6C0800C675F9 /* NetworkWeatherManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,14 +201,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1BF4C98C2450A7F2006EEAC5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1BF4C98D2450A7F2006EEAC5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -389,66 +212,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1BF4C9952450A7F3006EEAC5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
 		1BF4C9962450A7F3006EEAC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -493,7 +256,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -503,30 +266,8 @@
 			};
 			name = Release;
 		};
-		1BF4C9982450A7F3006EEAC5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0E171FD3D7E30BF3770F5C9 /* Pods-FooTeam.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = FooTeam/FooTeam.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 34VDSPZYU9;
-				INFOPLIST_FILE = "$(SRCROOT)/FooTeam/App/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = V1taS.FooTeam;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
 		1BF4C9992450A7F3006EEAC5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93E3AB80B0541B0458271250 /* Pods-FooTeam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FooTeam/FooTeam.entitlements;
@@ -551,7 +292,6 @@
 		1BF4C97E2450A7F1006EEAC5 /* Build configuration list for PBXProject "FooTeam" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1BF4C9952450A7F3006EEAC5 /* Debug */,
 				1BF4C9962450A7F3006EEAC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -560,7 +300,6 @@
 		1BF4C9972450A7F3006EEAC5 /* Build configuration list for PBXNativeTarget "FooTeam" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1BF4C9982450A7F3006EEAC5 /* Debug */,
 				1BF4C9992450A7F3006EEAC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
