@@ -10,7 +10,6 @@
 		1B283249246B6BC700C675F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B283248246B6BC700C675F9 /* Constants.swift */; };
 		1B28324B246B6C0800C675F9 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */; };
 		1B2978F224E8AF49005B943B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B2978F124E8AF49005B943B /* GoogleService-Info.plist */; };
-		1B2978F424E8B060005B943B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978F324E8B060005B943B /* SwiftUIView.swift */; };
 		1B2978F724E8B2DC005B943B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978F624E8B2DC005B943B /* AuthService.swift */; };
 		1B2978F924E8B2E3005B943B /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978F824E8B2E3005B943B /* FirestoreService.swift */; };
 		1B2978FB24E8B2EB005B943B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978FA24E8B2EB005B943B /* StorageService.swift */; };
@@ -74,7 +73,6 @@
 		1B283248246B6BC700C675F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
 		1B2978F124E8AF49005B943B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1B2978F324E8B060005B943B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		1B2978F624E8B2DC005B943B /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1B2978F824E8B2E3005B943B /* FirestoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		1B2978FA24E8B2EB005B943B /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
@@ -380,7 +378,6 @@
 				1B29792724E8B80E005B943B /* Model */,
 				1B96BECF2496D98200AAF68B /* Services */,
 				1BEA42ED247B4A2700A4A000 /* App */,
-				1B2978F324E8B060005B943B /* SwiftUIView.swift */,
 				1B49B40524B53CB800C33233 /* FooTeam.entitlements */,
 			);
 			path = FooTeam;
@@ -562,7 +559,6 @@
 				1B29790824E8B774005B943B /* Bundle-Decodable.swift in Sources */,
 				1B29790724E8B774005B943B /* ButtonFormView.swift in Sources */,
 				1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */,
-				1B2978F424E8B060005B943B /* SwiftUIView.swift in Sources */,
 				1B29790924E8B774005B943B /* GradientView.swift in Sources */,
 				1B2978F724E8B2DC005B943B /* AuthService.swift in Sources */,
 				1B29794824E8B9F6005B943B /* ContentFooTeamMenu.swift in Sources */,
