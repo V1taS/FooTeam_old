@@ -46,6 +46,18 @@
 		1B29794024E8B93B005B943B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29793A24E8B939005B943B /* LoginViewController.swift */; };
 		1B29794124E8B93B005B943B /* CreateTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29793B24E8B93A005B943B /* CreateTeamViewController.swift */; };
 		1B29794224E8B93B005B943B /* JoinTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29793C24E8B93B005B943B /* JoinTeamViewController.swift */; };
+		1B29794724E8B9F6005B943B /* ContentFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29794524E8B9F5005B943B /* ContentFooTeam.swift */; };
+		1B29794824E8B9F6005B943B /* ContentFooTeamMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29794624E8B9F6005B943B /* ContentFooTeamMenu.swift */; };
+		1B29794B24E8BA0E005B943B /* HeaderFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29794A24E8BA0E005B943B /* HeaderFooTeam.swift */; };
+		1B29795124E8BA32005B943B /* CellTopPlayersFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29794D24E8BA2F005B943B /* CellTopPlayersFooTeam.swift */; };
+		1B29795224E8BA33005B943B /* BoxTopPlayersFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29794E24E8BA30005B943B /* BoxTopPlayersFooTeam.swift */; };
+		1B29795324E8BA33005B943B /* BackgroundFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29794F24E8BA31005B943B /* BackgroundFooTeam.swift */; };
+		1B29795424E8BA33005B943B /* TopPlayersFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29795024E8BA32005B943B /* TopPlayersFooTeam.swift */; };
+		1B29795824E8BA55005B943B /* ListPlayersFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29795624E8BA54005B943B /* ListPlayersFooTeam.swift */; };
+		1B29795924E8BA55005B943B /* TeamsFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29795724E8BA55005B943B /* TeamsFooTeam.swift */; };
+		1B29795E24E8BA74005B943B /* CellCaruselBodyFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29795B24E8BA71005B943B /* CellCaruselBodyFooTeam.swift */; };
+		1B29795F24E8BA74005B943B /* BoxCaruselBodyFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29795C24E8BA72005B943B /* BoxCaruselBodyFooTeam.swift */; };
+		1B29796024E8BA74005B943B /* CaruselBodyFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29795D24E8BA74005B943B /* CaruselBodyFooTeam.swift */; };
 		1B47244624B7CC1700853889 /* CalendarFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47244524B7CC1700853889 /* CalendarFooTeam.swift */; };
 		1B49B40724B53E6200C33233 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49B40624B53E6200C33233 /* Notifications.swift */; };
 		1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDC9E6247B85C400BFC139 /* Team.swift */; };
@@ -97,6 +109,18 @@
 		1B29793A24E8B939005B943B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1B29793B24E8B93A005B943B /* CreateTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTeamViewController.swift; sourceTree = "<group>"; };
 		1B29793C24E8B93B005B943B /* JoinTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinTeamViewController.swift; sourceTree = "<group>"; };
+		1B29794524E8B9F5005B943B /* ContentFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentFooTeam.swift; sourceTree = "<group>"; };
+		1B29794624E8B9F6005B943B /* ContentFooTeamMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentFooTeamMenu.swift; sourceTree = "<group>"; };
+		1B29794A24E8BA0E005B943B /* HeaderFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderFooTeam.swift; sourceTree = "<group>"; };
+		1B29794D24E8BA2F005B943B /* CellTopPlayersFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellTopPlayersFooTeam.swift; sourceTree = "<group>"; };
+		1B29794E24E8BA30005B943B /* BoxTopPlayersFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxTopPlayersFooTeam.swift; sourceTree = "<group>"; };
+		1B29794F24E8BA31005B943B /* BackgroundFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundFooTeam.swift; sourceTree = "<group>"; };
+		1B29795024E8BA32005B943B /* TopPlayersFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPlayersFooTeam.swift; sourceTree = "<group>"; };
+		1B29795624E8BA54005B943B /* ListPlayersFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPlayersFooTeam.swift; sourceTree = "<group>"; };
+		1B29795724E8BA55005B943B /* TeamsFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamsFooTeam.swift; sourceTree = "<group>"; };
+		1B29795B24E8BA71005B943B /* CellCaruselBodyFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellCaruselBodyFooTeam.swift; sourceTree = "<group>"; };
+		1B29795C24E8BA72005B943B /* BoxCaruselBodyFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxCaruselBodyFooTeam.swift; sourceTree = "<group>"; };
+		1B29795D24E8BA74005B943B /* CaruselBodyFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaruselBodyFooTeam.swift; sourceTree = "<group>"; };
 		1B47244524B7CC1700853889 /* CalendarFooTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarFooTeam.swift; sourceTree = "<group>"; };
 		1B49B40524B53CB800C33233 /* FooTeam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FooTeam.entitlements; sourceTree = "<group>"; };
 		1B49B40624B53E6200C33233 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -144,7 +168,9 @@
 		1B2978FE24E8B711005B943B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1B29794424E8B9E2005B943B /* MainScreenUI */,
 				1B29793624E8B923005B943B /* SignIn&Auth */,
+				1B29794324E8B9AE005B943B /* Create&Join&Profile */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -214,13 +240,71 @@
 			isa = PBXGroup;
 			children = (
 				1B29793924E8B938005B943B /* AuthViewController.swift */,
-				1B29793B24E8B93A005B943B /* CreateTeamViewController.swift */,
-				1B29793C24E8B93B005B943B /* JoinTeamViewController.swift */,
 				1B29793A24E8B939005B943B /* LoginViewController.swift */,
-				1B29793724E8B936005B943B /* SetupProfileViewController.swift */,
 				1B29793824E8B937005B943B /* SignUpViewController.swift */,
 			);
 			path = "SignIn&Auth";
+			sourceTree = "<group>";
+		};
+		1B29794324E8B9AE005B943B /* Create&Join&Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1B29793B24E8B93A005B943B /* CreateTeamViewController.swift */,
+				1B29793724E8B936005B943B /* SetupProfileViewController.swift */,
+				1B29793C24E8B93B005B943B /* JoinTeamViewController.swift */,
+			);
+			path = "Create&Join&Profile";
+			sourceTree = "<group>";
+		};
+		1B29794424E8B9E2005B943B /* MainScreenUI */ = {
+			isa = PBXGroup;
+			children = (
+				1B29794524E8B9F5005B943B /* ContentFooTeam.swift */,
+				1B29794624E8B9F6005B943B /* ContentFooTeamMenu.swift */,
+				1B29794924E8BA02005B943B /* HeaderFooTeam */,
+				1B29794C24E8BA22005B943B /* TopPlayersFooTeam */,
+				1B29795524E8BA49005B943B /* TeamsFooTeam */,
+				1B29795A24E8BA64005B943B /* CaruselBodyFooTeam */,
+			);
+			path = MainScreenUI;
+			sourceTree = "<group>";
+		};
+		1B29794924E8BA02005B943B /* HeaderFooTeam */ = {
+			isa = PBXGroup;
+			children = (
+				1B29794A24E8BA0E005B943B /* HeaderFooTeam.swift */,
+			);
+			path = HeaderFooTeam;
+			sourceTree = "<group>";
+		};
+		1B29794C24E8BA22005B943B /* TopPlayersFooTeam */ = {
+			isa = PBXGroup;
+			children = (
+				1B29794F24E8BA31005B943B /* BackgroundFooTeam.swift */,
+				1B29794E24E8BA30005B943B /* BoxTopPlayersFooTeam.swift */,
+				1B29794D24E8BA2F005B943B /* CellTopPlayersFooTeam.swift */,
+				1B29795024E8BA32005B943B /* TopPlayersFooTeam.swift */,
+			);
+			path = TopPlayersFooTeam;
+			sourceTree = "<group>";
+		};
+		1B29795524E8BA49005B943B /* TeamsFooTeam */ = {
+			isa = PBXGroup;
+			children = (
+				1B29795724E8BA55005B943B /* TeamsFooTeam.swift */,
+				1B29795624E8BA54005B943B /* ListPlayersFooTeam.swift */,
+			);
+			path = TeamsFooTeam;
+			sourceTree = "<group>";
+		};
+		1B29795A24E8BA64005B943B /* CaruselBodyFooTeam */ = {
+			isa = PBXGroup;
+			children = (
+				1B29795C24E8BA72005B943B /* BoxCaruselBodyFooTeam.swift */,
+				1B29795D24E8BA74005B943B /* CaruselBodyFooTeam.swift */,
+				1B29795B24E8BA71005B943B /* CellCaruselBodyFooTeam.swift */,
+			);
+			path = CaruselBodyFooTeam;
 			sourceTree = "<group>";
 		};
 		1B66CCD824A5410A00F03ED4 /* Sources */ = {
@@ -448,10 +532,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B29795324E8BA33005B943B /* BackgroundFooTeam.swift in Sources */,
 				1B29792E24E8B87F005B943B /* AuthNavigatingDelegate.swift in Sources */,
+				1B29795424E8BA33005B943B /* TopPlayersFooTeam.swift in Sources */,
 				1B29792224E8B7A6005B943B /* ButtonExtension.swift in Sources */,
 				1B29794024E8B93B005B943B /* LoginViewController.swift in Sources */,
+				1B29796024E8BA74005B943B /* CaruselBodyFooTeam.swift in Sources */,
 				1B49B40724B53E6200C33233 /* Notifications.swift in Sources */,
+				1B29795E24E8BA74005B943B /* CellCaruselBodyFooTeam.swift in Sources */,
 				1B29791E24E8B7A6005B943B /* SegmentedControlExtension.swift in Sources */,
 				1B29792524E8B7A6005B943B /* AplicationExtension.swift in Sources */,
 				1B2978F924E8B2E3005B943B /* FirestoreService.swift in Sources */,
@@ -460,6 +548,7 @@
 				1B29792324E8B7A6005B943B /* StackViewExtension.swift in Sources */,
 				1B29792024E8B7A6005B943B /* ColorExtension.swift in Sources */,
 				1B29792A24E8B854005B943B /* Players.swift in Sources */,
+				1B29795224E8BA33005B943B /* BoxTopPlayersFooTeam.swift in Sources */,
 				1B29791B24E8B7A6005B943B /* ImageExtension.swift in Sources */,
 				1B29793F24E8B93B005B943B /* AuthViewController.swift in Sources */,
 				1B29793524E8B8BA005B943B /* Validators.swift in Sources */,
@@ -473,14 +562,21 @@
 				1B2978F424E8B060005B943B /* SwiftUIView.swift in Sources */,
 				1B29790924E8B774005B943B /* GradientView.swift in Sources */,
 				1B2978F724E8B2DC005B943B /* AuthService.swift in Sources */,
+				1B29794824E8B9F6005B943B /* ContentFooTeamMenu.swift in Sources */,
 				1B283249246B6BC700C675F9 /* Constants.swift in Sources */,
 				1B29793E24E8B93B005B943B /* SignUpViewController.swift in Sources */,
+				1B29794B24E8BA0E005B943B /* HeaderFooTeam.swift in Sources */,
 				1B47244624B7CC1700853889 /* CalendarFooTeam.swift in Sources */,
+				1B29795124E8BA32005B943B /* CellTopPlayersFooTeam.swift in Sources */,
+				1B29795824E8BA55005B943B /* ListPlayersFooTeam.swift in Sources */,
 				1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */,
+				1B29795F24E8BA74005B943B /* BoxCaruselBodyFooTeam.swift in Sources */,
 				1B29792424E8B7A6005B943B /* ImageViewExtension.swift in Sources */,
 				1BF4C9892450A7F1006EEAC5 /* SceneDelegate.swift in Sources */,
+				1B29795924E8BA55005B943B /* TeamsFooTeam.swift in Sources */,
 				1B2978FB24E8B2EB005B943B /* StorageService.swift in Sources */,
 				1B29791F24E8B7A6005B943B /* FontExtension.swift in Sources */,
+				1B29794724E8B9F6005B943B /* ContentFooTeam.swift in Sources */,
 				1B29791A24E8B7A6005B943B /* ViewExtension.swift in Sources */,
 				1B29792B24E8B854005B943B /* Teams.swift in Sources */,
 				1B29794124E8B93B005B943B /* CreateTeamViewController.swift in Sources */,
