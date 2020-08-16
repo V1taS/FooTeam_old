@@ -9,7 +9,6 @@
 import UIKit
 import SwiftUI
 import FirebaseAuth
-import SDWebImage
 
 class CreateTeamViewController: UIViewController {
     

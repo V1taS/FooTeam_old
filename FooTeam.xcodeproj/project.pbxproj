@@ -58,6 +58,7 @@
 		1B29795E24E8BA74005B943B /* CellCaruselBodyFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29795B24E8BA71005B943B /* CellCaruselBodyFooTeam.swift */; };
 		1B29795F24E8BA74005B943B /* BoxCaruselBodyFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29795C24E8BA72005B943B /* BoxCaruselBodyFooTeam.swift */; };
 		1B29796024E8BA74005B943B /* CaruselBodyFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29795D24E8BA74005B943B /* CaruselBodyFooTeam.swift */; };
+		1B29796224E8BB28005B943B /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29796124E8BB28005B943B /* SelfConfiguringCell.swift */; };
 		1B47244624B7CC1700853889 /* CalendarFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47244524B7CC1700853889 /* CalendarFooTeam.swift */; };
 		1B49B40724B53E6200C33233 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49B40624B53E6200C33233 /* Notifications.swift */; };
 		1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDC9E6247B85C400BFC139 /* Team.swift */; };
@@ -121,6 +122,7 @@
 		1B29795B24E8BA71005B943B /* CellCaruselBodyFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellCaruselBodyFooTeam.swift; sourceTree = "<group>"; };
 		1B29795C24E8BA72005B943B /* BoxCaruselBodyFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxCaruselBodyFooTeam.swift; sourceTree = "<group>"; };
 		1B29795D24E8BA74005B943B /* CaruselBodyFooTeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaruselBodyFooTeam.swift; sourceTree = "<group>"; };
+		1B29796124E8BB28005B943B /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
 		1B47244524B7CC1700853889 /* CalendarFooTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarFooTeam.swift; sourceTree = "<group>"; };
 		1B49B40524B53CB800C33233 /* FooTeam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FooTeam.entitlements; sourceTree = "<group>"; };
 		1B49B40624B53E6200C33233 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -168,9 +170,9 @@
 		1B2978FE24E8B711005B943B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1B29794424E8B9E2005B943B /* MainScreenUI */,
 				1B29793624E8B923005B943B /* SignIn&Auth */,
 				1B29794324E8B9AE005B943B /* Create&Join&Profile */,
+				1B29794424E8B9E2005B943B /* MainScreenUI */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				1B29792D24E8B87F005B943B /* AuthNavigatingDelegate.swift */,
+				1B29796124E8BB28005B943B /* SelfConfiguringCell.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				1B29792B24E8B854005B943B /* Teams.swift in Sources */,
 				1B29794124E8B93B005B943B /* CreateTeamViewController.swift in Sources */,
 				1B29791D24E8B7A6005B943B /* LabelExtension.swift in Sources */,
+				1B29796224E8BB28005B943B /* SelfConfiguringCell.swift in Sources */,
 				1B28324B246B6C0800C675F9 /* NetworkWeatherManager.swift in Sources */,
 				1B29792124E8B7A6005B943B /* ScrollViewExtension.swift in Sources */,
 				1B29794224E8B93B005B943B /* JoinTeamViewController.swift in Sources */,

@@ -6,8 +6,6 @@
 //  Copyright © 2020 Vitalii Sosin. All rights reserved.
 //
 
-/*
-
 import UIKit
 import Firebase
 import FirebaseAuth
@@ -77,5 +75,3 @@ class AuthService {
         }
     }
 }
-
- */

@@ -15,7 +15,7 @@ struct CellTopPlayersFooTeam: View {
     let backgroundColor: Color = Color(#colorLiteral(red: 0.5725490451, green: 0, blue: 0.2313725501, alpha: 1))
     
     let namePlayer: String = "Сосин Виталий"
-    let photoPlayer: String = "Александр Руховец"
+    let photoPlayer: String = "Сосин Виталий"
     let ratingPlayer: String = "89"
     let positionPlayer: String = "ФРВ"
     

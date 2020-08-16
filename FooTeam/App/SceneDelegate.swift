@@ -20,37 +20,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
                 window = UIWindow(frame: windowScene.coordinateSpace.bounds)
                 window?.windowScene = windowScene
-        
-        let mainContentFooTeam = UIHostingController(rootView: SwiftUIView())
-        mainContentFooTeam.modalPresentationStyle = .fullScreen
-        self.window?.rootViewController = mainContentFooTeam
                 
                 
-//                if let user = Auth.auth().currentUser {
-//                    FirestoreService.shared.getUserData(user: user) { (result) in
-//                        switch result {
-//                        case .success(let muser):
-//        //                    let mainTabBar = MainTabBarController(currentUser: muser)
-//        //                    mainTabBar.modalPresentationStyle = .fullScreen
-//                            print(muser)
-//                            
-//                            let mainContentFooTeam = UIHostingController(rootView: ContentFooTeamMenu())
-//                            mainContentFooTeam.modalPresentationStyle = .fullScreen
-//                            self.window?.rootViewController = mainContentFooTeam
-//                            
-//                        case .failure(_):
-//                            self.window?.rootViewController = SwiftUIView()
-////                            self.window?.rootViewController = AuthViewController()
-//        //                    self.window?.rootViewController = CreateTeamViewController()
-//                        }
-//                    }
-//                } else {
-//                    window?.rootViewController = SwiftUIView()
-////                    window?.rootViewController = AuthViewController()
-//        //              window?.rootViewController = CreateTeamViewController()
-//                }
+                if let user = Auth.auth().currentUser {
+                    FirestoreService.shared.getUserData(user: user) { (result) in
+                        switch result {
+                        case .success(let muser):
+        //                    let mainTabBar = MainTabBarController(currentUser: muser)
+        //                    mainTabBar.modalPresentationStyle = .fullScreen
+                            print(muser)
+                            
+                            let mainContentFooTeam = UIHostingController(rootView: ContentFooTeamMenu())
+                            mainContentFooTeam.modalPresentationStyle = .fullScreen
+                            self.window?.rootViewController = mainContentFooTeam
+                            
+                        case .failure(_):
+                            self.window?.rootViewController = AuthViewController()
+        //                    self.window?.rootViewController = CreateTeamViewController()
+                        }
+                    }
+                } else {
+                    window?.rootViewController = AuthViewController()
+        //              window?.rootViewController = CreateTeamViewController()
+                }
                 window?.makeKeyAndVisible()
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
