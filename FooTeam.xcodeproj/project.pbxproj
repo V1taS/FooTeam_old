@@ -3,12 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1B283249246B6BC700C675F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B283248246B6BC700C675F9 /* Constants.swift */; };
 		1B28324B246B6C0800C675F9 /* NetworkWeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */; };
+		1B2978F224E8AF49005B943B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B2978F124E8AF49005B943B /* GoogleService-Info.plist */; };
+		1B2978F424E8B060005B943B /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978F324E8B060005B943B /* SwiftUIView.swift */; };
+		1B2978F724E8B2DC005B943B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978F624E8B2DC005B943B /* AuthService.swift */; };
+		1B2978F924E8B2E3005B943B /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978F824E8B2E3005B943B /* FirestoreService.swift */; };
+		1B2978FB24E8B2EB005B943B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978FA24E8B2EB005B943B /* StorageService.swift */; };
+		1B2978FD24E8B2F2005B943B /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978FC24E8B2F2005B943B /* ListenerService.swift */; };
 		1B47244624B7CC1700853889 /* CalendarFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47244524B7CC1700853889 /* CalendarFooTeam.swift */; };
 		1B49B40724B53E6200C33233 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49B40624B53E6200C33233 /* Notifications.swift */; };
 		1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDC9E6247B85C400BFC139 /* Team.swift */; };
@@ -16,11 +22,19 @@
 		1BF4C9892450A7F1006EEAC5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */; };
 		1BF4C9902450A7F3006EEAC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4C98F2450A7F3006EEAC5 /* Assets.xcassets */; };
 		1BF4C9932450A7F3006EEAC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */; };
+		54C58285EC39A524265E3AA1 /* Pods_FooTeam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D054C0AA3936098B624B6 /* Pods_FooTeam.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AE5A5E80A197ED0B13269A2 /* Pods-FooTeam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooTeam.release.xcconfig"; path = "Target Support Files/Pods-FooTeam/Pods-FooTeam.release.xcconfig"; sourceTree = "<group>"; };
 		1B283248246B6BC700C675F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkWeatherManager.swift; sourceTree = "<group>"; };
+		1B2978F124E8AF49005B943B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1B2978F324E8B060005B943B /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		1B2978F624E8B2DC005B943B /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		1B2978F824E8B2E3005B943B /* FirestoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		1B2978FA24E8B2EB005B943B /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		1B2978FC24E8B2F2005B943B /* ListenerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
 		1B47244524B7CC1700853889 /* CalendarFooTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarFooTeam.swift; sourceTree = "<group>"; };
 		1B49B40524B53CB800C33233 /* FooTeam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FooTeam.entitlements; sourceTree = "<group>"; };
 		1B49B40624B53E6200C33233 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -31,6 +45,7 @@
 		1BF4C98F2450A7F3006EEAC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BF4C9922450A7F3006EEAC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BF4C9942450A7F3006EEAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F06D054C0AA3936098B624B6 /* Pods_FooTeam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FooTeam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C58285EC39A524265E3AA1 /* Pods_FooTeam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +66,17 @@
 				1B283248246B6BC700C675F9 /* Constants.swift */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		1B2978F524E8B2C2005B943B /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				1B2978F624E8B2DC005B943B /* AuthService.swift */,
+				1B2978F824E8B2E3005B943B /* FirestoreService.swift */,
+				1B2978FA24E8B2EB005B943B /* StorageService.swift */,
+				1B2978FC24E8B2F2005B943B /* ListenerService.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		1B66CCD824A5410A00F03ED4 /* Sources */ = {
@@ -67,6 +94,7 @@
 				1B28324A246B6C0800C675F9 /* NetworkWeatherManager.swift */,
 				1B49B40624B53E6200C33233 /* Notifications.swift */,
 				1B47244524B7CC1700853889 /* CalendarFooTeam.swift */,
+				1B2978F524E8B2C2005B943B /* Firebase */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -74,9 +102,10 @@
 		1BEA42ED247B4A2700A4A000 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */,
 				1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */,
+				1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */,
 				1BF4C9942450A7F3006EEAC5 /* Info.plist */,
+				1B2978F124E8AF49005B943B /* GoogleService-Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -94,6 +123,8 @@
 			children = (
 				1BF4C9852450A7F1006EEAC5 /* FooTeam */,
 				1BF4C9842450A7F1006EEAC5 /* Products */,
+				E6371551543354DA27B7223B /* Pods */,
+				D6861444A6F18BA9CA929B0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,14 +139,31 @@
 		1BF4C9852450A7F1006EEAC5 /* FooTeam */ = {
 			isa = PBXGroup;
 			children = (
-				1B49B40524B53CB800C33233 /* FooTeam.entitlements */,
-				1BEA42EE247B4A3000A4A000 /* StoryBoards */,
 				1B96BECF2496D98200AAF68B /* Services */,
+				1BEA42EE247B4A3000A4A000 /* StoryBoards */,
 				1B283247246B6B3C00C675F9 /* Supporting files */,
 				1B66CCD824A5410A00F03ED4 /* Sources */,
 				1BEA42ED247B4A2700A4A000 /* App */,
+				1B2978F324E8B060005B943B /* SwiftUIView.swift */,
+				1B49B40524B53CB800C33233 /* FooTeam.entitlements */,
 			);
 			path = FooTeam;
+			sourceTree = "<group>";
+		};
+		D6861444A6F18BA9CA929B0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F06D054C0AA3936098B624B6 /* Pods_FooTeam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6371551543354DA27B7223B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5A5E80A197ED0B13269A2 /* Pods-FooTeam.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BF4C9972450A7F3006EEAC5 /* Build configuration list for PBXNativeTarget "FooTeam" */;
 			buildPhases = (
+				ADED9C0408188F04275570A8 /* [CP] Check Pods Manifest.lock */,
 				1BF4C97F2450A7F1006EEAC5 /* Sources */,
 				1BF4C9802450A7F1006EEAC5 /* Frameworks */,
 				1BF4C9812450A7F1006EEAC5 /* Resources */,
+				C54AE096B2F6392D2BD53E5D /* [CP] Embed Pods Frameworks */,
+				98D1773EFF3A52CEA7D89460 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,10 +229,70 @@
 			files = (
 				1BF4C9932450A7F3006EEAC5 /* LaunchScreen.storyboard in Resources */,
 				1BF4C9902450A7F3006EEAC5 /* Assets.xcassets in Resources */,
+				1B2978F224E8AF49005B943B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98D1773EFF3A52CEA7D89460 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADED9C0408188F04275570A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FooTeam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C54AE096B2F6392D2BD53E5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FooTeam/Pods-FooTeam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1BF4C97F2450A7F1006EEAC5 /* Sources */ = {
@@ -189,12 +300,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B49B40724B53E6200C33233 /* Notifications.swift in Sources */,
+				1B2978F924E8B2E3005B943B /* FirestoreService.swift in Sources */,
 				1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */,
+				1B2978F424E8B060005B943B /* SwiftUIView.swift in Sources */,
+				1B2978F724E8B2DC005B943B /* AuthService.swift in Sources */,
 				1B283249246B6BC700C675F9 /* Constants.swift in Sources */,
 				1B47244624B7CC1700853889 /* CalendarFooTeam.swift in Sources */,
 				1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */,
 				1BF4C9892450A7F1006EEAC5 /* SceneDelegate.swift in Sources */,
+				1B2978FB24E8B2EB005B943B /* StorageService.swift in Sources */,
 				1B28324B246B6C0800C675F9 /* NetworkWeatherManager.swift in Sources */,
+				1B2978FD24E8B2F2005B943B /* ListenerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +372,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -268,8 +384,10 @@
 		};
 		1BF4C9992450A7F3006EEAC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AE5A5E80A197ED0B13269A2 /* Pods-FooTeam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
 				CODE_SIGN_ENTITLEMENTS = FooTeam/FooTeam.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34VDSPZYU9;
