@@ -15,6 +15,25 @@
 		1B2978F924E8B2E3005B943B /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978F824E8B2E3005B943B /* FirestoreService.swift */; };
 		1B2978FB24E8B2EB005B943B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978FA24E8B2EB005B943B /* StorageService.swift */; };
 		1B2978FD24E8B2F2005B943B /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2978FC24E8B2F2005B943B /* ListenerService.swift */; };
+		1B29790624E8B774005B943B /* AddAvaTeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29790024E8B76F005B943B /* AddAvaTeamsView.swift */; };
+		1B29790724E8B774005B943B /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29790124E8B770005B943B /* ButtonFormView.swift */; };
+		1B29790824E8B774005B943B /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29790224E8B771005B943B /* Bundle-Decodable.swift */; };
+		1B29790924E8B774005B943B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29790324E8B772005B943B /* GradientView.swift */; };
+		1B29790A24E8B774005B943B /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29790424E8B773005B943B /* InsertableTextField.swift */; };
+		1B29790B24E8B774005B943B /* AddAvaPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29790524E8B774005B943B /* AddAvaPlayersView.swift */; };
+		1B29791A24E8B7A6005B943B /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29790D24E8B79A005B943B /* ViewExtension.swift */; };
+		1B29791B24E8B7A6005B943B /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29790E24E8B79B005B943B /* ImageExtension.swift */; };
+		1B29791C24E8B7A6005B943B /* CustomeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29790F24E8B79C005B943B /* CustomeTextField.swift */; };
+		1B29791D24E8B7A6005B943B /* LabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29791024E8B79D005B943B /* LabelExtension.swift */; };
+		1B29791E24E8B7A6005B943B /* SegmentedControlExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29791124E8B79E005B943B /* SegmentedControlExtension.swift */; };
+		1B29791F24E8B7A6005B943B /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29791224E8B79F005B943B /* FontExtension.swift */; };
+		1B29792024E8B7A6005B943B /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29791324E8B7A0005B943B /* ColorExtension.swift */; };
+		1B29792124E8B7A6005B943B /* ScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29791424E8B7A1005B943B /* ScrollViewExtension.swift */; };
+		1B29792224E8B7A6005B943B /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29791524E8B7A2005B943B /* ButtonExtension.swift */; };
+		1B29792324E8B7A6005B943B /* StackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29791624E8B7A3005B943B /* StackViewExtension.swift */; };
+		1B29792424E8B7A6005B943B /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29791724E8B7A4005B943B /* ImageViewExtension.swift */; };
+		1B29792524E8B7A6005B943B /* AplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29791824E8B7A5005B943B /* AplicationExtension.swift */; };
+		1B29792624E8B7A6005B943B /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29791924E8B7A6005B943B /* ViewControllerExtension.swift */; };
 		1B47244624B7CC1700853889 /* CalendarFooTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B47244524B7CC1700853889 /* CalendarFooTeam.swift */; };
 		1B49B40724B53E6200C33233 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B49B40624B53E6200C33233 /* Notifications.swift */; };
 		1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDC9E6247B85C400BFC139 /* Team.swift */; };
@@ -35,6 +54,25 @@
 		1B2978F824E8B2E3005B943B /* FirestoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		1B2978FA24E8B2EB005B943B /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		1B2978FC24E8B2F2005B943B /* ListenerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
+		1B29790024E8B76F005B943B /* AddAvaTeamsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAvaTeamsView.swift; sourceTree = "<group>"; };
+		1B29790124E8B770005B943B /* ButtonFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
+		1B29790224E8B771005B943B /* Bundle-Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		1B29790324E8B772005B943B /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		1B29790424E8B773005B943B /* InsertableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		1B29790524E8B774005B943B /* AddAvaPlayersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAvaPlayersView.swift; sourceTree = "<group>"; };
+		1B29790D24E8B79A005B943B /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		1B29790E24E8B79B005B943B /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		1B29790F24E8B79C005B943B /* CustomeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeTextField.swift; sourceTree = "<group>"; };
+		1B29791024E8B79D005B943B /* LabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelExtension.swift; sourceTree = "<group>"; };
+		1B29791124E8B79E005B943B /* SegmentedControlExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControlExtension.swift; sourceTree = "<group>"; };
+		1B29791224E8B79F005B943B /* FontExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		1B29791324E8B7A0005B943B /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		1B29791424E8B7A1005B943B /* ScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewExtension.swift; sourceTree = "<group>"; };
+		1B29791524E8B7A2005B943B /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		1B29791624E8B7A3005B943B /* StackViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewExtension.swift; sourceTree = "<group>"; };
+		1B29791724E8B7A4005B943B /* ImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
+		1B29791824E8B7A5005B943B /* AplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AplicationExtension.swift; sourceTree = "<group>"; };
+		1B29791924E8B7A6005B943B /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		1B47244524B7CC1700853889 /* CalendarFooTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarFooTeam.swift; sourceTree = "<group>"; };
 		1B49B40524B53CB800C33233 /* FooTeam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FooTeam.entitlements; sourceTree = "<group>"; };
 		1B49B40624B53E6200C33233 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -79,6 +117,47 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
+		1B2978FE24E8B711005B943B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B2978FF24E8B74B005B943B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1B29790524E8B774005B943B /* AddAvaPlayersView.swift */,
+				1B29790024E8B76F005B943B /* AddAvaTeamsView.swift */,
+				1B29790224E8B771005B943B /* Bundle-Decodable.swift */,
+				1B29790124E8B770005B943B /* ButtonFormView.swift */,
+				1B29790324E8B772005B943B /* GradientView.swift */,
+				1B29790424E8B773005B943B /* InsertableTextField.swift */,
+				1B29790C24E8B785005B943B /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1B29790C24E8B785005B943B /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1B29791824E8B7A5005B943B /* AplicationExtension.swift */,
+				1B29791524E8B7A2005B943B /* ButtonExtension.swift */,
+				1B29791324E8B7A0005B943B /* ColorExtension.swift */,
+				1B29790F24E8B79C005B943B /* CustomeTextField.swift */,
+				1B29791224E8B79F005B943B /* FontExtension.swift */,
+				1B29790E24E8B79B005B943B /* ImageExtension.swift */,
+				1B29791724E8B7A4005B943B /* ImageViewExtension.swift */,
+				1B29791024E8B79D005B943B /* LabelExtension.swift */,
+				1B29791424E8B7A1005B943B /* ScrollViewExtension.swift */,
+				1B29791124E8B79E005B943B /* SegmentedControlExtension.swift */,
+				1B29791624E8B7A3005B943B /* StackViewExtension.swift */,
+				1B29791924E8B7A6005B943B /* ViewControllerExtension.swift */,
+				1B29790D24E8B79A005B943B /* ViewExtension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		1B66CCD824A5410A00F03ED4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +181,10 @@
 		1BEA42ED247B4A2700A4A000 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				1B2978FF24E8B74B005B943B /* Extensions */,
+				1B66CCD824A5410A00F03ED4 /* Sources */,
+				1B283247246B6B3C00C675F9 /* Supporting files */,
+				1BEA42EE247B4A3000A4A000 /* Storyboards */,
 				1BF4C9882450A7F1006EEAC5 /* SceneDelegate.swift */,
 				1BF4C9862450A7F1006EEAC5 /* AppDelegate.swift */,
 				1BF4C9942450A7F3006EEAC5 /* Info.plist */,
@@ -110,12 +193,12 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		1BEA42EE247B4A3000A4A000 /* StoryBoards */ = {
+		1BEA42EE247B4A3000A4A000 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				1BF4C9912450A7F3006EEAC5 /* LaunchScreen.storyboard */,
 			);
-			path = StoryBoards;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		1BF4C97A2450A7F1006EEAC5 = {
@@ -139,10 +222,8 @@
 		1BF4C9852450A7F1006EEAC5 /* FooTeam */ = {
 			isa = PBXGroup;
 			children = (
+				1B2978FE24E8B711005B943B /* View */,
 				1B96BECF2496D98200AAF68B /* Services */,
-				1BEA42EE247B4A3000A4A000 /* StoryBoards */,
-				1B283247246B6B3C00C675F9 /* Supporting files */,
-				1B66CCD824A5410A00F03ED4 /* Sources */,
 				1BEA42ED247B4A2700A4A000 /* App */,
 				1B2978F324E8B060005B943B /* SwiftUIView.swift */,
 				1B49B40524B53CB800C33233 /* FooTeam.entitlements */,
@@ -299,18 +380,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B29792224E8B7A6005B943B /* ButtonExtension.swift in Sources */,
 				1B49B40724B53E6200C33233 /* Notifications.swift in Sources */,
+				1B29791E24E8B7A6005B943B /* SegmentedControlExtension.swift in Sources */,
+				1B29792524E8B7A6005B943B /* AplicationExtension.swift in Sources */,
 				1B2978F924E8B2E3005B943B /* FirestoreService.swift in Sources */,
+				1B29790B24E8B774005B943B /* AddAvaPlayersView.swift in Sources */,
+				1B29792324E8B7A6005B943B /* StackViewExtension.swift in Sources */,
+				1B29792024E8B7A6005B943B /* ColorExtension.swift in Sources */,
+				1B29791B24E8B7A6005B943B /* ImageExtension.swift in Sources */,
+				1B29791C24E8B7A6005B943B /* CustomeTextField.swift in Sources */,
+				1B29792624E8B7A6005B943B /* ViewControllerExtension.swift in Sources */,
+				1B29790A24E8B774005B943B /* InsertableTextField.swift in Sources */,
+				1B29790824E8B774005B943B /* Bundle-Decodable.swift in Sources */,
+				1B29790724E8B774005B943B /* ButtonFormView.swift in Sources */,
 				1BF4C9872450A7F1006EEAC5 /* AppDelegate.swift in Sources */,
 				1B2978F424E8B060005B943B /* SwiftUIView.swift in Sources */,
+				1B29790924E8B774005B943B /* GradientView.swift in Sources */,
 				1B2978F724E8B2DC005B943B /* AuthService.swift in Sources */,
 				1B283249246B6BC700C675F9 /* Constants.swift in Sources */,
 				1B47244624B7CC1700853889 /* CalendarFooTeam.swift in Sources */,
 				1BDDC9E7247B85C400BFC139 /* Team.swift in Sources */,
+				1B29792424E8B7A6005B943B /* ImageViewExtension.swift in Sources */,
 				1BF4C9892450A7F1006EEAC5 /* SceneDelegate.swift in Sources */,
 				1B2978FB24E8B2EB005B943B /* StorageService.swift in Sources */,
+				1B29791F24E8B7A6005B943B /* FontExtension.swift in Sources */,
+				1B29791A24E8B7A6005B943B /* ViewExtension.swift in Sources */,
+				1B29791D24E8B7A6005B943B /* LabelExtension.swift in Sources */,
 				1B28324B246B6C0800C675F9 /* NetworkWeatherManager.swift in Sources */,
+				1B29792124E8B7A6005B943B /* ScrollViewExtension.swift in Sources */,
 				1B2978FD24E8B2F2005B943B /* ListenerService.swift in Sources */,
+				1B29790624E8B774005B943B /* AddAvaTeamsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
